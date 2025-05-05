@@ -1,4 +1,3 @@
-// app/api/visitor/route.ts
 import { NextRequest, NextResponse } from 'next/server';
 import { UAParser } from 'ua-parser-js';
 
@@ -13,7 +12,13 @@ export async function GET(req: NextRequest) {
 
   if (ip !== 'Unknown') {
     try {
-      const res = await fetch(`https://ipapi.co/${ip}/json/`);
+      const res = await fetch(`https://ipapi.co/${ip}/json/`, {
+        headers: {
+          'User-Agent': req.headers.get('user-agent') || 'Mozilla/5.0',
+          'Accept': 'application/json',
+        },
+      });
+
       locationData = await res.json();
     } catch (error) {
       console.error('Geolocation API error:', error);
