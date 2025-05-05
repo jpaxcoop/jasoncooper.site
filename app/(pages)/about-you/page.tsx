@@ -64,7 +64,7 @@ export default function AboutYouPage() {
 
             <div className="text-white text-[1.5vw] rounded-[0.5vw] bg-gray-900 py-[1vw] px-[2vw] m-[1vw] flex justify-between">
                 <div>Location</div>
-                <div>{data.city}, {data.region}, {data.country}</div>
+                <div className="text-right">{data.city}, {data.region}</div>
             </div>
 
             <div className="text-white text-[1.5vw] rounded-[0.5vw] bg-gray-900 py-[1vw] px-[2vw] m-[1vw] flex justify-between">
