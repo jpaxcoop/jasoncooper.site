@@ -139,31 +139,7 @@ export default function SkillsTechTab() {
             <h4 className="font-heading text-[14] font-medium uppercase mb-3">Projects</h4>
 
             <div className="mb-3">
-              <Link href="/projects/peerless-portal" className="text-primary hover:text-pink-600" target="_blank">
-                Peerless Portal
-                <ChevronRightIcon fontSize="small" />
-              </Link>
-            </div>
-
-            <div className="mb-3">
-              <Link href="/projects/alcon-toolbox" className="text-primary hover:text-pink-600" target="_blank">
-                Alcon Toolbox
-                <ChevronRightIcon fontSize="small" />
-              </Link>
-            </div>
-
-            <div className="mb-3">
-              <Link href="/projects/veritiv-leaderlink" className="text-primary hover:text-pink-600" target="_blank">
-                Veritiv LeaderLink
-                <ChevronRightIcon fontSize="small" />
-              </Link>
-            </div>
-
-            <div className="mb-3">
-              <Link href="/projects/aadvantage-cash" className="text-primary hover:text-pink-600" target="_blank">
-                AAdvantage Cash
-                <ChevronRightIcon fontSize="small" />
-              </Link>
+              --
             </div>
           </div>
         </div>
@@ -294,31 +270,7 @@ export default function SkillsTechTab() {
             <h4 className="font-heading text-[14] font-medium uppercase mt-6 mb-3">Projects</h4>
 
             <div className="mb-3">
-              <Link href="/projects/peerless-portal" className="text-primary hover:text-pink-600" target="_blank">
-                Peerless Portal
-                <ChevronRightIcon fontSize="small" />
-              </Link>
-            </div>
-
-            <div className="mb-3">
-              <Link href="/projects/alcon-toolbox" className="text-primary hover:text-pink-600" target="_blank">
-                Alcon Toolbox
-                <ChevronRightIcon fontSize="small" />
-              </Link>
-            </div>
-
-            <div className="mb-3">
-              <Link href="/projects/veritiv-leaderlink" className="text-primary hover:text-pink-600" target="_blank">
-                Veritiv LeaderLink
-                <ChevronRightIcon fontSize="small" />
-              </Link>
-            </div>
-
-            <div className="mb-3">
-              <Link href="/projects/aadvantage-cash" className="text-primary hover:text-pink-600" target="_blank">
-                AAdvantage Cash
-                <ChevronRightIcon fontSize="small" />
-              </Link>
+              --
             </div>
           </div>
         </div>
