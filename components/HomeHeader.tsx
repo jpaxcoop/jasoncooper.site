@@ -21,7 +21,23 @@ export default function HomeHeader() {
     // Wait for animation to finish before navigating
     setTimeout(() => {
       router.push('/resume');
-    }, 350);
+    }, 750);
+  };
+
+  const handleProjectsClick = (e: React.MouseEvent) => {
+    e.preventDefault();
+    setHideHeader(true);
+
+    const svg = document.getElementById('homeOfficeSvg');
+
+    if (!svg) return;
+
+    svg.classList.add('zoom-animate-projects');
+
+    // Wait for animation to finish before navigating
+    setTimeout(() => {
+      router.push('/projects');
+    }, 750);
   };
 
   const handleAboutYouClick = (e: React.MouseEvent) => {
@@ -37,7 +53,7 @@ export default function HomeHeader() {
     // Wait for animation to finish before navigating
     setTimeout(() => {
       router.push('/about-you');
-    }, 350);
+    }, 750);
   };
 
   return (
@@ -53,7 +69,7 @@ export default function HomeHeader() {
         </div>
 
         <div>
-          <Link href="/projects" className="hover:text-pink-600">
+          <Link href="/projects" className="hover:text-pink-600" onClick={handleProjectsClick}>
             Projects
           </Link>
         </div>

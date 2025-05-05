@@ -101,6 +101,11 @@ h1, h2, h3, h4, h5, h6 {
   transform-origin: center;
 }
 
+.zoom-animate-projects {
+  transform: scale(2) translate(-25%, 15%);
+  transform-origin: center;
+}
+
 .zoom-animate-about-you {
   transform: scale(4) translate(22%, 0%);
   transform-origin: center;
