@@ -3,7 +3,7 @@ import { NextRequest, NextResponse } from 'next/server';
 import { UAParser } from 'ua-parser-js';
 
 export async function GET(req: NextRequest) {
-  const ip = req.headers.get('x-forwarded-for')?.split(',')[0] ?? req.ip ?? 'Unknown';
+  const ip = req.headers.get('x-forwarded-for')?.split(',')[0] ?? 'Unknown';
   const userAgent = req.headers.get('user-agent') ?? 'Unknown';
 
   const parser = new UAParser(userAgent);
