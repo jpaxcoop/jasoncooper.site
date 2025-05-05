@@ -1,7 +1,23 @@
+'use client';
+
 import Image from 'next/image';
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 
 export default function HomeBackground() {
+  const homeOfficeImages = [
+    '/home-office-1.svg',
+    '/home-office-2.svg',
+    '/home-office-3.svg',
+    '/home-office-4.svg',
+  ];
+
+  const [bgImage, setBgImage] = useState('');
+
+  useEffect(() => {
+    const randomIndex = Math.floor(Math.random() * homeOfficeImages.length);
+    setBgImage(homeOfficeImages[randomIndex]);
+  }, []);
+
   return (
     <div className="absolute inset-0 z-[-1]">
         <div className="absolute inset-0 bg-gradient-to-tr bg-gradient-to-r from-blue-200 via-blue-200 to-pink-200" />
@@ -86,10 +102,20 @@ export default function HomeBackground() {
             />
         </div>
 
+        <div className="absolute top-[-10vh] left-[-55vw] z-0 animate-cloud-loop" style={{ animationDuration: '90s', animationDelay: '60s' }}>
+            <Image
+                src="/cloud.png"
+                alt=""
+                height={0}
+                width={100}
+                style={{ height: "48vh", width: "auto" }}
+            />
+        </div>
+
         <div
             id="homeOfficeSvg"
             className="absolute inset-0 bg-center bg-cover bg-no-repeat transition-transform duration-1000 ease-in-out"
-            style={{ backgroundImage: "url('/home-office.svg')" }}
+            style={{ backgroundImage: bgImage ? `url(${bgImage})` : 'none' }}
         />
     </div>
   );
