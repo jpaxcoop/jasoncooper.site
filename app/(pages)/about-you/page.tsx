@@ -53,28 +53,33 @@ export default function AboutYouPage() {
                 </div>
 
                 <div className="text-white text-[2vw]">
-                    Website Visitor
+                    New Visitor
                 </div>
             </div>
 
-            <div className="text-white text-[1.5vw] rounded-[0.5vw] bg-gray-900 py-[1vw] px-[2vw] m-[1vw]">
-                IP Address {data.ip}
+            <div className="text-white text-[1.5vw] rounded-[0.5vw] bg-gray-900 py-[1vw] px-[2vw] m-[1vw] flex justify-between">
+                <div>IP Address</div>
+                <div>{data.ip}</div>
             </div>
 
-            <div className="text-white text-[1.5vw] rounded-[0.5vw] bg-gray-900 py-[1vw] px-[2vw] m-[1vw]">
-                Location {data.city}, {data.region}, {data.country}
+            <div className="text-white text-[1.5vw] rounded-[0.5vw] bg-gray-900 py-[1vw] px-[2vw] m-[1vw] flex justify-between">
+                <div>Location</div>
+                <div>{data.city}, {data.region}, {data.country}</div>
             </div>
 
-            <div className="text-white text-[1.5vw] rounded-[0.5vw] bg-gray-900 py-[1vw] px-[2vw] m-[1vw]">
-                Timezone: {data.timezone}
+            <div className="text-white text-[1.5vw] rounded-[0.5vw] bg-gray-900 py-[1vw] px-[2vw] m-[1vw] flex justify-between">
+                <div>Timezone</div>
+                <div>{data.timezone}</div>
             </div>
 
-            <div className="text-white text-[1.5vw] rounded-[0.5vw] bg-gray-900 py-[1vw] px-[2vw] m-[1vw]">
-                Browser: {data.browser}
+            <div className="text-white text-[1.5vw] rounded-[0.5vw] bg-gray-900 py-[1vw] px-[2vw] m-[1vw] flex justify-between">
+                <div>Browser</div>
+                <div>{data.browser}</div>
             </div>
 
-            <div className="text-white text-[1.5vw] rounded-[0.5vw] bg-gray-900 py-[1vw] px-[2vw] m-[1vw]">
-                OS: {data.os}
+            <div className="text-white text-[1.5vw] rounded-[0.5vw] bg-gray-900 py-[1vw] px-[2vw] m-[1vw] flex justify-between">
+                <div>OS</div>
+                <div>{data.os}</div>
             </div>
         </div>
     );
