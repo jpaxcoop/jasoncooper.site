@@ -17,7 +17,7 @@ export default function HomeSplash() {
 
   return (
     <div
-      className={`fixed inset-0 bg-white flex items-center justify-center z-50 animate-fadeOut transition-opacity duration-1000`}
+      className={`fixed inset-0 bg-white flex items-center justify-center text-center px-4 z-50 animate-fadeOut transition-opacity duration-1000`}
     >
       <h1 className="text-[36px] animate-fadeIn font-heading uppercase tracking-widest text-black transition-opacity duration-1000 opacity-0">
         Welcome to Jason Cooper's Website

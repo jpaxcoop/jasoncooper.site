@@ -21,18 +21,18 @@ export default function ResumePage() {
 
     return (
         <>
-            <div className="bg-white shadow-[16px_8px_0px_rgba(160,90,44,1)] max-w-4xl mx-auto my-16 p-12 rotate-[-0.33deg] min-h-[90vw]">
+            <div className="bg-white shadow-[16px_8px_0px_rgba(160,90,44,1)] max-w-4xl mx-auto my-16 p-4 lg:p-12 md:rotate-[-0.33deg] rotate-0 min-h-[90vw]">
                 <div className="flex justify-between items-baseline">
-                    <h1 className="text-[36px] font-heading uppercase tracking-widest mb-4 text-primary">
+                    <h1 className="text-[24px] md:text-[36px] font-heading uppercase tracking-widest mb-4 text-primary leading-tight">
                         Jason Cooper
                     </h1>
 
-                    <h2 className="text-[24px] font-heading uppercase tracking-wider">
-                        Designer <span className="text-[28px] relative top-[1px] text-primary">&</span> Developer
+                    <h2 className="md:text-[24px] font-heading uppercase tracking-wider text-right leading-[.75]">
+                        Designer <span className="text-[28px] relative top-[1px] text-primary">&</span>&nbsp;Developer
                     </h2>
                 </div>
 
-                <div className="flex">
+                <div className="flex flex-wrap md:flex-nowrap">
                     {tabs.map((tab) => (
                         <button
                             key={tab}
@@ -48,12 +48,10 @@ export default function ResumePage() {
                     ))}
                 </div>
 
-                <div className="mt-8">
-                    {activeTab === 'Introduction' && <IntroductionTab />}
-                    {activeTab === 'Recommendations' && <RecommendationsTab />}
-                    {activeTab === 'Skills / Tech' && <SkillsTechTab />}
-                    {activeTab === 'Experience' && <ExperienceTab />}
-                </div>
+                {activeTab === 'Introduction' && <IntroductionTab />}
+                {activeTab === 'Recommendations' && <RecommendationsTab />}
+                {activeTab === 'Skills / Tech' && <SkillsTechTab />}
+                {activeTab === 'Experience' && <ExperienceTab />}
             </div>
         </>
     );

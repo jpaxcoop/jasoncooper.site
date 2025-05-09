@@ -4,7 +4,7 @@ import ChevronRightIcon from '@mui/icons-material/ChevronRight';
 export default function ExperienceTab() {
     return (
       <>
-        <div className="px-4 mb-8">
+        <div className="md:p-4 py-4">
           <h4 className="font-heading text-[16px] font-semibold">Senior UI Designer / Developer, Peerless Network</h4>
           <em>Sep 2018 - Apr 2025 · 6 yrs 8 mos</em>
 
@@ -17,7 +17,7 @@ export default function ExperienceTab() {
           <p>Over the years, the Peerless Portal drastically increased its scope - upstream with quote-building and integration with Salesforce, and downstream with product usage reporting and support ticket management. Though Peerless Network was purchased by Infobip, a much larger, international company with its own platform, the Peerless Portal remains in use today.</p>
         </div>
 
-        <div className="px-4 mb-8">
+        <div className="md:p-4 py-4">
           <h4 className="font-heading text-[16px] font-semibold">Marketing Automation & Technology Manager, PGi</h4>
           <em>Jan 2016 - Sep 2018 · 2 yrs 9 mos</em>
 
@@ -32,7 +32,7 @@ export default function ExperienceTab() {
           <p>Finally, I make sure the capabilities are available to other team members by developing easy-to-use interfaces and providing clear, illustrated, web-based documentation.</p>
         </div>
 
-        <Link href="https://www.linkedin.com/in/jasonpaxtoncooper" className="text-primary hover:text-pink-600" target="_blank">
+        <Link href="https://www.linkedin.com/in/jasonpaxtoncooper" className="md:p-4 py-4 text-primary hover:text-pink-600" target="_blank">
           Review all my experience on LinkedIn
           <ChevronRightIcon fontSize="small" />
         </Link>

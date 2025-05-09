@@ -18,7 +18,7 @@ export default function SkillsTechTab() {
 
   return (
     <>
-      <div className="flex px-4 mt-8 flex-wrap">
+      <div className="flex flex-wrap md:p-4 py-4">
         <button
           onClick={() => scrollToSection('application-design')}
           className="text-primary border py-1 px-3 hover:text-pink-600 rounded-md mr-2 mb-2"
@@ -69,8 +69,8 @@ export default function SkillsTechTab() {
         </button>
       </div>
 
-      <div id="application-design" className="flex mt-8 mb-4">
-        <div className="w-3/4 pt-0 p-4">
+      <div id="application-design" className="flex flex-wrap md:flex-nowrap md:p-4 gap-4">
+        <div className="w-full md:w-3/4">
           <h4 className="font-heading text-[18] font-semibold">Application Design</h4>
 
           <p className="mb-4">My journey into application design began over 15 years ago when I was hired to design a web-based print ordering application. The print side of the business did not last, but the application design did! I've designed dozens of B2B applications and websites, learning UX and UI best practices along the way.</p>
@@ -85,9 +85,9 @@ export default function SkillsTechTab() {
           </button>
         </div>
 
-        <div className="w-1/4 pt-0 p-4">
-          <div className="mt-6 pl-4 border-l">
-            <h4 className="font-heading text-[14] font-medium uppercase mt-6 mb-3">Projects</h4>
+        <div className="w-full md:w-1/4">
+          <div className="md:p-4 md:pt-0 md:border-l">
+            <h4 className="font-heading text-[14] font-medium uppercase mb-3">Projects</h4>
 
             <div className="mb-3">
               <Link href="/projects/peerless-portal" className="text-primary hover:text-pink-600" target="_blank">
@@ -120,8 +120,8 @@ export default function SkillsTechTab() {
         </div>
       </div>
 
-      <div id="prototyping" className="flex mb-4">
-        <div className="w-3/4 pt-0 p-4">
+      <div id="prototyping" className="flex flex-wrap md:flex-nowrap md:p-4 gap-4">
+        <div className="w-full md:w-3/4">
           <h4 className="font-heading text-[18] font-semibold">Prototyping</h4>
 
           <p className="mb-2">I create prototypes to test early ideas and discover obstacles. Originally my prototypes were sketches done in <strong>Photoshop</strong>, then they graduated to <strong>HTML</strong> static files. Today, I can quickly spin up operational prototypes with a <strong>JavaScript</strong> framework and database. I've used <strong>Figma</strong> to present and share ideas, but I find it an unnecessary step when I can code something just as quickly.</p>
@@ -134,8 +134,8 @@ export default function SkillsTechTab() {
           </button>
         </div>
 
-        <div className="w-1/4 pt-0 p-4">
-          <div className="mt-6 pl-4 border-l">
+        <div className="w-full md:w-1/4">
+          <div className="md:p-4 md:pt-0 md:border-l">
             <h4 className="font-heading text-[14] font-medium uppercase mb-3">Projects</h4>
 
             <div className="mb-3">
@@ -145,8 +145,8 @@ export default function SkillsTechTab() {
         </div>
       </div>
 
-      <div id="ux-and-ui-design" className="flex mb-4">
-        <div className="w-3/4 pt-0 p-4">
+      <div id="ux-and-ui-design" className="flex flex-wrap md:flex-nowrap md:p-4 py-4 gap-4">
+        <div className="w-full md:w-3/4">
           <h4 className="font-heading text-[18] font-semibold">UX and UI Design</h4>
 
           <p className="mb-4">I collect as much information about users as I can before designing the user experience. In my experience, much of it is anecdotal and the only hard data comes from CRM platforms or legacy applications. I would enjoy the chance to conduct user research, but to this point budget and time constraints have not allowed for it.</p>
@@ -163,8 +163,8 @@ export default function SkillsTechTab() {
           </button>
         </div>
 
-        <div className="w-1/4 pt-0 p-4">
-          <div className="mt-6 pl-4 border-l">
+        <div className="w-full md:w-1/4">
+          <div className="md:p-4 md:pt-0 md:border-l">
             <h4 className="font-heading text-[14] font-medium uppercase mb-3">Projects</h4>
 
             <div className="mb-3">
@@ -198,8 +198,8 @@ export default function SkillsTechTab() {
         </div>
       </div>
 
-      <div id="application-development" className="flex mb-4">
-        <div className="w-3/4 pt-0 p-4">
+      <div id="application-development" className="flex flex-wrap md:flex-nowrap md:p-4 py-4 gap-4">
+        <div className="w-full md:w-3/4">
           <h4 className="font-heading text-[18] font-semibold">Application Development</h4>
 
           <p className="mb-4">Today I am a <strong>JavaScript</strong> developer. For the last year or so, I've been focusing on <strong>React, especially with the Next.js framework</strong>. Prior to that, I worked with <strong>Vue.js and the Laravel PHP framework</strong> for several years. And prior to that, I was a big fan of the <strong>Bootstrap frontend framework with jQuery</strong>.</p>
@@ -214,9 +214,9 @@ export default function SkillsTechTab() {
           </button>
         </div>
 
-        <div className="w-1/4 pt-0 p-4">
-          <div className="mt-6 pl-4 border-l">
-            <h4 className="font-heading text-[14] font-medium uppercase mt-6 mb-3">Projects</h4>
+        <div className="w-full md:w-1/4">
+          <div className="md:p-4 md:pt-0 md:border-l">
+            <h4 className="font-heading text-[14] font-medium uppercase mb-3">Projects</h4>
 
             <div className="mb-3">
               <Link href="/projects/peerless-portal" className="text-primary hover:text-pink-600" target="_blank">
@@ -249,8 +249,8 @@ export default function SkillsTechTab() {
         </div>
       </div>
 
-      <div id="artificial-intelligence" className="flex mb-4">
-        <div className="w-3/4 pt-0 p-4">
+      <div id="artificial-intelligence" className="flex flex-wrap md:flex-nowrap md:p-4 py-4 gap-4">
+        <div className="w-full md:w-3/4">
           <h4 className="font-heading text-[18] font-semibold">Artificial Intelligence</h4>
 
           <p className="mb-4">I've come to an obvious realization: AI is the future (if not the present) of application development. An effective application developer uses an AI coding assistant constantly, and only writes code themselves to tweak, adjust, or test. I've spent the last several months learning the coding language of the future: AI prompts that deliver specific, accurate code. To this end I've used <strong>Copilot in VS Code</strong>, the <strong>Cursor IDE</strong>, and of course <strong>ChatGPT</strong>.</p>
@@ -265,9 +265,9 @@ export default function SkillsTechTab() {
           </button>
         </div>
 
-        <div className="w-1/4 pt-0 p-4">
-          <div className="mt-6 pl-4 border-l">
-            <h4 className="font-heading text-[14] font-medium uppercase mt-6 mb-3">Projects</h4>
+        <div className="w-full md:w-1/4">
+          <div className="md:p-4 md:pt-0 md:border-l">
+            <h4 className="font-heading text-[14] font-medium uppercase mb-3">Projects</h4>
 
             <div className="mb-3">
               --
@@ -276,10 +276,10 @@ export default function SkillsTechTab() {
         </div>
       </div>
 
-      <div id="languages" className="mb-4">
-        <h4 className="font-heading text-[18] font-semibold px-4">Languages and Frameworks</h4>
+      <div id="languages" className="md:p-4 py-4">
+        <h4 className="font-heading text-[18] font-semibold">Languages and Frameworks</h4>
 
-        <ul className="px-4 columns-4 mb-2">
+        <ul className="md:p-4 columns-4 mb-2">
           <li>HTML</li>
           <li>CSS</li>
           <li>JavaScript</li>
@@ -296,16 +296,16 @@ export default function SkillsTechTab() {
 
         <button
           onClick={scrollToTop}
-          className="text-primary text-sm hover:text-pink-600 px-4"
+          className="text-primary text-sm hover:text-pink-600"
         >
           Return to top
         </button>
       </div>
 
-      <div id="tools" className="mb-4">
-        <h4 className="font-heading text-[18] font-semibold px-4">Tools</h4>
+      <div id="tools" className="md:p-4 py-4">
+        <h4 className="font-heading text-[18] font-semibold">Tools</h4>
 
-        <ul className="px-4 columns-4 mb-2">
+        <ul className="md:p-4 columns-4 mb-2">
           <li>Visual Studio Code</li>
           <li>Cursor IDE</li>
           <li>ChatGPT</li>
@@ -318,7 +318,7 @@ export default function SkillsTechTab() {
 
         <button
           onClick={scrollToTop}
-          className="text-primary text-sm hover:text-pink-600 px-4"
+          className="text-primary text-sm hover:text-pink-600"
         >
           Return to top
         </button>

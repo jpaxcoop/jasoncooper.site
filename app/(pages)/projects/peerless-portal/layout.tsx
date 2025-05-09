@@ -12,7 +12,7 @@ export default function ProjectLayout({
 
   return (
     <>
-         <div className="absolute top-[24px] left-[50px] z-20 text-left">
+         <div className="absolute top-[24px] left-[18px] z-20 text-left">
           <nav className="flex flex-col space-y-[18px] text-[18px] font-heading uppercase">
             <div>
               <button

@@ -4,7 +4,7 @@ import ChevronRightIcon from '@mui/icons-material/ChevronRight';
 export default function RecommendationsTab() {
     return (
       <>
-        <div className="px-4 pb-8">
+        <div className="md:p-4 pb-8">
           <div className="mb-2 pl-4 border-l">
             <p className="mb-4">
               “Jason is the perfect complement to any business or entrepreneur with a vision. He excels at taking big concepts and grand objectives and quickly transforming them into a detailed, functional application. During our time together at Peerless Network, Jason accomplished this first as a solo designer and developer and then shifted gears to leading a team that handled multiple projects simultaneously.
@@ -19,7 +19,7 @@ export default function RecommendationsTab() {
           <em>Jason's boss</em>          
         </div>
         
-        <div className="px-4 pb-8">
+        <div className="md:p-4 pb-8">
           <div className="mb-2 pl-4 border-l">
             <p className="mb-4">
               “I had the pleasure of working with Jason for 5 years. During that time, he simultaneously carried the responsibility of project manager and team lead, all while being a daily contributor to the code base.
