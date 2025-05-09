@@ -19,7 +19,7 @@ export default function HomeBackground() {
   }, []);
 
   return (
-    <div className="absolute inset-0 z-[-1]">
+    <div className="fixed h-full w-full top-0 z-[-10] overflow-x-hidden">
         <div className="absolute inset-0 bg-gradient-to-tr bg-gradient-to-r from-blue-200 via-blue-200 to-pink-200" />
 
         <div className="absolute top-[-18vh] left-[50vw] z-0 animate-cloud-initial" style={{ animationDuration: '65s' }}>

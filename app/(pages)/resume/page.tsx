@@ -21,7 +21,7 @@ export default function ResumePage() {
 
     return (
         <>
-            <div className="bg-white shadow-[16px_8px_0px_rgba(160,90,44,1)] max-w-4xl ml-12 my-16 p-12 rotate-[-0.33deg] min-h-[90vw]">
+            <div className="bg-white shadow-[16px_8px_0px_rgba(160,90,44,1)] max-w-4xl mx-auto my-16 p-12 rotate-[-0.33deg] min-h-[90vw]">
                 <div className="flex justify-between items-baseline">
                     <h1 className="text-[36px] font-heading uppercase tracking-widest mb-4 text-primary">
                         Jason Cooper
