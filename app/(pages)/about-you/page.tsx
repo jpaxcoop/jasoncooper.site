@@ -54,12 +54,13 @@ export default function AboutYouPage() {
 
     return (
         <>
-            <div id="about-you-container" className="relative pl-[5vw] pt-16 pb-8">
+            <div id="about-you-container" className="relative pl-0 lg:pl-[5vw] pt-16 pb-8">
                 <div
                     className="absolute inset-0 w-full bottom-0 overflow-hidden"
                 >
                     <Image
                         src="/hand-holding.svg"
+                        className="hidden lg:block"
                         alt=""
                         width={0}
                         height={0}
@@ -67,56 +68,61 @@ export default function AboutYouPage() {
                     />
                 </div>
 
-                <div className="bg-black w-[32vw] p-[1vw] rotate-[0.5deg] h-[60vw] rounded-[3vw]">
-                    <div className="bg-black w-[1.5vw] h-[5vw] rotate-[0.5deg] rounded-[.25vw] absolute left-[-0.5vw] top-[13vw]">
+                <div className="bg-black w-full h-full lg:w-[32vw] lg:h-[60vw] p-4 lg:p-[1vw] rotate-0 lg:rotate-[0.5deg] lg:rounded-[3vw]">
+                    <div className="hidden lg:block bg-black w-[1.5vw] h-[5vw] rotate-[0.5deg] rounded-[.25vw] absolute left-[-0.5vw] top-[13vw]">
                     </div>
 
-                    <div className="bg-black w-[1.5vw] h-[5vw] rotate-[0.5deg] rounded-[.25vw] absolute left-[-0.5vw] top-[18vw]">
+                    <div className="hidden lg:block bg-black w-[1.5vw] h-[5vw] rotate-[0.5deg] rounded-[.25vw] absolute left-[-0.5vw] top-[18vw]">
                     </div>
 
-                    <div className="bg-black w-[1.5vw] h-[8vw] rotate-[0.5deg] rounded-[.25vw] absolute right-[-0.5vw] top-[15vw]">
+                    <div className="hidden lg:block bg-black w-[1.5vw] h-[8vw] rotate-[0.5deg] rounded-[.25vw] absolute right-[-0.5vw] top-[15vw]">
                     </div>
 
-                    <div className="bg-gray-700 rounded-t-[1.5vw] h-[18vw] text-center leading-none">
-                        <div className="text-gray-300 text-[12vw]">
+                    <div className="bg-gray-700 rounded-t-[1.5vw] h-[160px] lg:h-[18vw] text-center leading-none">
+                        <div className="text-gray-300 text-8xl lg:text-[12vw]">
                             <PersonIcon fontSize="inherit" />
                         </div>
 
-                        <div className="text-white text-[2vw]">
+                        <div className="text-white text-2xl lg:text-[2vw]">
                             New Visitor
                         </div>
                     </div>
 
-                    <div className="text-white text-[1.5vw] rounded-[0.5vw] bg-gray-900 py-[1vw] px-[2vw] m-[1vw] flex justify-between">
+                    <div className="text-white lg:text-[1.5vw] rounded-[0.5vw] bg-gray-900 py-[1vw] px-[2vw] m-[1vw] flex justify-between">
                         <div>IP Address</div>
                         <div>{data.ip}</div>
                     </div>
 
-                    <div className="text-white text-[1.5vw] rounded-[0.5vw] bg-gray-900 py-[1vw] px-[2vw] m-[1vw] flex justify-between">
+                    <div className="text-white lg:text-[1.5vw] rounded-[0.5vw] bg-gray-900 py-[1vw] px-[2vw] m-[1vw] flex justify-between">
                         <div>Location</div>
-                        <div className="text-right">{data.city}, {data.region}</div>
+                        <div className="text-right">
+                            {data.city}<br />
+                            {data.region}
+                        </div>
                     </div>
 
-                    <div className="text-white text-[1.5vw] rounded-[0.5vw] bg-gray-900 py-[1vw] px-[2vw] m-[1vw] flex justify-between">
+                    <div className="text-white lg:text-[1.5vw] rounded-[0.5vw] bg-gray-900 py-[1vw] px-[2vw] m-[1vw] flex justify-between">
                         <div>Timezone</div>
                         <div>{data.timezone}</div>
                     </div>
 
-                    <div className="text-white text-[1.5vw] rounded-[0.5vw] bg-gray-900 py-[1vw] px-[2vw] m-[1vw] flex justify-between">
+                    <div className="text-white lg:text-[1.5vw] rounded-[0.5vw] bg-gray-900 py-[1vw] px-[2vw] m-[1vw] flex justify-between">
                         <div>Browser</div>
                         <div>{data.browser}</div>
                     </div>
 
-                    <div className="text-white text-[1.5vw] rounded-[0.5vw] bg-gray-900 py-[1vw] px-[2vw] m-[1vw] flex justify-between">
+                    <div className="text-white lg:text-[1.5vw] rounded-[0.5vw] bg-gray-900 py-[1vw] px-[2vw] m-[1vw] flex justify-between">
                         <div>OS</div>
                         <div>{data.os}</div>
                     </div>
                 </div>
             </div>
 
-            <div className="fixed top-0 z-[-1] w-full h-full bg-black/20"></div>
+            <div className="hidden lg:block fixed top-0 z-[-1] w-full h-full bg-black/20"></div>
 
-            <HomeBackground />
+            <div className="hidden lg:block">
+                <HomeBackground />
+            </div>
         </>
     );
 }
