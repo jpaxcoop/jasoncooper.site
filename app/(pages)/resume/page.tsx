@@ -1,6 +1,6 @@
 'use client';
 
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import IntroductionTab from "./IntroductionTab";
 import SkillsTechTab from "./SkillsTechTab";
 import ExperienceTab from "./ExperienceTab";
@@ -10,48 +10,35 @@ export default function ResumePage() {
     const tabs = ['Introduction', 'Recommendations', 'Skills / Tech', 'Experience'];
     const [activeTab, setActiveTab] = useState('Introduction');
 
-    useEffect(() => {
-        const original = document.body.style.backgroundColor;
-        document.body.style.backgroundColor = '#deaa87';
-
-        return () => {
-            document.body.style.backgroundColor = original;
-        };
-    }, []);
-
     return (
         <>
-            <div className="bg-white shadow-[16px_8px_0px_rgba(160,90,44,1)] max-w-4xl mx-auto my-16 p-4 lg:p-12 md:rotate-[-0.33deg] rotate-0 min-h-[90vw]">
-                <div className="flex justify-between items-baseline">
-                    <h1 className="text-[24px] md:text-[36px] font-heading uppercase tracking-widest mb-4 text-primary leading-tight">
-                        Jason Cooper
-                    </h1>
+            <div className="max-w-full xl:max-w-6xl mx-auto p-4 md:px-8">
+                <div className="flex flex-wrap md:flex-nowrap gap-8">
+                    <div className="w-full md:w-auto">
+                        <div className="p-2 bg-white/10 rounded-lg">
+                            {tabs.map((tab) => (
+                                <button
+                                    key={tab}
+                                    onClick={() => setActiveTab(tab)}
+                                    className={`px-4 py-2 text-sm font-heading font-medium ${
+                                    activeTab === tab
+                                        ? 'text-pink-600'
+                                        : 'hover:text-white'
+                                    }`}
+                                >
+                                    {tab}
+                                </button>
+                            ))}
+                        </div>
+                    </div>
 
-                    <h2 className="md:text-[24px] font-heading uppercase tracking-wider text-right leading-[.75]">
-                        Designer <span className="text-[28px] relative top-[1px] text-primary">&</span>&nbsp;Developer
-                    </h2>
+                    <div>
+                        {activeTab === 'Introduction' && <IntroductionTab />}
+                        {activeTab === 'Recommendations' && <RecommendationsTab />}
+                        {activeTab === 'Skills / Tech' && <SkillsTechTab />}
+                        {activeTab === 'Experience' && <ExperienceTab />}
+                    </div>
                 </div>
-
-                <div className="flex flex-wrap md:flex-nowrap">
-                    {tabs.map((tab) => (
-                        <button
-                            key={tab}
-                            onClick={() => setActiveTab(tab)}
-                            className={`px-4 py-2 text-sm font-heading font-medium ${
-                            activeTab === tab
-                                ? 'border-b-2 border-primary text-primary'
-                                : 'hover:text-pink-600'
-                            }`}
-                        >
-                            {tab}
-                        </button>
-                    ))}
-                </div>
-
-                {activeTab === 'Introduction' && <IntroductionTab />}
-                {activeTab === 'Recommendations' && <RecommendationsTab />}
-                {activeTab === 'Skills / Tech' && <SkillsTechTab />}
-                {activeTab === 'Experience' && <ExperienceTab />}
             </div>
         </>
     );

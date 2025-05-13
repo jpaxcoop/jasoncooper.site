@@ -4,7 +4,7 @@ import ChevronRightIcon from '@mui/icons-material/ChevronRight';
 export default function ExperienceTab() {
   return (
     <>
-      <div className="md:p-4 py-4">
+      <div className="md:px-4 pb-4">
         <h4 className="font-heading text-[16px] font-semibold">Senior UI Designer / Developer, Peerless Network</h4>
         <em>Sep 2018 - Apr 2025 · 6 yrs 8 mos</em>
 

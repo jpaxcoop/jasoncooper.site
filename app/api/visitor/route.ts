@@ -2,19 +2,23 @@ import { NextRequest, NextResponse } from 'next/server';
 import { UAParser } from 'ua-parser-js';
 
 export async function GET(req: NextRequest) {
-  const ip = req.headers.get('x-forwarded-for')?.split(',')[0] ?? 'Unknown';
-  const userAgent = req.headers.get('user-agent') ?? 'Unknown';
+  const WEATHER_API_KEY = process.env.NEXT_PUBLIC_OPENWEATHER_API_KEY;
 
-  const parser = new UAParser(userAgent);
-  const ua = parser.getResult();
+  const ip = req.headers.get('x-forwarded-for')?.split(',')[0] ?? null;
+  // const ip = '73.82.64.135';
+  const userAgent = req.headers.get('user-agent') ?? null;
+
+  const parser = userAgent ? new UAParser(userAgent) : null;
+  const parsedAgent = parser ? parser.getResult() : null;
 
   let locationData = null;
+  let weatherData = null;
 
-  if (ip !== 'Unknown') {
+  if (ip) {
     try {
       const res = await fetch(`https://ipapi.co/${ip}/json/`, {
         headers: {
-          'User-Agent': req.headers.get('user-agent') || 'Mozilla/5.0',
+          'User-Agent': userAgent || 'Mozilla/5.0',
           'Accept': 'application/json',
         },
       });
@@ -25,13 +29,49 @@ export async function GET(req: NextRequest) {
     }
   }
 
+  const city = locationData?.city;
+
+  if (city && WEATHER_API_KEY) {
+    const cityEncoded = encodeURIComponent(city);
+    const weatherUrl = `https://api.openweathermap.org/data/2.5/weather?q=${cityEncoded}&appid=${WEATHER_API_KEY}&units=imperial`;
+
+    try {
+      const weatherRes = await fetch(weatherUrl);
+      weatherData = await weatherRes.json();
+    } catch (error) {
+      console.error('Weather fetch failed:', error);
+    }
+  }
+
   return NextResponse.json({
     ip,
-    city: locationData?.city ?? null,
-    region: locationData?.region ?? null,
-    country: locationData?.country_name ?? null,
-    timezone: locationData?.timezone ?? null,
-    browser: ua.browser.name ?? 'Unknown',
-    os: ua.os.name ?? 'Unknown',
+    city: locationData?.city,
+    region: locationData?.region,
+    country: locationData?.country,
+    latitude: locationData?.latitude,
+    longitude: locationData?.longitude,
+    timezone: locationData?.timezone,
+    browser: parsedAgent?.browser.name,
+    os: parsedAgent?.os.name,
+    weather: weatherData ? {
+      main: weatherData.weather?.[0]?.main,
+      temp: weatherData.main?.temp,
+    } : null,
   });
+
+  // return NextResponse.json({
+  //   ip,
+  //   city: 'Peachtree Corners',
+  //   region: 'Georgia',
+  //   country: 'US',
+  //   latitude: 33.9733,
+  //   longitude:  -84.2231,
+  //   timezone: 'America/New_York',
+  //   browser: 'Chrome',
+  //   os: 'Windows',
+  //   weather: {
+  //     main: 'Clouds',
+  //     temp: 66,
+  //   },
+  // });
 }

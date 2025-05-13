@@ -1,9 +1,75 @@
 'use client';
 
-import Link from "next/link";
-import ChevronRightIcon from '@mui/icons-material/ChevronRight';
+import { useRouter } from "next/navigation";
+import Image from "next/image";
 
 export default function SkillsTechTab() {
+  const router = useRouter();
+
+  const projects = {
+		peerlessPortal: {
+			title: 'Peerless Portal',
+			imgSrc: '/peerless-portal.png',
+			linkHref: '/projects/peerless-portal',
+			description: 'I designed and developed the Peerless Portal, an ordering automation and provisioning platform for a telecommunications company.',
+		},
+		pgi: {
+			title: 'PGi',
+			imgSrc: '/pgi-landing-page.jpg',
+			linkHref: '/pgi-martech',
+			description: 'I built hundreds of landing pages and emails, and orchestrated dozens of campaigns for PGi. I was so efficient that I replaced two team members, and my more effective designs increased engagement measurably.',
+		},
+		hopeIndustrialSystems: {
+			title: 'Hope Industrial Systems',
+			imgSrc: '/hope-industrial-shopping.png',
+			linkHref: 'https://shop.hopeindustrial.com/19-industrial-rack-mount-monitor-and-touch-screen?product_power=AC&product_window=No%20Protective%20Window%20(non-touch)&product_bezel=Powder-Coat%20Carbon%20Steel',
+			description: 'I was hired to develop some temporary shopping pages while a full-scale ecommerce site was built. The "temporary" pages performed so well they are still in use years later.',
+		},
+		streamlineWealth: {
+			title: 'Streamline Wealth',
+			imgSrc: '/streamline-wealth.png',
+			linkHref: '/streamline-wealth',
+			description: 'I designed sales materials for a financial firm. My clean, attractive design communicated complex information clearly and made multi-page forms approachable.',
+		},
+		paxton: {
+			title: 'paxton',
+			imgSrc: '/paxton.png',
+			linkHref: 'https://jasonpaxtoncooper.com/paxton',
+			description: 'Paxton Cooper is my son. The hard work of getting him here fell upon my wife. I contributed by building this website to keep me organized and informed.',
+		},
+		veritivLeaderLink: {
+			title: 'Veritiv LeaderLink',
+			imgSrc: '/leaderlink-quick-links.jpg',
+			linkHref: '/projects/veritiv-leaderlink',
+			description: 'LeaderLink was one of several applications I designed for Veritiv, a multi-billion-dollar paper, packaging, and facility supplies distributor.',
+		},
+  };
+
+  const applicationDesignProjects = [
+    projects.peerlessPortal,
+    projects.veritivLeaderLink,
+    projects.paxton,
+  ];
+
+  const prototypingProjects = [
+    projects.peerlessPortal,
+  ];
+
+  const uxAndUIDesignProjects = [
+    projects.peerlessPortal,
+    projects.pgi,
+    projects.hopeIndustrialSystems,
+    projects.streamlineWealth,
+    projects.paxton,
+    projects.veritivLeaderLink,
+  ];
+
+  const applicationDevelopmentProjects = [
+    projects.peerlessPortal,
+    projects.pgi,
+    projects.hopeIndustrialSystems,
+  ];
+
   const scrollToSection = (anchorId: string) => {
     const section = document.getElementById(anchorId);
 
@@ -18,7 +84,7 @@ export default function SkillsTechTab() {
 
   return (
     <>
-      <div className="flex flex-wrap md:p-4 py-4">
+      <div className="flex flex-wrap mb-4">
         <button
           onClick={() => scrollToSection('application-design')}
           className="text-primary border py-1 px-3 hover:text-pink-600 rounded-md mr-2 mb-2"
@@ -69,217 +135,206 @@ export default function SkillsTechTab() {
         </button>
       </div>
 
-      <div id="application-design" className="flex flex-wrap md:flex-nowrap md:p-4 gap-4">
-        <div className="w-full md:w-3/4">
-          <h4 className="font-heading text-[18] font-semibold">Application Design</h4>
+      <div id="application-design" className="mb-4">
+        <h4 className="font-heading text-lg font-semibold mb-2">Application Design</h4>
+        
+        <div className="flex flex-wrap md:flex-nowrap gap-8">
+          <div className="w-full md:w-3/4">
 
-          <p className="mb-4">My journey into application design began over 15 years ago when I was hired to design a web-based print ordering application. The print side of the business did not last, but the application design did! I've designed dozens of B2B applications and websites, learning UX and UI best practices along the way.</p>
+            <p className="mb-4">My journey into application design began over 15 years ago when I was hired to design a web-based print ordering application. The print side of the business did not last, but the application design did! I've designed dozens of B2B applications and websites, learning UX and UI best practices along the way.</p>
 
-          <p className="mb-2">I often work directly with stakeholders to collect requirements and learn about the systems and processes the new application will integrate with. But it's always helpful to collaborate with a product manager, who can bring a great deal of content matter expertise.</p>
+            <p className="mb-2">I often work directly with stakeholders to collect requirements and learn about the systems and processes the new application will integrate with. But it's always helpful to collaborate with a product manager, who can bring a great deal of content matter expertise.</p>
 
-          <button
-            onClick={scrollToTop}
-            className="text-primary text-sm hover:text-pink-600"
-          >
-            Return to top
-          </button>
-        </div>
+            <button
+              onClick={scrollToTop}
+              className="text-gray-400 text-sm hover:text-pink-600"
+            >
+              Return to top
+            </button>
+          </div>
 
-        <div className="w-full md:w-1/4">
-          <div className="md:p-4 md:pt-0 md:border-l">
-            <h4 className="font-heading text-[14] font-medium uppercase mb-3">Projects</h4>
+          <div className="w-full md:w-1/4">
+            <h4 className="font-heading text-sm tracking-wider font-medium uppercase mb-3">Projects</h4>
 
-            <div className="mb-3">
-              <Link href="/projects/peerless-portal" className="text-primary hover:text-pink-600" target="_blank">
-                Peerless Portal
-                <ChevronRightIcon fontSize="small" />
-              </Link>
-            </div>
-
-            <div className="mb-3">
-              <Link href="/projects/alcon-toolbox" className="text-primary hover:text-pink-600" target="_blank">
-                Alcon Toolbox
-                <ChevronRightIcon fontSize="small" />
-              </Link>
-            </div>
-
-            <div className="mb-3">
-              <Link href="/projects/veritiv-leaderlink" className="text-primary hover:text-pink-600" target="_blank">
-                Veritiv LeaderLink
-                <ChevronRightIcon fontSize="small" />
-              </Link>
-            </div>
-
-            <div className="mb-3">
-              <Link href="/projects/aadvantage-cash" className="text-primary hover:text-pink-600" target="_blank">
-                AAdvantage Cash
-                <ChevronRightIcon fontSize="small" />
-              </Link>
+            <div className="flex flex-wrap justify-between">
+              {applicationDesignProjects.map((project, index) => {
+                return (
+                  <div key={index} className="w-[46%] mb-2">
+                    <div className="relative aspect-square rounded-lg overflow-hidden mb-2">
+                      <Image
+                        src={project.imgSrc}
+                        alt={project.title}
+                        fill
+                        className="object-cover hover:border-2 border-pink-500 hover:cursor-pointer"
+                        sizes="(max-width: 768px) 50vw, 25vw"
+                        title={project.title}
+                        onClick={() => router.push(project.linkHref)}
+                      />
+                    </div>
+                  </div>
+                );
+              })}
             </div>
           </div>
         </div>
       </div>
 
-      <div id="prototyping" className="flex flex-wrap md:flex-nowrap md:p-4 gap-4">
-        <div className="w-full md:w-3/4">
-          <h4 className="font-heading text-[18] font-semibold">Prototyping</h4>
+      <div id="prototyping" className="mb-4">
+        <h4 className="font-heading text-lg font-semibold mb-2">Prototyping</h4>
 
-          <p className="mb-2">I create prototypes to test early ideas and discover obstacles. Originally my prototypes were sketches done in <strong>Photoshop</strong>, then they graduated to <strong>HTML</strong> static files. Today, I can quickly spin up operational prototypes with a <strong>JavaScript</strong> framework and database. I've used <strong>Figma</strong> to present and share ideas, but I find it an unnecessary step when I can code something just as quickly.</p>
+        <div className="flex flex-wrap md:flex-nowrap gap-8">
+          <div className="w-full md:w-3/4">
 
-          <button
-            onClick={scrollToTop}
-            className="text-primary text-sm hover:text-pink-600"
-          >
-            Return to top
-          </button>
-        </div>
+            <p className="mb-2">I create prototypes to test early ideas and discover obstacles. Originally my prototypes were sketches done in <strong>Photoshop</strong>, then they graduated to <strong>HTML</strong> static files. Today, I can quickly spin up operational prototypes with a <strong>JavaScript</strong> framework and database. I've used <strong>Figma</strong> to present and share ideas, but I find it an unnecessary step when I can code something just as quickly.</p>
 
-        <div className="w-full md:w-1/4">
-          <div className="md:p-4 md:pt-0 md:border-l">
-            <h4 className="font-heading text-[14] font-medium uppercase mb-3">Projects</h4>
+            <button
+              onClick={scrollToTop}
+              className="text-gray-400 text-sm hover:text-pink-600"
+            >
+              Return to top
+            </button>
+          </div>
 
-            <div className="mb-3">
-              --
+          <div className="w-full md:w-1/4">
+            <h4 className="font-heading text-sm tracking-wide font-medium uppercase mb-3">Projects</h4>
+
+            <div className="flex flex-wrap justify-between">
+              {prototypingProjects.map((project, index) => {
+                return (
+                  <div key={index} className="w-[46%] mb-2">
+                    <div className="relative aspect-square rounded-lg overflow-hidden mb-2">
+                      <Image
+                        src={project.imgSrc}
+                        alt={project.title}
+                        fill
+                        className="object-cover hover:border-2 border-pink-500 hover:cursor-pointer"
+                        sizes="(max-width: 768px) 50vw, 25vw"
+                        title={project.title}
+                        onClick={() => router.push(project.linkHref)}
+                      />
+                    </div>
+                  </div>
+                );
+              })}
             </div>
           </div>
         </div>
       </div>
 
-      <div id="ux-and-ui-design" className="flex flex-wrap md:flex-nowrap md:p-4 py-4 gap-4">
-        <div className="w-full md:w-3/4">
-          <h4 className="font-heading text-[18] font-semibold">UX and UI Design</h4>
+      <div id="ux-and-ui-design" className="mb-4">
+        <h4 className="font-heading text-lg font-semibold mb-2">UX and UI Design</h4>
 
-          <p className="mb-4">I collect as much information about users as I can before designing the user experience. In my experience, much of it is anecdotal and the only hard data comes from CRM platforms or legacy applications. I would enjoy the chance to conduct user research, but to this point budget and time constraints have not allowed for it.</p>
+        <div className="flex flex-wrap md:flex-nowrap gap-8">
+          <div className="w-full md:w-3/4">
+            <p className="mb-4">I collect as much information about users as I can before designing the user experience. In my experience, much of it is anecdotal and the only hard data comes from CRM platforms or legacy applications. I would enjoy the chance to conduct user research, but to this point budget and time constraints have not allowed for it.</p>
 
-          <p className="mb-4">My work in the B2B space has taught me the ideal user experience is intuitive, fast, and risk-free (meaning the user can always go back, undo, or delete). The user interface is informed by that philosophy - the process and controls should be so obvious that the need for instruction or documentation is almost redundant (but should stil be present!).</p>
+            <p className="mb-4">My work in the B2B space has taught me the ideal user experience is intuitive, fast, and risk-free (meaning the user can always go back, undo, or delete). The user interface is informed by that philosophy - the process and controls should be so obvious that the need for instruction or documentation is almost redundant (but should stil be present!).</p>
 
-          <p className="mb-2">With my marketing background, I have an understanding (and appreciation) for brand identity and standards. I have a lot of experience applying a brand to all sorts of assets, including applications. I'm careful to make sure the UI design represents the brand without interfering with the connection between the user and the application.</p>
+            <p className="mb-2">With my marketing background, I have an understanding (and appreciation) for brand identity and standards. I have a lot of experience applying a brand to all sorts of assets, including applications. I'm careful to make sure the UI design represents the brand without interfering with the connection between the user and the application.</p>
 
-          <button
-            onClick={scrollToTop}
-            className="text-primary text-sm hover:text-pink-600"
-          >
-            Return to top
-          </button>
-        </div>
+            <button
+              onClick={scrollToTop}
+              className="text-gray-400 text-sm hover:text-pink-600"
+            >
+              Return to top
+            </button>
+          </div>
 
-        <div className="w-full md:w-1/4">
-          <div className="md:p-4 md:pt-0 md:border-l">
-            <h4 className="font-heading text-[14] font-medium uppercase mb-3">Projects</h4>
+          <div className="w-full md:w-1/4">
+            <h4 className="font-heading text-sm tracking-wide font-medium uppercase mb-3">Projects</h4>
 
-            <div className="mb-3">
-              <Link href="/projects/peerless-portal" className="text-primary hover:text-pink-600" target="_blank">
-                Peerless Portal
-                <ChevronRightIcon fontSize="small" />
-              </Link>
-            </div>
-
-            <div className="mb-3">
-              <Link href="/projects/alcon-toolbox" className="text-primary hover:text-pink-600" target="_blank">
-                Alcon Toolbox
-                <ChevronRightIcon fontSize="small" />
-              </Link>
-            </div>
-
-            <div className="mb-3">
-              <Link href="/projects/veritiv-leaderlink" className="text-primary hover:text-pink-600" target="_blank">
-                Veritiv LeaderLink
-                <ChevronRightIcon fontSize="small" />
-              </Link>
-            </div>
-
-            <div className="mb-3">
-              <Link href="/projects/aadvantage-cash" className="text-primary hover:text-pink-600" target="_blank">
-                AAdvantage Cash
-                <ChevronRightIcon fontSize="small" />
-              </Link>
+            <div className="flex flex-wrap justify-between">
+              {uxAndUIDesignProjects.map((project, index) => {
+                return (
+                  <div key={index} className="w-[46%] mb-2">
+                    <div className="relative aspect-square rounded-lg overflow-hidden mb-2">
+                      <Image
+                        src={project.imgSrc}
+                        alt={project.title}
+                        fill
+                        className="object-cover hover:border-2 border-pink-500 hover:cursor-pointer"
+                        sizes="(max-width: 768px) 50vw, 25vw"
+                        title={project.title}
+                        onClick={() => router.push(project.linkHref)}
+                      />
+                    </div>
+                  </div>
+                );
+              })}
             </div>
           </div>
         </div>
       </div>
 
-      <div id="application-development" className="flex flex-wrap md:flex-nowrap md:p-4 py-4 gap-4">
-        <div className="w-full md:w-3/4">
-          <h4 className="font-heading text-[18] font-semibold">Application Development</h4>
+      <div id="application-development" className="mb-4">
+        <h4 className="font-heading text-lg font-semibold mb-2">Application Development</h4>
 
-          <p className="mb-4">Today I am a <strong>JavaScript</strong> developer. For the last year or so, I've been focusing on <strong>React, especially with the Next.js framework</strong>. Prior to that, I worked with <strong>Vue.js and the Laravel PHP framework</strong> for several years. And prior to that, I was a big fan of the <strong>Bootstrap frontend framework with jQuery</strong>.</p>
+        <div className="flex flex-wrap md:flex-nowrap gap-8">
+          <div className="w-full md:w-3/4">
+            <p className="mb-4">Today I am a <strong>JavaScript</strong> developer. For the last year or so, I've been focusing on <strong>React, especially with the Next.js framework</strong>. Prior to that, I worked with <strong>Vue.js and the Laravel PHP framework</strong> for several years. And prior to that, I was a big fan of the <strong>Bootstrap frontend framework with jQuery</strong>.</p>
 
-          <p className="mb-2">As a team leader, I'm experienced in version control and Continuous Integration/Continuous Delivery. I've worked with <strong>GitHub Actions paired with Laravel Envoyer</strong> for deployment and <strong>BitBucket with Jenkins</strong>. For JavaScript tests I've worked with <strong>Cypress and Jest</strong>. For PHP I write <strong>phpunit</strong> tests.</p>
+            <p className="mb-2">As a team leader, I'm experienced in version control and Continuous Integration/Continuous Delivery. I've worked with <strong>GitHub Actions paired with Laravel Envoyer</strong> for deployment and <strong>BitBucket with Jenkins</strong>. For JavaScript tests I've worked with <strong>Cypress and Jest</strong>. For PHP I write <strong>phpunit</strong> tests.</p>
 
-          <button
-            onClick={scrollToTop}
-            className="text-primary text-sm hover:text-pink-600"
-          >
-            Return to top
-          </button>
-        </div>
+            <button
+              onClick={scrollToTop}
+              className="text-gray-400 text-sm hover:text-pink-600"
+            >
+              Return to top
+            </button>
+          </div>
 
-        <div className="w-full md:w-1/4">
-          <div className="md:p-4 md:pt-0 md:border-l">
-            <h4 className="font-heading text-[14] font-medium uppercase mb-3">Projects</h4>
+          <div className="w-full md:w-1/4">
+            <h4 className="font-heading text-sm tracking-wide font-medium uppercase mb-3">Projects</h4>
 
-            <div className="mb-3">
-              <Link href="/projects/peerless-portal" className="text-primary hover:text-pink-600" target="_blank">
-                Peerless Portal
-                <ChevronRightIcon fontSize="small" />
-              </Link>
-            </div>
-
-            <div className="mb-3">
-              <Link href="/projects/alcon-toolbox" className="text-primary hover:text-pink-600" target="_blank">
-                Alcon Toolbox
-                <ChevronRightIcon fontSize="small" />
-              </Link>
-            </div>
-
-            <div className="mb-3">
-              <Link href="/projects/veritiv-leaderlink" className="text-primary hover:text-pink-600" target="_blank">
-                Veritiv LeaderLink
-                <ChevronRightIcon fontSize="small" />
-              </Link>
-            </div>
-
-            <div className="mb-3">
-              <Link href="/projects/aadvantage-cash" className="text-primary hover:text-pink-600" target="_blank">
-                AAdvantage Cash
-                <ChevronRightIcon fontSize="small" />
-              </Link>
+            <div className="flex flex-wrap justify-between">
+              {applicationDevelopmentProjects.map((project, index) => {
+                return (
+                  <div key={index} className="w-[46%] mb-2">
+                    <div className="relative aspect-square rounded-lg overflow-hidden mb-2">
+                      <Image
+                        src={project.imgSrc}
+                        alt={project.title}
+                        fill
+                        className="object-cover hover:border-2 border-pink-500 hover:cursor-pointer"
+                        sizes="(max-width: 768px) 50vw, 25vw"
+                        title={project.title}
+                        onClick={() => router.push(project.linkHref)}
+                      />
+                    </div>
+                  </div>
+                );
+              })}
             </div>
           </div>
         </div>
       </div>
 
-      <div id="artificial-intelligence" className="flex flex-wrap md:flex-nowrap md:p-4 py-4 gap-4">
-        <div className="w-full md:w-3/4">
-          <h4 className="font-heading text-[18] font-semibold">Artificial Intelligence</h4>
+      <div id="artificial-intelligence" className="mb-4">
+        <h4 className="font-heading text-lg font-semibold mb-2">Artificial Intelligence</h4>
 
-          <p className="mb-4">I've come to an obvious realization: AI is the future (if not the present) of application development. An effective application developer uses an AI coding assistant constantly, and only writes code themselves to tweak, adjust, or test. I've spent the last several months learning the coding language of the future: AI prompts that deliver specific, accurate code. To this end I've used <strong>Copilot in VS Code</strong>, the <strong>Cursor IDE</strong>, and of course <strong>ChatGPT</strong>.</p>
+        <div className="flex flex-wrap md:flex-nowrap gap-8">
+          <div className="w-full md:w-3/4">
+            <p className="mb-4">I've come to an obvious realization: AI is the future (if not the present) of application development. An effective application developer uses an AI coding assistant constantly, and only writes code themselves to tweak, adjust, or test. I've spent the last several months learning the coding language of the future: AI prompts that deliver specific, accurate code. To this end I've used <strong>Copilot in VS Code</strong>, the <strong>Cursor IDE</strong>, and of course <strong>ChatGPT</strong>.</p>
 
-          <p className="mb-2">I've also experimented with the <strong>OpenAI API</strong> and <strong>AI image generation</strong>.</p>
+            <p className="mb-2">I've also experimented with the <strong>OpenAI API</strong> and <strong>AI image generation</strong>.</p>
 
-          <button
-            onClick={scrollToTop}
-            className="text-primary text-sm hover:text-pink-600"
-          >
-            Return to top
-          </button>
-        </div>
+            <button
+              onClick={scrollToTop}
+              className="text-gray-400 text-sm hover:text-pink-600"
+            >
+              Return to top
+            </button>
+          </div>
 
-        <div className="w-full md:w-1/4">
-          <div className="md:p-4 md:pt-0 md:border-l">
-            <h4 className="font-heading text-[14] font-medium uppercase mb-3">Projects</h4>
-
-            <div className="mb-3">
-              --
-            </div>
+          <div className="w-full md:w-1/4">
           </div>
         </div>
       </div>
 
-      <div id="languages" className="md:p-4 py-4">
-        <h4 className="font-heading text-[18] font-semibold">Languages and Frameworks</h4>
+      <div id="languages" className="mb-4">
+        <h4 className="font-heading text-lg font-semibold mb-2">Languages and Frameworks</h4>
 
-        <ul className="md:p-4 columns-4 mb-2">
+        <ul className="columns-4 mb-2 gap-4">
           <li>HTML</li>
           <li>CSS</li>
           <li>JavaScript</li>
@@ -296,16 +351,16 @@ export default function SkillsTechTab() {
 
         <button
           onClick={scrollToTop}
-          className="text-primary text-sm hover:text-pink-600"
+          className="text-gray-400 text-sm hover:text-pink-600"
         >
           Return to top
         </button>
       </div>
 
-      <div id="tools" className="md:p-4 py-4">
-        <h4 className="font-heading text-[18] font-semibold">Tools</h4>
+      <div id="tools" className="mb-4">
+        <h4 className="font-heading text-lg font-semibold mb-2">Tools</h4>
 
-        <ul className="md:p-4 columns-4 mb-2">
+        <ul className="columns-4 mb-2 gap-4">
           <li>Visual Studio Code</li>
           <li>Cursor IDE</li>
           <li>ChatGPT</li>
@@ -318,7 +373,7 @@ export default function SkillsTechTab() {
 
         <button
           onClick={scrollToTop}
-          className="text-primary text-sm hover:text-pink-600"
+          className="text-gray-400 text-sm hover:text-pink-600"
         >
           Return to top
         </button>

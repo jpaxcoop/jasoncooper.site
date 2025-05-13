@@ -1,40 +1,20 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-  --primary-color: #0ea5e9;
-}
-
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
+@theme {
+  --color-background: theme('colors.gray.900');
+  --color-foreground: theme('colors.gray.300');
   --font-sans: var(--font-sans);
   --font-heading: var(--font-heading);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    color: var(--foreground);
-  }
-}
-
 body {
-  background: var(--background);
-  color: var(--foreground);
+  color: var(--color-foreground);
   @apply font-sans; /* Use Nunito for body */
 }
 
 h1, h2, h3, h4, h5, h6 {
   @apply font-heading; /* Use Montserrat for headings */
-}
-
-.text-primary {
-  color: var(--primary-color);
-}
-
-.border-primary {
-  border-color: var(--primary-color);
+  color: theme('colors.gray.200');
 }
 
 @keyframes fadeIn {
@@ -63,54 +43,4 @@ h1, h2, h3, h4, h5, h6 {
 .animate-fadeOut {
   animation: fadeOut 1s ease-in forwards;
   animation-delay: 2s;
-}
-
-@keyframes cloudInitial {
-  0% {
-    transform: translateX(0vw);
-  }
-  100% {
-    transform: translateX(150vw);
-  }
-}
-
-.animate-cloud-initial {
-  animation-name: cloudInitial;
-  animation-timing-function: linear;
-  animation-fill-mode: forwards;
-}
-
-@keyframes cloudLoop {
-  0% {
-    transform: translateX(0vw); /* Start from the left (off-screen) */
-  }
-  100% {
-    transform: translateX(200vw); /* Move to the right (off-screen) */
-  }
-}
-
-.animate-cloud-loop {
-  animation-name: cloudLoop;
-  animation-timing-function: linear;
-  animation-iteration-count: infinite;
-}
-
-.zoom-animate-resume {
-  transform: scale(2) translate(-25%, -25%);
-  transform-origin: center;
-}
-
-.zoom-animate-projects {
-  transform: scale(2) translate(-25%, 15%);
-  transform-origin: center;
-}
-
-.zoom-animate-about-you {
-  transform: scale(4) translate(22%, 0%);
-  transform-origin: center;
-}
-
-.fade-out {
-  opacity: 0;
-  transition: opacity 0.1s ease;
 }

@@ -6,10 +6,10 @@ import ChevronRightIcon from '@mui/icons-material/ChevronRight';
 export default function IntroductionTab() {
 
   return (
-    <div className="flex flex-wrap md:flex-nowrap">
-      <div className="w-full md:w-3/4 md:p-4">
+    <div className="flex flex-wrap md:flex-nowrap gap-8">
+      <div className="w-full md:w-3/4">
         <p className="mb-4">
-            <span className="text-primary font-medium text-lg">Hello!</span> I'm a designer and developer looking for my next passion project. Do you have a web application that you need to constantly enhance with new features for your customers? Or maybe you have a vision where you're still working out the details? I can help in either case.
+            <span className="text-pink-500 font-medium text-lg">Hello!</span> I'm a designer and developer looking for my next passion project. Do you have a web application that you need to constantly enhance with new features for your customers? Or maybe you have a vision where you're still working out the details? I can help in either case.
         </p>
 
         <p className="mb-4">
@@ -24,31 +24,25 @@ export default function IntroductionTab() {
         </p>
       </div>
 
-      <div className="w-full md:w-1/4 md:p-4">
-        <div className="mb-3">
-          <Link href="mailto:jasonpaxtoncooper@gmail.com" className="text-primary hover:text-pink-600">
-            Email Jason
+      <div className="w-full md:w-1/4">
+        <Link href="mailto:jasonpaxtoncooper@gmail.com" className="block mb-3 border-1 rounded-lg p-2 hover:border-pink-500 hover:text-pink-600">
+          Email Jason
+          <ChevronRightIcon fontSize="small" />
+        </Link>
+
+        <Link href="https://www.linkedin.com/in/jasonpaxtoncooper" target="_blank" className="block mb-3 border-1 rounded-lg p-2 hover:border-pink-500 hover:text-pink-600">
+          <div>
+            Connect on LinkedIn
             <ChevronRightIcon fontSize="small" />
-          </Link>
-        </div>
+          </div>
+        </Link>
 
-        <div className="mb-3">
-          <Link href="https://www.linkedin.com/in/jasonpaxtoncooper" target="_blank" className="text-primary hover:text-pink-600">
-            <div>
-              Connect on LinkedIn
-              <ChevronRightIcon fontSize="small" />
-            </div>
-          </Link>
-        </div>
-
-        <div className="mb-4">
-          <Link href="/jason-cooper-resume.pdf" target="_blank" className="text-primary hover:text-pink-600">
-            <div>
-              Download as PDF
-              <ChevronRightIcon fontSize="small" />
-            </div>
-          </Link>
-        </div>
+        <Link href="/jason-cooper-resume.pdf" target="_blank" className="block mb-3 border-1 rounded-lg p-2 hover:border-pink-500 hover:text-pink-600">
+          <div>
+            Download as PDF
+            <ChevronRightIcon fontSize="small" />
+          </div>
+        </Link>
       </div>
     </div>
   );

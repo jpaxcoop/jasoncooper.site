@@ -1,18 +1,31 @@
 'use client';
 
-import HomeBackground from "@/components/HomeBackground";
-import PersonIcon from "@mui/icons-material/Person";
-import Image from "next/image";
+import TimeDisplay from "@/components/TimeDisplay";
 import { useEffect, useState } from "react";
+import dynamic from 'next/dynamic';
+import Stage from "@/components/Stage";
+import SkyAndGround from "@/components/SkyAndGround";
+
+const MapView = dynamic(() => import('@/components/MapView'), {
+    ssr: false,
+});
+
+type WeatherData = {
+    temp: number | undefined;
+    main: string;
+};
 
 type VisitorData = {
     ip: string;
     city: string | null;
     region: string | null;
     country: string | null;
-    timezone: string | null;
-    browser: string;
-    os: string;
+    latitude: number;
+    longitude: number;
+    timezone: string | undefined;
+    browser: string | null;
+    os: string | null;
+    weather: WeatherData | null;
 };
 
 export default function AboutYouPage() {
@@ -24,104 +37,64 @@ export default function AboutYouPage() {
           .then(setData);
     }, []);
 
-    useEffect(() => {
-        if (!data) return;
-
-        const aboutYouContainer = document.getElementById('about-you-container');
-
-        const updateHeight = () => {
-            if (aboutYouContainer) {
-              const viewportHeight = window.innerHeight;
-              const docHeight = Math.max(
-                document.body.scrollHeight,
-              );
-              const maxHeight = Math.max(viewportHeight, docHeight);
-              console.log(maxHeight);
-              aboutYouContainer.style.height = `${maxHeight}px`;
-            }
-          };
-        
-        updateHeight(); // set initially
-        window.addEventListener('resize', updateHeight);
-    
-        return () => window.removeEventListener('resize', updateHeight);
-    }, [data]);
-
     if (!data) return (
-        <>
-        </>
+        <div className="relative">
+            <Stage className="absolute top-0 w-full h-[80vh]"></Stage>
+        </div>
     );
 
     return (
         <>
-            <div id="about-you-container" className="relative pl-0 lg:pl-[5vw] pt-16 pb-8">
-                <div
-                    className="absolute inset-0 w-full bottom-0 overflow-hidden"
-                >
-                    <Image
-                        src="/hand-holding.svg"
-                        className="hidden lg:block"
-                        alt=""
-                        width={0}
-                        height={0}
-                        style={{position: 'absolute', width: '74vw', height: 'auto', top: '18vw', left: '.5vw'}}
-                    />
-                </div>
+            <div className="relative">
+                <div className="max-w-full xl:max-w-6xl mx-auto p-4 md:px-8 opacity-0 animate-fadeIn">
+                    <div className="flex flex-wrap md:flex-nowrap justify-between">
+                        <div className="w-full md:w-sm text-white text-shadow-lg">
+                            <div className="bg-black/25 rounded-lg p-4 mb-4">
+                                <div className="flex justify-between gap-4 mb-1">
+                                    <div className="font-bold tracking-wide">IP Address</div>
+                                    <div>{data.ip}</div>
+                                </div>
 
-                <div className="bg-black w-full h-full lg:w-[32vw] lg:h-[60vw] p-4 lg:p-[1vw] rotate-0 lg:rotate-[0.5deg] lg:rounded-[3vw]">
-                    <div className="hidden lg:block bg-black w-[1.5vw] h-[5vw] rotate-[0.5deg] rounded-[.25vw] absolute left-[-0.5vw] top-[13vw]">
-                    </div>
+                                <div className="flex justify-between gap-4 mb-1">
+                                    <div className="font-bold tracking-wide">Browser</div>
+                                    <div>{data.browser}</div>
+                                </div>
 
-                    <div className="hidden lg:block bg-black w-[1.5vw] h-[5vw] rotate-[0.5deg] rounded-[.25vw] absolute left-[-0.5vw] top-[18vw]">
-                    </div>
+                                <div className="flex justify-between gap-4">
+                                    <div className="font-bold tracking-wide">OS</div>
+                                    <div>{data.os}</div>
+                                </div>
+                            </div>
 
-                    <div className="hidden lg:block bg-black w-[1.5vw] h-[8vw] rotate-[0.5deg] rounded-[.25vw] absolute right-[-0.5vw] top-[15vw]">
-                    </div>
+                            <div className="bg-black/25 rounded-lg p-4 mb-4">
+                                <div className="flex justify-between gap-4">
+                                    <div className="font-bold tracking-wide">Location</div>
+                                    <div className="text-right">
+                                        {data.city}, {data.region}
+                                    </div>
+                                </div>
+                            </div>
 
-                    <div className="bg-gray-700 rounded-t-[1.5vw] h-[160px] lg:h-[18vw] text-center leading-none">
-                        <div className="text-gray-300 text-8xl lg:text-[12vw]">
-                            <PersonIcon fontSize="inherit" />
+                            <div className="bg-black/25 rounded-lg overflow-hidden mb-4">
+                                <MapView lat={data.latitude} lng={data.longitude} height={240} zoom={10} />
+                            </div>
                         </div>
 
-                        <div className="text-white text-2xl lg:text-[2vw]">
-                            New Visitor
+                        <div className="w-full text-center md:text-right text-white text-shadow-lg">
+                            <div className="text-3xl">
+                                {Math.round(data.weather?.temp ?? 0)}&deg; F / {data.weather?.main}
+                            </div>
+
+                            <div className="text-lg">
+                                <TimeDisplay timezone={data.timezone ?? ''} />
+                            </div>
                         </div>
-                    </div>
-
-                    <div className="text-white lg:text-[1.5vw] rounded-[0.5vw] bg-gray-900 py-[1vw] px-[2vw] m-[1vw] flex justify-between">
-                        <div>IP Address</div>
-                        <div>{data.ip}</div>
-                    </div>
-
-                    <div className="text-white lg:text-[1.5vw] rounded-[0.5vw] bg-gray-900 py-[1vw] px-[2vw] m-[1vw] flex justify-between">
-                        <div>Location</div>
-                        <div className="text-right">
-                            {data.city}<br />
-                            {data.region}
-                        </div>
-                    </div>
-
-                    <div className="text-white lg:text-[1.5vw] rounded-[0.5vw] bg-gray-900 py-[1vw] px-[2vw] m-[1vw] flex justify-between">
-                        <div>Timezone</div>
-                        <div>{data.timezone}</div>
-                    </div>
-
-                    <div className="text-white lg:text-[1.5vw] rounded-[0.5vw] bg-gray-900 py-[1vw] px-[2vw] m-[1vw] flex justify-between">
-                        <div>Browser</div>
-                        <div>{data.browser}</div>
-                    </div>
-
-                    <div className="text-white lg:text-[1.5vw] rounded-[0.5vw] bg-gray-900 py-[1vw] px-[2vw] m-[1vw] flex justify-between">
-                        <div>OS</div>
-                        <div>{data.os}</div>
                     </div>
                 </div>
             </div>
 
-            <div className="hidden lg:block fixed top-0 z-[-1] w-full h-full bg-black/20"></div>
-
-            <div className="hidden lg:block">
-                <HomeBackground />
+            <div className="absolute top-0 w-full h-[80vh] z-[-10]">
+                <SkyAndGround data={data}></SkyAndGround>
             </div>
         </>
     );

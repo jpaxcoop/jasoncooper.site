@@ -14,12 +14,8 @@ export default function PeerlessPortalPage() {
     }, []);
 
     return (
-        <div className="mx-auto my-16 px-4 text-white">
-            <h1 className="font-heading font-semibold text-xl mb-4">
-                Peerless Portal
-            </h1>
-
-            <div className="flex flex-wrap lg:flex-nowrap gap-4 mb-8">
+        <div className="max-w-full xl:max-w-6xl mx-auto p-4 md:px-8">
+            <div className="flex flex-wrap lg:flex-nowrap gap-8 mb-8">
                 <div className="w-full lg:w-2/3">
                     <div className="relative rounded-lg overflow-hidden">
                         <Image
@@ -33,6 +29,8 @@ export default function PeerlessPortalPage() {
                 </div>
 
                 <div className="w-full lg:w-1/3">
+                    <h1 className="font-heading font-semibold text-2xl mb-2">Peerless Portal</h1>
+
                     <p className="mb-4">I led the design and development of the Peerless Portal, a customer-facing order automation platform. I started with a blank canvas and had the platform deployed in production with customers in 3 months.</p>
 
                     <p className="mb-4">Adoption increased from there. In the first year, Peerless Network required that all but the largest enterprise customers be serviced through the Peerless Portal. My team grew to 5 team members dedicated to the Portal project.</p>
