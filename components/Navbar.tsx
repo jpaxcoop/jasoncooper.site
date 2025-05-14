@@ -15,7 +15,7 @@ export default function Navbar() {
   ];
 
   return (
-    <nav className="opacity-0 animate-fadeIn delay-300">
+    <nav className="opacity-0 animate-fadeIn delay-300 px-4">
       <ul className="flex flex-wrap sm:flex-nowrap justify-center space-x-6">
       {navItems.map(({ href, label }) => {
           const isActive = pathname === href;
