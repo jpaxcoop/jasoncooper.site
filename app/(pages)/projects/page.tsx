@@ -17,7 +17,7 @@ export default function ProjectsPage() {
 		{
 			title: 'PGi',
 			imgSrc: '/pgi-landing-page.jpg',
-			linkHref: '/pgi-martech',
+			linkHref: '/projects/pgi',
 			description: 'I built hundreds of landing pages and emails, and orchestrated dozens of campaigns for PGi. I was so efficient that I replaced two team members, and my more effective designs increased engagement measurably.',
 		},
 		{
@@ -29,7 +29,7 @@ export default function ProjectsPage() {
 		{
 			title: 'Streamline Wealth',
 			imgSrc: '/streamline-wealth.png',
-			linkHref: '/streamline-wealth',
+			linkHref: '/projects/streamline-wealth',
 			description: 'I designed sales materials for a financial firm. My clean, attractive design communicated complex information clearly and made multi-page forms approachable.',
 		},
 		{

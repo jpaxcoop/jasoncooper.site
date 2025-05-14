@@ -40,9 +40,9 @@ export default function PeerlessPortalPage() {
             <div className="flex flex-wrap lg:flex-nowrap gap-8 mb-4">
                 <div className="w-full lg:w-1/2 flex flex-wrap md:flex-nowrap gap-4 mb-4">
                     <div className="w-full md:w-1/2">
-                        <div className="relative rounded-lg overflow-hidden">
+                        <div className="relative aspect-video rounded-lg overflow-hidden">
                             <Image
-                                src="/peerless-portal-chart.png"
+                                src="/peerless-portal-flowchart.png"
                                 alt="Peerless Portal"
                                 width={800}
                                 height={450}
@@ -58,9 +58,9 @@ export default function PeerlessPortalPage() {
 
                 <div className="w-full lg:w-1/2 flex flex-wrap md:flex-nowrap gap-4 mb-4">
                     <div className="w-full md:w-1/2">
-                        <div className="relative rounded-lg overflow-hidden">
+                        <div className="relative aspect-video rounded-lg overflow-hidden">
                             <Image
-                                src="/peerless-portal-flowchart.png"
+                                src="/peerless-portal-chart.png"
                                 alt="Peerless Portal"
                                 width={800}
                                 height={450}
