@@ -33,7 +33,7 @@ export default function ExperienceTab() {
     </div>
 
     <div className="md:p-4 py-4">
-      <h4 className="font-heading text-[16px] font-semibold">Systems Development, Dynamic Marketign Systems (now Truelio)</h4>
+      <h4 className="font-heading text-[16px] font-semibold">Systems Development, Dynamic Marketing Systems (now Truelio)</h4>
       <em>May 2004 - Oct 2015 · 11 yrs 6 mos</em>
 
       <p className="mb-4">For more than 10 years, I worked at the B2B marketing services firm Dynamic Marketing Systems. I started as a designer and implementer of print ordering and automation systems. I grew into an automator of all kinds of marketing - from print to email nurturing to sales support.</p>
