@@ -12,7 +12,6 @@ export default function HomePage() {
           height={1080}
           layout="responsive"
         />
-        {/* <div className="mx-auto transform -translate-x-1/2 -translate-y-0 w-18 h-8 scale-x-600 rounded-full bg-gray-800/75 blur-md pointer-events-none"></div> */}
       </div>
     </>
   );
