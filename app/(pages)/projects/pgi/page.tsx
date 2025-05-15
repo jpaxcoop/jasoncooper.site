@@ -1,18 +1,6 @@
-'use client';
-
 import Image from "next/image";
-import { useEffect } from "react";
 
 export default function PgiPage() {
-    useEffect(() => {
-        const original = document.body.style.backgroundColor;
-        document.body.style.backgroundColor = '#111';
-
-        return () => {
-            document.body.style.backgroundColor = original;
-        };
-    }, []);
-
     return (
         <div className="max-w-full xl:max-w-6xl mx-auto p-4 md:px-8">
             <div className="flex flex-wrap lg:flex-nowrap gap-8 mb-8">

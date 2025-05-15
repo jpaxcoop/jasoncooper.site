@@ -1,18 +1,6 @@
-'use client';
-
 import Image from "next/image";
-import { useEffect } from "react";
 
 export default function PeerlessPortalPage() {
-    useEffect(() => {
-        const original = document.body.style.backgroundColor;
-        document.body.style.backgroundColor = '#111';
-
-        return () => {
-            document.body.style.backgroundColor = original;
-        };
-    }, []);
-
     return (
         <div className="max-w-full xl:max-w-6xl mx-auto p-4 md:px-8">
             <div className="flex flex-wrap lg:flex-nowrap gap-8 mb-8">
@@ -52,7 +40,7 @@ export default function PeerlessPortalPage() {
                     </div>
 
                     <div className="w-full md:w-1/2">
-                        <p className="mb-4">I wore the hats of team lead, designer, and developer. I worked closely with the voice product team, the customer account management leadership, and technical support to add features to support business units across the company.</p>
+                        <p className="mb-4">I wore the hats of team lead, designer, and developer. I worked closely with the voice product team, the customer account management leadership, and technical support to design features to support business units across the company.</p>
                     </div>
                 </div>
 
