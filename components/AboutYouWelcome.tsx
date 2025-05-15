@@ -6,8 +6,8 @@ type Props = {
   
   export default function AboutYouWelcome({ onDismiss }: Props) {
     return (
-        <Stage className="absolute top-0 w-full h-[80vh] text-center pointer-events-none">
-            <div className="absolute top-1/2 left-1/2 transform -translate-y-1/2 -translate-x-1/2 w-full md:max-w-xl p-4 pointer-events-auto">
+        <>
+            <div className="w-full mx-auto md:max-w-xl p-4 text-center">
                 <h2 className="text-2xl font-bold mb-4">Enough About Me - What About&nbsp;You?</h2>
                 <p className="mb-4">When you visit a website, your web browser provides your IP address, browser version, and OS. On this page, I've used your IP address to approximate your geolocation, and then used that to check your timezone and weather. Finally, I've used this data to illustrate the sky near you.</p>
 
@@ -18,7 +18,9 @@ type Props = {
                     Learn About You
                 </button>
             </div>
-        </Stage>
+            <Stage className="absolute z-[-1] top-0 w-full h-[80vh] pointer-events-none">
+            </Stage>
+        </>
     );
   }
   
