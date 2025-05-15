@@ -2,48 +2,13 @@
 
 import { useRouter } from "next/navigation";
 import Image from "next/image";
+import { thumbs } from "@/data/thumb";
+import { handleThumbClick } from "@/utlis/thumb-utils";
 
 export default function SkillsTechTab() {
   const router = useRouter();
 
-  const projects = {
-		peerlessPortal: {
-			title: 'Peerless Portal',
-			imgSrc: '/peerless-portal.png',
-			linkHref: '/projects/peerless-portal',
-			description: 'I designed and developed the Peerless Portal, an ordering automation and provisioning platform for a telecommunications company.',
-		},
-		pgi: {
-			title: 'PGi',
-			imgSrc: '/pgi-landing-page.jpg',
-			linkHref: '/pgi-martech',
-			description: 'I built hundreds of landing pages and emails, and orchestrated dozens of campaigns for PGi. I was so efficient that I replaced two team members, and my more effective designs increased engagement measurably.',
-		},
-		hopeIndustrialSystems: {
-			title: 'Hope Industrial Systems',
-			imgSrc: '/hope-industrial-shopping.png',
-			linkHref: 'https://shop.hopeindustrial.com/19-industrial-rack-mount-monitor-and-touch-screen?product_power=AC&product_window=No%20Protective%20Window%20(non-touch)&product_bezel=Powder-Coat%20Carbon%20Steel',
-			description: 'I was hired to develop some temporary shopping pages while a full-scale ecommerce site was built. The "temporary" pages performed so well they are still in use years later.',
-		},
-		streamlineWealth: {
-			title: 'Streamline Wealth',
-			imgSrc: '/streamline-wealth.png',
-			linkHref: '/streamline-wealth',
-			description: 'I designed sales materials for a financial firm. My clean, attractive design communicated complex information clearly and made multi-page forms approachable.',
-		},
-		paxton: {
-			title: 'paxton',
-			imgSrc: '/paxton.png',
-			linkHref: 'https://jasonpaxtoncooper.com/paxton',
-			description: 'Paxton Cooper is my son. The hard work of getting him here fell upon my wife. I contributed by building this website to keep me organized and informed.',
-		},
-		veritivLeaderLink: {
-			title: 'Veritiv LeaderLink',
-			imgSrc: '/leaderlink-quick-links.jpg',
-			linkHref: '/projects/veritiv-leaderlink',
-			description: 'LeaderLink was one of several applications I designed for Veritiv, a multi-billion-dollar paper, packaging, and facility supplies distributor.',
-		},
-  };
+  const projects = thumbs;
 
   const applicationDesignProjects = [
     projects.peerlessPortal,
@@ -168,7 +133,7 @@ export default function SkillsTechTab() {
                         className="object-cover hover:border-2 border-pink-500 hover:cursor-pointer"
                         sizes="(max-width: 768px) 50vw, 25vw"
                         title={project.title}
-                        onClick={() => router.push(project.linkHref)}
+                        onClick={() => handleThumbClick(project, router)}
                       />
                     </div>
                   </div>
@@ -210,7 +175,7 @@ export default function SkillsTechTab() {
                         className="object-cover hover:border-2 border-pink-500 hover:cursor-pointer"
                         sizes="(max-width: 768px) 50vw, 25vw"
                         title={project.title}
-                        onClick={() => router.push(project.linkHref)}
+                        onClick={() => handleThumbClick(project, router)}
                       />
                     </div>
                   </div>
@@ -255,7 +220,7 @@ export default function SkillsTechTab() {
                         className="object-cover hover:border-2 border-pink-500 hover:cursor-pointer"
                         sizes="(max-width: 768px) 50vw, 25vw"
                         title={project.title}
-                        onClick={() => router.push(project.linkHref)}
+                        onClick={() => handleThumbClick(project, router)}
                       />
                     </div>
                   </div>
@@ -298,7 +263,7 @@ export default function SkillsTechTab() {
                         className="object-cover hover:border-2 border-pink-500 hover:cursor-pointer"
                         sizes="(max-width: 768px) 50vw, 25vw"
                         title={project.title}
-                        onClick={() => router.push(project.linkHref)}
+                        onClick={() => handleThumbClick(project, router)}
                       />
                     </div>
                   </div>

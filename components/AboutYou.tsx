@@ -1,31 +1,14 @@
 import dynamic from "next/dynamic";
 import SkyAndGround from "./SkyAndGround";
 import TimeDisplay from "./TimeDisplay";
+import { Visitor } from "@/types/about-you";
 
 const MapView = dynamic(() => import('@/components/MapView'), {
     ssr: false,
 });
 
-type WeatherData = {
-    temp: number | undefined;
-    main: string;
-};
-
-type AboutYouData = {
-    ip: string;
-    city: string | null;
-    region: string | null;
-    country: string | null;
-    latitude: number;
-    longitude: number;
-    timezone: string | undefined;
-    browser: string | null;
-    os: string | null;
-    weather: WeatherData | null;
-};
-
 type Props = {
-    data: AboutYouData;
+    data: Visitor;
   };
   
   export default function AboutYouData({ data }: Props) {
