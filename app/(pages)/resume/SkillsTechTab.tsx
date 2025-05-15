@@ -303,6 +303,7 @@ export default function SkillsTechTab() {
           <li>HTML</li>
           <li>CSS</li>
           <li>JavaScript</li>
+          <li>Typescript</li>
           <li>PHP</li>
           <li>Vue</li>
           <li>React</li>
