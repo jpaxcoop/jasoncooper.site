@@ -79,7 +79,7 @@ export default function AboutMePage() {
                 title={findAboutBlockById(1)?.title ?? ''}
                 width={737}
                 height={818}
-                className="absolute w-[23%] aspect-square rounded-xl shadow-sm border-4 border-white left-1/2 top-[6%] transform -translate-x-1/2 hover:cursor-pointer opacity-0 animate-[fadeIn_0.5s_ease-in-out_0.1s_forwards]"
+                className="absolute w-[23%] aspect-square rounded-xl shadow-sm border-4 border-white left-1/2 top-[6%] transform -translate-x-1/2 hover:cursor-pointer opacity-0 animate-[fadeIn_0.5s_ease-in-out_0.1s_forwards] transition-transform duration-300 transform hover:scale-110 origin-center"
                 onClick={() => setActiveId(1)}
             />
 
@@ -89,7 +89,7 @@ export default function AboutMePage() {
                 title={findAboutBlockById(2)?.title ?? ''}
                 width={737}
                 height={818}
-                className="absolute w-[23%] aspect-square rounded-xl shadow-sm border-4 border-white top-[12%] right-[12%] hover:cursor-pointer opacity-0 animate-[fadeIn_0.5s_ease-in-out_0.2s_forwards]"
+                className="absolute w-[23%] aspect-square rounded-xl shadow-sm border-4 border-white top-[12%] right-[12%] hover:cursor-pointer opacity-0 animate-[fadeIn_0.5s_ease-in-out_0.2s_forwards] transition-transform duration-300 transform hover:scale-110 origin-center"
                 onClick={() => setActiveId(2)}
             />
 
@@ -99,7 +99,7 @@ export default function AboutMePage() {
                 title={findAboutBlockById(3)?.title ?? ''}
                 width={737}
                 height={818}
-                className="absolute w-[23%] aspect-square rounded-xl shadow-sm border-4 border-white top-1/2 transform -translate-y-1/2 right-[6%] hover:cursor-pointer opacity-0 animate-[fadeIn_0.5s_ease-in-out_0.3s_forwards]"
+                className="absolute w-[23%] aspect-square rounded-xl shadow-sm border-4 border-white top-1/2 transform -translate-y-1/2 right-[6%] hover:cursor-pointer opacity-0 animate-[fadeIn_0.5s_ease-in-out_0.3s_forwards] transition-transform duration-300 transform hover:scale-110 origin-center"
                 onClick={() => setActiveId(3)}
             />
 
@@ -109,7 +109,7 @@ export default function AboutMePage() {
                 title={findAboutBlockById(4)?.title ?? ''}
                 width={737}
                 height={818}
-                className="absolute w-[23%] aspect-square rounded-xl shadow-sm border-4 border-white bottom-[12%] right-[12%] hover:cursor-pointer opacity-0 animate-[fadeIn_0.5s_ease-in-out_0.4s_forwards]"
+                className="absolute w-[23%] aspect-square rounded-xl shadow-sm border-4 border-white bottom-[12%] right-[12%] hover:cursor-pointer opacity-0 animate-[fadeIn_0.5s_ease-in-out_0.4s_forwards] transition-transform duration-300 transform hover:scale-110 origin-center"
                 onClick={() => setActiveId(4)}
             />
 
@@ -119,7 +119,7 @@ export default function AboutMePage() {
                 title={findAboutBlockById(5)?.title ?? ''}
                 width={737}
                 height={818}
-                className="absolute w-[23%] aspect-square rounded-xl shadow-sm border-4 border-white left-1/2 bottom-[6%] transform -translate-x-1/2 hover:cursor-pointer opacity-0 animate-[fadeIn_0.5s_ease-in-out_0.5s_forwards]"
+                className="absolute w-[23%] aspect-square rounded-xl shadow-sm border-4 border-white left-1/2 bottom-[6%] transform -translate-x-1/2 hover:cursor-pointer opacity-0 animate-[fadeIn_0.5s_ease-in-out_0.5s_forwards] transition-transform duration-300 transform hover:scale-110 origin-center"
                 onClick={() => setActiveId(5)}
             />
 
@@ -129,7 +129,7 @@ export default function AboutMePage() {
                 title={findAboutBlockById(6)?.title ?? ''}
                 width={737}
                 height={818}
-                className="absolute w-[23%] aspect-square rounded-xl shadow-sm border-4 border-white bottom-[12%] left-[12%] hover:cursor-pointer opacity-0 animate-[fadeIn_0.5s_ease-in-out_0.6s_forwards]"
+                className="absolute w-[23%] aspect-square rounded-xl shadow-sm border-4 border-white bottom-[12%] left-[12%] hover:cursor-pointer opacity-0 animate-[fadeIn_0.5s_ease-in-out_0.6s_forwards] transition-transform duration-300 transform hover:scale-110 origin-center"
                 onClick={() => setActiveId(6)}
             />
 
@@ -139,7 +139,7 @@ export default function AboutMePage() {
                 title={findAboutBlockById(7)?.title ?? ''}
                 width={737}
                 height={818}
-                className="absolute w-[23%] aspect-square rounded-xl shadow-sm border-4 border-white top-1/2 transform -translate-y-1/2 left-[6%] hover:cursor-pointer opacity-0 animate-[fadeIn_0.5s_ease-in-out_0.7s_forwards]"
+                className="absolute w-[23%] aspect-square rounded-xl shadow-sm border-4 border-white top-1/2 transform -translate-y-1/2 left-[6%] hover:cursor-pointer opacity-0 animate-[fadeIn_0.5s_ease-in-out_0.7s_forwards] transition-transform duration-300 transform hover:scale-110 origin-center"
                 onClick={() => setActiveId(7)}
             />
             
@@ -149,7 +149,7 @@ export default function AboutMePage() {
                 title={findAboutBlockById(8)?.title ?? ''}
                 width={737}
                 height={818}
-                className="absolute w-[23%] aspect-square rounded-xl shadow-sm border-4 border-white top-[12%] left-[12%] hover:cursor-pointer opacity-0 opacity-0 animate-[fadeIn_0.5s_ease-in-out_0.8s_forwards]"
+                className="absolute w-[23%] aspect-square rounded-xl shadow-sm border-4 border-white top-[12%] left-[12%] hover:cursor-pointer opacity-0 opacity-0 animate-[fadeIn_0.5s_ease-in-out_0.8s_forwards] transition-transform duration-300 transform hover:scale-110 origin-center"
                 onClick={() => setActiveId(8)}
             />
 
