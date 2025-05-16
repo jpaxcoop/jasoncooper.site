@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="47.996246mm"
+   height="16.004208mm"
+   viewBox="0 0 47.996246 16.004208"
+   version="1.1"
+   id="svg1"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs1" />
+  <g
+     id="layer1"
+     transform="translate(-157.95626,-220.6625)">
+    <g
+       id="layer6"
+       transform="matrix(0.26458333,0,0,0.26458333,-74.8919,70.65268)">
+      <rect
+         style="display:inline;fill:#16502d;fill-opacity:1;stroke:#333333;stroke-width:0;stroke-dasharray:none;stroke-opacity:1"
+         id="rect151-2-8-6-8"
+         width="7.7383742"
+         height="172.74779"
+         x="269.4613"
+         y="-1197.1001"
+         transform="rotate(107.63773)" />
+      <ellipse
+         style="display:inline;fill:#ececec;fill-opacity:1;stroke:#333333;stroke-width:0;stroke-dasharray:none;stroke-opacity:1"
+         id="path151-3-5-8-0"
+         cx="273.32993"
+         cy="-1196.6376"
+         rx="3.8690264"
+         ry="1.3423153"
+         transform="rotate(107.63773)" />
+      <rect
+         style="display:inline;fill:#ececec;fill-opacity:1;stroke:#333333;stroke-width:0;stroke-dasharray:none;stroke-opacity:1"
+         id="rect151-2-2-9"
+         width="7.7383742"
+         height="2.2241135"
+         x="269.46146"
+         y="1196.5598"
+         transform="matrix(-0.30299751,0.95299135,0.95299135,0.30299751,0,0)" />
+      <ellipse
+         style="display:inline;fill:#f2f2f2;fill-opacity:1;stroke:#333333;stroke-width:0;stroke-dasharray:none;stroke-opacity:1"
+         id="path151-3-3-0"
+         cx="273.32993"
+         cy="-1198.901"
+         rx="3.8690264"
+         ry="1.3423153"
+         transform="rotate(107.63773)" />
+      <path
+         style="display:inline;fill:#f4e3d7;fill-opacity:1;stroke:#000000;stroke-width:0;stroke-dasharray:none;stroke-opacity:1"
+         d="m 894.4776,567.14394 -2.3116,7.27067 -12.109,-7.44835 z"
+         id="path152-0" />
+      <path
+         id="path152-6-7"
+         style="display:inline;fill:#1a1a1a;fill-opacity:1;stroke:#000000;stroke-width:0;stroke-dasharray:none;stroke-opacity:1"
+         d="m 883.3361,567.00704 -3.2801,-0.0408 2.7547,1.69391 z" />
+    </g>
+  </g>
+</svg>

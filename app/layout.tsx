@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import { Montserrat, Nunito } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/Header";
-import Footer from "@/components/Footer";
 
 const montserrat = Montserrat({
   subsets: ['latin'],
@@ -35,8 +34,7 @@ export default async function RootLayout({
         className={`${montserrat.variable} ${nunito.variable} antialiased flex min-h-screen flex-col`}
       >
         <Header />
-        <main className="flex-1">{children}</main>
-        <Footer />
+        <main className="flex-grow flex flex-col">{children}</main>
       </body>
     </html>
   );
