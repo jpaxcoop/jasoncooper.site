@@ -1,6 +1,7 @@
 'use client';
 
 import Footer from "@/components/Footer";
+import RoleMatcherModal from "@/components/RoleMatcherModal";
 import Image from "next/image"
 import Link from "next/link";
 import { useCallback, useEffect, useState } from "react";
@@ -13,7 +14,8 @@ const screens = [
 ];
 
 export default function HomePage() {
-  const [isLampOn, setIsLampOn] = useState(false);
+  const [isLampOn, setIsLampOn] = useState<boolean>(false);
+  const [isRoleMatcherModalOpen, setIsRoleMatcherModalOpen] =useState<boolean>(false);
 
   const emptyScreen = '/desk/empty-screen.png';
 
@@ -44,7 +46,13 @@ export default function HomePage() {
   };
 
   const handleKeyboardClick = () => {
-    playErrorSound();
+    if (isRoleMatcherModalOpen) {
+      return;
+    }
+
+    playSound('/desk/keyboard-typing.mp3');
+
+    setIsRoleMatcherModalOpen(true);
   };
 
   const handlePensClick = () => {
@@ -145,19 +153,25 @@ export default function HomePage() {
               />
             </Link>
 
-            <div className="absolute top-[1%] mt-2 left-[55%] bg-white/20 text-pink-500 px-[2%] py-[0.5%] text-[1.75vw] rounded shadow-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+            <div className="absolute top-[6%] left-[57%] bg-white/80 text-pink-500 px-4 py-1 text-lg rounded shadow-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none">
               Browse Jason's projects
             </div>
           </div>
 
-          <Image
-            src="/desk/keyboard.svg"
-            alt=""
-            width={448}
-            height={245}
-            className="absolute top-[40%] left-[36.5%] w-[18%]"
-            onClick={handleKeyboardClick}
-          />
+          <div className="group">
+            <Image
+              src="/desk/keyboard.svg"
+              alt=""
+              width={448}
+              height={245}
+              className="absolute top-[40%] left-[36.5%] w-[18%] hover:cursor-pointer transition-transform duration-300 transform hover:scale-110 origin-center"
+              onClick={handleKeyboardClick}
+            />
+
+            <div className="absolute top-[38%] z-10 left-[42%] bg-white/80 text-pink-500 px-4 py-1 text-lg rounded shadow-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none">
+              Try the Role Matcher
+            </div>
+          </div>
 
           <Image
             src="/desk/mouse.svg"
@@ -180,7 +194,7 @@ export default function HomePage() {
               />
             </Link>
 
-            <div className="absolute top-[58%] mt-2 left-[70%] bg-white/20 text-pink-500 px-[2%] py-[0.5%] text-[1.75vw] rounded shadow-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+            <div className="absolute top-[58%] mt-2 left-[70%] bg-white/80 text-pink-500 px-4 py-1 text-lg rounded shadow-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none">
               Read Jason's resume
             </div>
           </div>
@@ -196,7 +210,7 @@ export default function HomePage() {
               />
             </Link>
 
-            <div className="absolute top-[33%] mt-2 left-[75%] bg-white/20 text-pink-500 px-[2%] py-[0.5%] text-[1.75vw] rounded shadow-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+            <div className="absolute top-[38%] mt-2 left-[75%] bg-white/80 text-pink-500 px-4 py-1 text-lg rounded shadow-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none">
               About Jason
             </div>
           </div>
@@ -226,6 +240,8 @@ export default function HomePage() {
           <Footer />
         </div>
       </div>
+
+      <RoleMatcherModal isOpen={isRoleMatcherModalOpen} setIsOpen={setIsRoleMatcherModalOpen} />
     </>
   );
 }
