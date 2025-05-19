@@ -2,9 +2,16 @@
 
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
+import { useState } from 'react';
+import MenuIcon from '@mui/icons-material/Menu';
+import MenuOpenIcon from '@mui/icons-material/MenuOpen';
+import NavMenuPortal from './NavMenuPortal';
 
 export default function Navbar() {
+  const [isOpen, setIsOpen] = useState<boolean>(false);
   const pathname = usePathname();
+
+  const toggleMenu = () => setIsOpen(!isOpen);
 
   const navItems = [
     { href: '/', label: 'Home' },
@@ -15,8 +22,8 @@ export default function Navbar() {
   ];
 
   return (
-    <nav className="opacity-0 animate-fadeIn delay-300 px-4">
-      <ul className="flex flex-wrap sm:flex-nowrap justify-center space-x-6">
+    <nav className="z-[20] opacity-0 animate-fadeIn delay-300 px-4">
+      <ul className="hidden md:flex justify-center space-x-6">
       {navItems.map(({ href, label }) => {
           const isActive = pathname === href || pathname.startsWith(`${href}/`);
 
@@ -24,7 +31,7 @@ export default function Navbar() {
             <li key={href}>
               <Link
                 href={href}
-                className={`lowercase tracking-wider transition-colors hover:text-pink-500 ${
+                className={`lowercase tracking-wider transition-colors hover:text-pink-500 text-shadow-lg/30 ${
                   isActive ? 'text-white' : 'text-gray-300'
                 }`}
               >
@@ -34,6 +41,18 @@ export default function Navbar() {
           );
         })}
       </ul>
+
+      <div className="fixed top-4 left-4 md:hidden">
+        <button
+          onClick={toggleMenu}
+          aria-label="Toggle Menu"
+          className="text-white hover:cursor-pointer"
+        >
+          {isOpen ? <MenuOpenIcon fontSize="large" /> : <MenuIcon fontSize="large" />}
+        </button>
+      </div>
+
+      <NavMenuPortal isOpen={isOpen} onClose={() => setIsOpen(false)} />
     </nav>
   );
 }

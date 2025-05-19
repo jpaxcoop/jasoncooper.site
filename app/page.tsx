@@ -77,8 +77,8 @@ export default function HomePage() {
 
   return (
     <>
-      <div className="relative w-full max-h-[calc(100vh-96px)] overflow-hidden">
-        <div className="relative w-full aspect-[16/9]">
+      <div className="relative w-full max-h-[calc(100vh-96px)] scale-250 md:scale-100 md:overflow-hidden">
+        <div className="relative w-full aspect-[16/9] top-[72px] md:top-auto">
           <div className="absolute inset-0 z-[-10]" />
 
           {/* <Image

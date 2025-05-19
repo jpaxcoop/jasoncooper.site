@@ -21,7 +21,9 @@ export default async function RootLayout({
         className="antialiased flex min-h-screen flex-col"
       >
         <Header />
-        <main className="flex-grow flex flex-col">{children}</main>
+        <main className="flex-grow flex flex-col overflow-x-hidden">{children}</main>
+
+        <div id="portal-root" />
       </body>
     </html>
   );
