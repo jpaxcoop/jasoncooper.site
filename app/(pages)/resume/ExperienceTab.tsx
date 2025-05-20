@@ -38,7 +38,7 @@ export default function ExperienceTab() {
 
       <p className="mb-4">For more than 10 years, I worked at the B2B marketing services firm Dynamic Marketing Systems. I started as a designer and implementer of print ordering and automation systems. I grew into an automator of all kinds of marketing - from print to email nurturing to sales support.</p>
         
-      <p className="mb-4">I also became a "utility player", a position I would assume throughout my career. I started managing our print ordering system, a project that required database management and HTML and CSS development. Then I managed all kinds of projects, which included helping designing business processes for our fledlging company. My day could include pitching business to clients, creative-directing a website, copy-writing and coding an HTML email, and preparing traffic reports with analysis.</p>
+      <p className="mb-4">I also became a "utility player", a position I would assume throughout my career. I started managing our print ordering system, a project that required database management and HTML and CSS development. Then I managed all kinds of projects, which included helping designing business processes for our fledgling company. My day could include pitching business to clients, creative-directing a website, copy-writing and coding an HTML email, and preparing traffic reports with analysis.</p>
     </div>
 
       <Link href="https://www.linkedin.com/in/jasonpaxtoncooper" className="md:p-4 py-4 text-primary hover:text-pink-600" target="_blank">
