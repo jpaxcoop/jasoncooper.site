@@ -217,7 +217,7 @@ export default function SkillsTechTab() {
                         src={project.imgSrc}
                         alt={project.title}
                         fill
-                        className="object-cover hover:border-2 border-pink-500 hover:cursor-pointer"
+                        className={`object-cover border-pink-500 ${project.linkHref ? 'hover:cursor-pointer hover:border-2' : ''}`}
                         sizes="(max-width: 768px) 50vw, 25vw"
                         title={project.title}
                         onClick={() => handleThumbClick(project, router)}
@@ -260,7 +260,7 @@ export default function SkillsTechTab() {
                         src={project.imgSrc}
                         alt={project.title}
                         fill
-                        className="object-cover hover:border-2 border-pink-500 hover:cursor-pointer"
+                        className={`object-cover border-pink-500 ${project.linkHref ? 'hover:cursor-pointer hover:border-2' : ''}`}
                         sizes="(max-width: 768px) 50vw, 25vw"
                         title={project.title}
                         onClick={() => handleThumbClick(project, router)}

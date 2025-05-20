@@ -20,7 +20,7 @@ export default function ProjectsPage() {
 									src={thumb.imgSrc}
 									alt={thumb.title}
 									fill
-									className="object-cover hover:border-2 border-pink-500 hover:cursor-pointer"
+									className={`object-cover border-pink-500 ${thumb.linkHref ? 'hover:cursor-pointer  hover:border-2' : ''}`}
 									sizes="(max-width: 768px) 50vw, 25vw"
 									onClick={() => handleThumbClick(thumb, router)}
 								/>
@@ -30,13 +30,15 @@ export default function ProjectsPage() {
 
 							<p className="mb-6">{thumb.description}</p>
 
-							<Link
-								href={thumb.linkHref}
-								className="border py-1 px-3 rounded-md text-base hover:text-pink-600"
-								target={thumb.openInNewTab ? '_blank' : '_self'}
-							>
-								View Project
-							</Link>
+							{thumb.linkHref &&
+								<Link
+									href={thumb.linkHref}
+									className="border py-1 px-3 rounded-md text-base hover:text-pink-600"
+									target={thumb.openInNewTab ? '_blank' : '_self'}
+								>
+									View Project
+								</Link>
+							}
 						</div>
 					);
 				})}

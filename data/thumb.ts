@@ -18,9 +18,9 @@ export const thumbs: ThumbCollection = {
   hopeIndustrialSystems: {
     title: 'Hope Industrial Systems',
     imgSrc: '/hope-industrial-shopping.png',
-    linkHref: 'https://shop.hopeindustrial.com/19-industrial-rack-mount-monitor-and-touch-screen?product_power=AC&product_window=No%20Protective%20Window%20(non-touch)&product_bezel=Powder-Coat%20Carbon%20Steel',
-    description: 'I was hired to develop some temporary shopping pages while a full-scale ecommerce site was built. The "temporary" pages performed so well they are still in use years later.',
-    openInNewTab: true,
+    linkHref: '',
+    description: 'I was hired to develop some temporary shopping pages while a full-scale ecommerce site was built.',
+    openInNewTab: false,
   },
   streamlineWealth: {
     title: 'Streamline Wealth',
