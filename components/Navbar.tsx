@@ -31,7 +31,7 @@ export default function Navbar() {
             <li key={href}>
               <Link
                 href={href}
-                className={`lowercase tracking-wider transition-colors hover:text-pink-500 text-shadow-lg/30 ${
+                className={`text-lg lowercase tracking-wider transition-colors hover:text-pink-500 text-shadow-lg/30 ${
                   isActive ? 'text-white' : 'text-gray-300'
                 }`}
               >
