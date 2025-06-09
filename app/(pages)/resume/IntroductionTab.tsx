@@ -1,25 +1,15 @@
-'use client';
-
 import Link from "next/link";
 import ChevronRightIcon from '@mui/icons-material/ChevronRight';
-import { useState } from "react";
-import RoleMatcherModal from "@/components/RoleMatcherModal";
 
 export default function IntroductionTab() {
-  const [isRoleMatcherModalOpen, setIsRoleMatcherModalOpen] =useState<boolean>(false);
-
   return (
     <>
       <div className="flex flex-wrap md:flex-nowrap gap-10">
         <div className="w-full md:w-3/4">
-          <button
-            className="w-full text-center p-2 rounded-lg border-2 border-white text-lg hover:border-pink-500 hover:text-pink-500 hover:cursor-pointer mb-4 text-white"
-            onClick={() => {setIsRoleMatcherModalOpen(true)}}
-          >
-            Hiring? Try the Role Matcher to see if Jason matches your role.
-          </button>
+          <h2 className="font-heading font-semibold text-2xl mb-2">Hello! I'm a designer and developer looking for my next passion project.</h2>
+
           <p className="mb-4">
-              <span className="text-pink-500 font-medium text-lg">Hello!</span> I'm a designer and developer looking for my next passion project. Do you have a web application that you need to constantly enhance with new features for your customers? Or maybe you have a vision where you're still working out the details? I can help in either case.
+              Do you have a web application that you need to constantly enhance with new features for your customers? Or maybe you have a vision where you're still working out the details? I can help in either case.
           </p>
 
           <p className="mb-4">
@@ -35,28 +25,22 @@ export default function IntroductionTab() {
         </div>
 
         <div className="w-full md:w-1/4">
-          <Link href="mailto:jasonpaxtoncooper@gmail.com" className="block mb-3 border-1 rounded-lg p-2 hover:border-pink-500 hover:text-pink-600">
+          <Link href="mailto:jasonpaxtoncooper@gmail.com" className="block mb-4 border border-gray-400 rounded-lg p-2 hover:text-white">
             Email Jason
             <ChevronRightIcon fontSize="small" />
           </Link>
 
-          <Link href="https://www.linkedin.com/in/jasonpaxtoncooper" target="_blank" className="block mb-3 border-1 rounded-lg p-2 hover:border-pink-500 hover:text-pink-600">
-            <div>
-              Connect on LinkedIn
-              <ChevronRightIcon fontSize="small" />
-            </div>
+          <Link href="https://www.linkedin.com/in/jasonpaxtoncooper" target="_blank" className="block mb-4 border border-gray-400 rounded-lg p-2 hover:text-white">
+            Connect on LinkedIn
+            <ChevronRightIcon fontSize="small" />
           </Link>
 
-          <Link href="/jason-cooper-resume.pdf" target="_blank" className="block mb-3 border-1 rounded-lg p-2 hover:border-pink-500 hover:text-pink-600">
-            <div>
-              Download as PDF
-              <ChevronRightIcon fontSize="small" />
-            </div>
+          <Link href="/jason-cooper-resume.pdf" target="_blank" className="block mb-4 border border-gray-400 rounded-lg p-2 hover:text-white">
+            Download as PDF
+            <ChevronRightIcon fontSize="small" />
           </Link>
         </div>
       </div>
-
-      <RoleMatcherModal isOpen={isRoleMatcherModalOpen} setIsOpen={setIsRoleMatcherModalOpen} />
     </>
   );
 }

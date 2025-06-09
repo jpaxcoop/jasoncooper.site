@@ -4,8 +4,21 @@ import ChevronRightIcon from '@mui/icons-material/ChevronRight';
 export default function RecommendationsTab() {
     return (
       <>
-        <div className="md:px-4 pb-8">
-          <div className="mb-2 pl-4 border-l">
+        <div className="flex justify-between items-end mb-8">
+          <div>
+            <h2 className="font-heading font-semibold text-2xl">Highly Recommended</h2>
+          </div>
+
+          <div className="text-right">
+            <Link href="https://www.linkedin.com/in/jasonpaxtoncooper" className="text-gray-400 hover:text-white" target="_blank">
+              Read all my recommendations on LinkedIn
+              <ChevronRightIcon fontSize="small" />
+            </Link>
+          </div>
+        </div>
+
+        <div className="mb-12">
+          <div className="mb-2 pl-6 pb-4 border-l-4 border-gray-500">
             <p className="mb-4">
               “Jason is the perfect complement to any business or entrepreneur with a vision. He excels at taking big concepts and grand objectives and quickly transforming them into a detailed, functional application. During our time together at Peerless Network, Jason accomplished this first as a solo designer and developer and then shifted gears to leading a team that handled multiple projects simultaneously.
             </p>
@@ -19,8 +32,8 @@ export default function RecommendationsTab() {
           <em>Jason's boss</em>          
         </div>
         
-        <div className="md:px-4 pb-8">
-          <div className="mb-2 pl-4 border-l">
+        <div className="mb-12">
+          <div className="mb-2 pl-6 pb-4 border-l-4 border-gray-500">
             <p className="mb-4">
               “I had the pleasure of working with Jason for 5 years. During that time, he simultaneously carried the responsibility of project manager and team lead, all while being a daily contributor to the code base.
             </p>
@@ -41,11 +54,6 @@ export default function RecommendationsTab() {
           <h4 className="font-heading text-[18] font-semibold">Software Engineer</h4>
           <em>Jason's team member</em>
         </div>
-
-        <Link href="https://www.linkedin.com/in/jasonpaxtoncooper" className="md:px-4 text-primary hover:text-pink-600" target="_blank">
-          Read all my recommendations on LinkedIn
-          <ChevronRightIcon fontSize="small" />
-        </Link>
       </>
     );
   }

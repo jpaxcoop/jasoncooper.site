@@ -17,6 +17,7 @@ export default function SkillsTechTab() {
   ];
 
   const prototypingProjects = [
+    projects.hal9000,
     projects.peerlessPortal,
   ];
 
@@ -27,6 +28,10 @@ export default function SkillsTechTab() {
     projects.streamlineWealth,
     projects.paxton,
     projects.veritivLeaderLink,
+  ];
+
+  const artificialIntelligenceProjects = [
+    projects.hal9000,
   ];
 
   const applicationDevelopmentProjects = [
@@ -49,70 +54,71 @@ export default function SkillsTechTab() {
 
   return (
     <>
+      <h2 className="font-heading font-semibold text-2xl mb-4">Skills & Tech</h2>
+
       <div className="flex flex-wrap mb-4">
         <button
           onClick={() => scrollToSection('application-design')}
-          className="text-primary border py-1 px-3 hover:text-pink-600 rounded-md mr-2 mb-2"
+          className="border-gray-400 border-1 py-1 px-3 hover:text-white hover:cursor-pointer rounded-md mr-2 mb-2"
         >
           Application Design
         </button>
 
         <button
           onClick={() => scrollToSection('prototyping')}
-          className="text-primary border py-1 px-3 hover:text-pink-600 rounded-md mr-2 mb-2"
+          className="border-gray-400 border-1 py-1 px-3 hover:text-white hover:cursor-pointer rounded-md mr-2 mb-2"
         >
           Prototyping
         </button>
 
         <button
           onClick={() => scrollToSection('ux-and-ui-design')}
-          className="text-primary border py-1 px-3 hover:text-pink-600 rounded-md mr-2 mb-2"
+          className="border-gray-400 border-1 py-1 px-3 hover:text-white hover:cursor-pointer rounded-md mr-2 mb-2"
         >
           UX and UI Design
         </button>
 
         <button
           onClick={() => scrollToSection('application-development')}
-          className="text-primary border py-1 px-3 hover:text-pink-600 rounded-md mr-2 mb-2"
+          className="border-gray-400 border-1 py-1 px-3 hover:text-white hover:cursor-pointer rounded-md mr-2 mb-2"
         >
           Application Development
         </button>
 
         <button
           onClick={() => scrollToSection('artificial-intelligence')}
-          className="text-primary border py-1 px-3 hover:text-pink-600 rounded-md mr-2 mb-2"
+          className="border-gray-400 border-1 py-1 px-3 hover:text-white hover:cursor-pointer rounded-md mr-2 mb-2"
         >
           Artificial Intelligence
         </button>
 
         <button
           onClick={() => scrollToSection('languages')}
-          className="text-primary border py-1 px-3 hover:text-pink-600 rounded-md mr-2 mb-2"
+          className="border-gray-400 border-1 py-1 px-3 hover:text-white hover:cursor-pointer rounded-md mr-2 mb-2"
         >
           Languages
         </button>
 
         <button
           onClick={() => scrollToSection('tools')}
-          className="text-primary border py-1 px-3 hover:text-pink-600 rounded-md mr-2 mb-2"
+          className="border-gray-400 border-1 py-1 px-3 hover:text-white hover:cursor-pointer rounded-md mr-2 mb-2"
         >
           Tools
         </button>
       </div>
 
-      <div id="application-design" className="mb-4">
+      <div id="application-design" className="mb-6">
         <h4 className="font-heading text-lg font-semibold mb-2">Application Design</h4>
         
         <div className="flex flex-wrap md:flex-nowrap gap-10">
           <div className="w-full md:w-3/4">
-
             <p className="mb-4">My journey into application design began over 15 years ago when I was hired to design a web-based print ordering application. The print side of the business did not last, but the application design did! I've designed dozens of B2B applications and websites, learning UX and UI best practices along the way.</p>
 
             <p className="mb-2">I often work directly with stakeholders to collect requirements and learn about the systems and processes the new application will integrate with. But it's always helpful to collaborate with a product manager, who can bring a great deal of content matter expertise.</p>
 
             <button
               onClick={scrollToTop}
-              className="text-gray-400 text-sm hover:text-pink-600"
+              className="text-gray-400 hover:text-pink-600"
             >
               Return to top
             </button>
@@ -144,7 +150,7 @@ export default function SkillsTechTab() {
         </div>
       </div>
 
-      <div id="prototyping" className="mb-4">
+      <div id="prototyping" className="mb-6">
         <h4 className="font-heading text-lg font-semibold mb-2">Prototyping</h4>
 
         <div className="flex flex-wrap md:flex-nowrap gap-10">
@@ -154,7 +160,7 @@ export default function SkillsTechTab() {
 
             <button
               onClick={scrollToTop}
-              className="text-gray-400 text-sm hover:text-pink-600"
+              className="text-gray-400 hover:text-pink-600"
             >
               Return to top
             </button>
@@ -186,7 +192,7 @@ export default function SkillsTechTab() {
         </div>
       </div>
 
-      <div id="ux-and-ui-design" className="mb-4">
+      <div id="ux-and-ui-design" className="mb-6">
         <h4 className="font-heading text-lg font-semibold mb-2">UX and UI Design</h4>
 
         <div className="flex flex-wrap md:flex-nowrap gap-10">
@@ -199,7 +205,7 @@ export default function SkillsTechTab() {
 
             <button
               onClick={scrollToTop}
-              className="text-gray-400 text-sm hover:text-pink-600"
+              className="text-gray-400 hover:text-pink-600"
             >
               Return to top
             </button>
@@ -231,7 +237,7 @@ export default function SkillsTechTab() {
         </div>
       </div>
 
-      <div id="application-development" className="mb-4">
+      <div id="application-development" className="mb-6">
         <h4 className="font-heading text-lg font-semibold mb-2">Application Development</h4>
 
         <div className="flex flex-wrap md:flex-nowrap gap-10">
@@ -242,7 +248,7 @@ export default function SkillsTechTab() {
 
             <button
               onClick={scrollToTop}
-              className="text-gray-400 text-sm hover:text-pink-600"
+              className="text-gray-400 hover:text-pink-600"
             >
               Return to top
             </button>
@@ -274,7 +280,7 @@ export default function SkillsTechTab() {
         </div>
       </div>
 
-      <div id="artificial-intelligence" className="mb-4">
+      <div id="artificial-intelligence" className="mb-6">
         <h4 className="font-heading text-lg font-semibold mb-2">Artificial Intelligence</h4>
 
         <div className="flex flex-wrap md:flex-nowrap gap-10">
@@ -285,18 +291,39 @@ export default function SkillsTechTab() {
 
             <button
               onClick={scrollToTop}
-              className="text-gray-400 text-sm hover:text-pink-600"
+              className="text-gray-400 hover:text-pink-600"
             >
               Return to top
             </button>
           </div>
 
           <div className="w-full md:w-1/4">
+            <h4 className="font-heading text-sm tracking-wide font-medium uppercase mb-3">Projects</h4>
+
+            <div className="flex flex-wrap justify-between">
+              {artificialIntelligenceProjects.map((project, index) => {
+                return (
+                  <div key={index} className="w-[46%] mb-2">
+                    <div className="relative aspect-square rounded-lg overflow-hidden mb-2">
+                      <Image
+                        src={project.imgSrc}
+                        alt={project.title}
+                        fill
+                        className={`object-cover border-pink-500 ${project.linkHref ? 'hover:cursor-pointer hover:border-2' : ''}`}
+                        sizes="(max-width: 768px) 50vw, 25vw"
+                        title={project.title}
+                        onClick={() => handleThumbClick(project, router)}
+                      />
+                    </div>
+                  </div>
+                );
+              })}
+            </div>
           </div>
         </div>
       </div>
 
-      <div id="languages" className="mb-4">
+      <div id="languages" className="mb-6">
         <h4 className="font-heading text-lg font-semibold mb-2">Languages and Frameworks</h4>
 
         <ul className="columns-4 mb-2 gap-4">
@@ -307,6 +334,7 @@ export default function SkillsTechTab() {
           <li>PHP</li>
           <li>Vue</li>
           <li>React</li>
+          <li>Next.JS</li>
           <li>jQuery</li>
           <li>Laravel</li>
           <li>MySQL</li>
@@ -317,13 +345,13 @@ export default function SkillsTechTab() {
 
         <button
           onClick={scrollToTop}
-          className="text-gray-400 text-sm hover:text-pink-600"
+          className="text-gray-400 hover:text-pink-600"
         >
           Return to top
         </button>
       </div>
 
-      <div id="tools" className="mb-4">
+      <div id="tools" className="mb-6">
         <h4 className="font-heading text-lg font-semibold mb-2">Tools</h4>
 
         <ul className="columns-4 mb-2 gap-4">
@@ -339,7 +367,7 @@ export default function SkillsTechTab() {
 
         <button
           onClick={scrollToTop}
-          className="text-gray-400 text-sm hover:text-pink-600"
+          className="text-gray-400 hover:text-pink-600"
         >
           Return to top
         </button>
