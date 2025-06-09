@@ -104,6 +104,10 @@ h1, h2, h3, h4, h5, h6 {
   @apply font-heading; /* Use Montserrat for headings */
 }
 
+p {
+  line-height: 1.67;
+}
+
 @keyframes fadeIn {
   from {
     opacity: 0;

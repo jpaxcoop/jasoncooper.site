@@ -1,6 +1,13 @@
 import { ThumbCollection } from '@/types/thumb';
 
 export const thumbs: ThumbCollection = {
+  hal9000: {
+    title: 'HAL9000',
+    imgSrc: '/hal9000.png',
+    linkHref: '/projects/hal9000',
+    description: 'My first serious foray into AI development: training an AI voice model and working with a Hugging Face LLM.',
+    openInNewTab: false,
+  },
   peerlessPortal: {
     title: 'Peerless Portal',
     imgSrc: '/peerless-portal.png',
