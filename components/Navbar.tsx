@@ -22,7 +22,7 @@ export default function Navbar() {
   ];
 
   return (
-    <nav className="z-[20] opacity-0 animate-fadeIn delay-300 px-4">
+    <nav className="z-[20] opacity-0 animate-fadeIn px-4">
       <ul className="hidden md:flex justify-center space-x-6">
       {navItems.map(({ href, label }) => {
           const isActive = pathname === href || pathname.startsWith(`${href}/`);

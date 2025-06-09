@@ -112,7 +112,7 @@ export default function HomePage() {
               alt=""
               width={113}
               height={402}
-              className="absolute top-[3%] left-[31%] w-[4.25%] hover:cursor-pointer transition-transform duration-300 transform hover:scale-110 origin-center"
+              className="absolute top-[3%] left-[31%] w-[4.25%] hover:cursor-pointer hover:drop-shadow-[0_0_0.5vw] hover:drop-shadow-neutral-300"
               onClick={handleLampClick}
             />
 
@@ -121,8 +121,51 @@ export default function HomePage() {
               alt=""
               width={325}
               height={427}
-              className={`absolute top-[10.25%] left-[30.5%] w-[9%] pointer-events-none ${isLampOn ? 'opacity-100' : 'opacity-0'}  transition-transform duration-300 transform group-hover:scale-104`}
+              className={`absolute top-[10.25%] left-[30.5%] w-[9%] pointer-events-none ${isLampOn ? 'opacity-100' : 'opacity-0'}  transition-transform duration-300`}
             />
+          </div>
+
+          <div className="group">
+            <Link href="/projects">
+              <Image
+                src="/desk/screen.svg"
+                alt=""
+                width={760}
+                height={560}
+                className="absolute top-[7%] left-[45%] w-[29%] hover:cursor-pointer"
+              />
+
+              <Image
+                src={screen}
+                alt=""
+                width={760}
+                height={560}
+                className="absolute top-[7.375%] left-[45.1875%] w-[28.5625%] animate-[fadeIn_1s_ease-in_forwards] hover:cursor-pointer pointer-events-none"
+              />
+
+              <div className="hidden lg:block absolute top-[4%] left-[60%] border-pink-500/50 border-3 px-4 py-1 text-lg rounded group-hover:bg-pink-500/50 bg-white/25 opacity-0 animate-fadeIn hover:cursor-pointer" style={{animationDelay: '1s'}}>
+                <div className="absolute w-[25%] h-[200%] top-1/2 left-[-25%] border-pink-500/50 border-t-3 border-l-3"></div>
+                <div className="absolute h-[40%] aspect-square rounded-full top-[250%] left-[-25%] transform -translate-x-1/2 -translate-y--1 bg-pink-500/50"></div>
+                Jason's projects
+              </div>
+            </Link>
+          </div>
+
+          <div className="group">
+            <Image
+              src="/desk/keyboard.svg"
+              alt=""
+              width={448}
+              height={245}
+              className="absolute top-[40%] left-[36.5%] w-[18%] hover:cursor-pointer"
+              onClick={handleKeyboardClick}
+            />
+
+            <div className="hidden lg:block absolute top-[56%] left-[22%] border-pink-500/50 border-3 px-4 py-1 text-lg rounded bg-pink-600/80 group-hover:bg-pink-500 opacity-0 animate-fadeIn hover:cursor-pointer" style={{animationDelay: '1.75s'}} onClick={handleKeyboardClick}>
+              <div className="absolute w-[15%] h-[240%] bottom-1/2 right-[-15%] border-pink-500/50 border-b-3 border-r-3"></div>
+              <div className="absolute h-[40%] aspect-square rounded-full top-[-215%] right-[-20%] transform -translate-x-1/2 -translate-y-1 bg-pink-500/50"></div>
+              Hiring? Try the Role Matcher
+            </div>
           </div>
 
           <Image
@@ -133,45 +176,6 @@ export default function HomePage() {
             className="absolute top-[41%] left-[48%] w-[7%]"
             onClick={handlePencilClick}
           />
-
-          <div className="group">
-            <Link href="/projects">
-              <Image
-                src="/desk/screen.svg"
-                alt=""
-                width={760}
-                height={560}
-                className="absolute top-[7%] left-[45%] w-[29%] hover:cursor-pointer transition-transform duration-300 transform group-hover:scale-110 origin-center"
-              />
-
-              <Image
-                src={screen}
-                alt=""
-                width={760}
-                height={560}
-                className="absolute top-[7.375%] left-[45.1875%] w-[28.5625%] animate-[fadeIn_1s_ease-in_forwards] hover:cursor-pointer transition-transform duration-300 transform group-hover:scale-110 origin-center pointer-events-none"
-              />
-            </Link>
-
-            <div className="absolute top-[6%] left-[57%] bg-white/80 text-pink-500 px-4 py-1 text-lg rounded shadow-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none">
-              Browse Jason's projects
-            </div>
-          </div>
-
-          <div className="group">
-            <Image
-              src="/desk/keyboard.svg"
-              alt=""
-              width={448}
-              height={245}
-              className="absolute top-[40%] left-[36.5%] w-[18%] hover:cursor-pointer transition-transform duration-300 transform hover:scale-110 origin-center"
-              onClick={handleKeyboardClick}
-            />
-
-            <div className="absolute top-[38%] z-10 left-[42%] bg-white/80 text-pink-500 px-4 py-1 text-lg rounded shadow-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none">
-              Try the Role Matcher
-            </div>
-          </div>
 
           <Image
             src="/desk/mouse.svg"
@@ -189,14 +193,16 @@ export default function HomePage() {
                 alt=""
                 width={118}
                 height={87}
-                className="absolute top-[51%] left-[60.5%] w-[11.75%] hover:cursor-pointer transition-transform duration-300 transform hover:scale-110 origin-center"
+                className="absolute top-[51%] left-[60.5%] w-[11.75%] hover:cursor-pointer"
                 onClick={handleResumeMouseClick}
               />
-            </Link>
 
-            <div className="absolute top-[58%] mt-2 left-[70%] bg-white/80 text-pink-500 px-4 py-1 text-lg rounded shadow-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none">
-              Read Jason's resume
-            </div>
+              <div className="hidden lg:block absolute top-[63%] left-[70%] border-pink-500/50 border-3 px-4 py-1 text-lg text-pink-500 group-hover:text-white rounded group-hover:bg-pink-500/50 bg-white/45 opacity-0 animate-fadeIn hover:cursor-pointer" style={{animationDelay: '1.5s'}}>
+                <div className="absolute w-[35%] h-[100%] bottom-1/2 left-[-35%] border-pink-500/50 border-b-3 border-l-3"></div>
+                <div className="absolute h-[40%] aspect-square rounded-full top-[-75%] left-[-34%] transform -translate-x-1/2 -translate-y-1 bg-pink-500/50"></div>
+                Jason's resumé
+              </div>
+            </Link>
           </div>
 
           <div className="group">
@@ -206,13 +212,15 @@ export default function HomePage() {
                 alt=""
                 width={125}
                 height={263}
-                className="absolute top-[40%] left-[73.25%] w-[4.75%] hover:cursor-pointer transition-transform duration-300 transform hover:scale-110 origin-center"
+                className="absolute top-[40%] left-[73.25%] w-[4.75%] group-hover:cursor-pointer"
               />
-            </Link>
 
-            <div className="absolute top-[38%] mt-2 left-[75%] bg-white/80 text-pink-500 px-4 py-1 text-lg rounded shadow-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none">
-              About Jason
-            </div>
+              <div className="hidden lg:block absolute top-[34%] left-[76.5%] border-pink-500/50 border-3 px-4 py-1 text-lg rounded group-hover:bg-pink-500/50 bg-white/25 opacity-0 animate-fadeIn hover:cursor-pointer" style={{animationDelay: '1.25s'}}>
+                <div className="absolute w-[15%] h-[180%] top-1/2 left-[-15%] border-pink-500/50 border-t-3 border-l-3"></div>
+                <div className="absolute h-[40%] aspect-square rounded-full top-[220%] left-[-15%] transform -translate-x-1/2 -translate-y--1 bg-pink-500/50"></div>
+                About Jason
+              </div>
+            </Link>
           </div>
 
           <Image
