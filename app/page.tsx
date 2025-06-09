@@ -41,7 +41,7 @@ export default function HomePage() {
     setIsLampOn(!isLampOn);
   };
 
-  const handleResumeMouseEnter = () => {
+  const handleResumeMouseClick = () => {
     playSound('/desk/resume-paper-rustling.wav');
   };
 
@@ -190,7 +190,7 @@ export default function HomePage() {
                 width={118}
                 height={87}
                 className="absolute top-[51%] left-[60.5%] w-[11.75%] hover:cursor-pointer transition-transform duration-300 transform hover:scale-110 origin-center"
-                onMouseEnter={handleResumeMouseEnter}
+                onClick={handleResumeMouseClick}
               />
             </Link>
 
