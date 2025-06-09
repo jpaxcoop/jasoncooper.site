@@ -10,7 +10,7 @@ export default function IntroductionTab() {
 
   return (
     <>
-      <div className="flex flex-wrap md:flex-nowrap gap-8">
+      <div className="flex flex-wrap md:flex-nowrap gap-10">
         <div className="w-full md:w-3/4">
           <button
             className="w-full text-center p-2 rounded-lg border-2 border-white text-lg hover:border-pink-500 hover:text-pink-500 hover:cursor-pointer mb-4 text-white"

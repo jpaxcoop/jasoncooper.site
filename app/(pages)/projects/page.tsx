@@ -11,7 +11,7 @@ export default function ProjectsPage() {
 
     return (
         <div className="max-w-full xl:max-w-7xl mx-auto p-4 md:px-8">
-            <div className="grid lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 gap-8">
+            <div className="grid lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 gap-10">
 				{Object.entries(thumbs).map(([key, thumb]) => {
 					return (
 						<div key={key} className="mb-4">

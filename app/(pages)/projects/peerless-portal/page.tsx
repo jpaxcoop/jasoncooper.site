@@ -2,8 +2,8 @@ import Image from "next/image";
 
 export default function PeerlessPortalPage() {
     return (
-        <div className="max-w-full xl:max-w-6xl mx-auto p-4 md:px-8">
-            <div className="flex flex-wrap lg:flex-nowrap gap-8 mb-8">
+        <div className="max-w-full xl:max-w-7xl mx-auto p-4 md:px-8">
+            <div className="flex flex-wrap lg:flex-nowrap gap-10 mb-8">
                 <div className="w-full lg:w-2/3">
                     <div className="relative rounded-lg overflow-hidden">
                         <Image
@@ -17,7 +17,7 @@ export default function PeerlessPortalPage() {
                 </div>
 
                 <div className="w-full lg:w-1/3">
-                    <h1 className="font-heading font-semibold text-2xl mb-2">Peerless Portal</h1>
+                    <h1 className="font-heading font-semibold text-2xl mb-4">Peerless Portal</h1>
 
                     <p className="mb-4">I led the design and development of the Peerless Portal, a customer-facing order automation platform. I started with a blank canvas and had the platform deployed in production with customers in 3 months.</p>
 
@@ -25,8 +25,8 @@ export default function PeerlessPortalPage() {
                 </div>
             </div>
 
-            <div className="flex flex-wrap lg:flex-nowrap gap-8 mb-4">
-                <div className="w-full lg:w-1/2 flex flex-wrap md:flex-nowrap gap-4 mb-4">
+            <div className="flex flex-wrap lg:flex-nowrap gap-10 mb-4">
+                <div className="w-full lg:w-1/2 flex flex-wrap md:flex-nowrap gap-6 mb-4">
                     <div className="w-full md:w-1/2">
                         <div className="relative aspect-video rounded-lg overflow-hidden">
                             <Image
@@ -44,7 +44,7 @@ export default function PeerlessPortalPage() {
                     </div>
                 </div>
 
-                <div className="w-full lg:w-1/2 flex flex-wrap md:flex-nowrap gap-4 mb-4">
+                <div className="w-full lg:w-1/2 flex flex-wrap md:flex-nowrap gap-6 mb-4">
                     <div className="w-full md:w-1/2">
                         <div className="relative aspect-video rounded-lg overflow-hidden">
                             <Image

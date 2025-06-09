@@ -15,7 +15,7 @@ type Props = {
     return (
       <>
         <div className="relative">
-            <div className="max-w-full xl:max-w-6xl mx-auto p-4 md:px-8 opacity-0 animate-fadeIn">
+            <div className="max-w-full xl:max-w-7xl mx-auto p-4 md:px-8 opacity-0 animate-fadeIn">
                 <div className="flex flex-wrap md:flex-nowrap justify-between">
                     <div className="w-full md:w-sm text-white text-shadow-lg">
                         <div className="bg-black/25 rounded-lg px-4 p-2 mb-4">

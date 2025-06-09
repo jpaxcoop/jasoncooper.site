@@ -12,8 +12,8 @@ export default function ResumePage() {
 
     return (
         <>
-            <div className="max-w-full xl:max-w-6xl mx-auto p-4 md:px-8">
-                <div className="flex flex-wrap md:flex-nowrap gap-8">
+            <div className="max-w-full xl:max-w-7xl mx-auto p-4 md:px-8">
+                <div className="flex flex-wrap md:flex-nowrap gap-10">
                     <div className="w-full md:w-auto">
                         <div className="p-2 bg-white/10 rounded-lg">
                             {tabs.map((tab) => (

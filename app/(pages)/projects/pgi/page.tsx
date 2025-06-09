@@ -2,8 +2,8 @@ import Image from "next/image";
 
 export default function PgiPage() {
     return (
-        <div className="max-w-full xl:max-w-6xl mx-auto p-4 md:px-8">
-            <div className="flex flex-wrap lg:flex-nowrap gap-8 mb-8">
+        <div className="max-w-full xl:max-w-7xl mx-auto p-4 md:px-8">
+            <div className="flex flex-wrap lg:flex-nowrap gap-10 mb-8">
                 <div className="w-full lg:w-1/2">
                     <div className="relative rounded-lg h-[40vh] overflow-hidden">
                         <Image
@@ -17,7 +17,7 @@ export default function PgiPage() {
                 </div>
 
                 <div className="w-full lg:w-1/2">
-                    <h1 className="font-heading font-semibold text-2xl mb-2">PGi</h1>
+                    <h1 className="font-heading font-semibold text-2xl mb-4">PGi</h1>
 
                     <p className="mb-4">I built hundreds of landing pages and emails, and orchestrated dozens of campaigns for PGi. I was so efficient that I replaced two team members, and my more effective designs increased engagement measurably.</p>
 
@@ -25,7 +25,7 @@ export default function PgiPage() {
                 </div>
             </div>
 
-             <div className="flex flex-wrap lg:flex-nowrap gap-8 mb-4">
+             <div className="flex flex-wrap lg:flex-nowrap gap-10 mb-4">
                 <div className="w-full lg:w-1/3 mb-4">
                     <div className="relative aspect-video rounded-lg overflow-hidden mb-4">
                         <Image
