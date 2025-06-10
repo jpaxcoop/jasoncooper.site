@@ -287,7 +287,7 @@ export default function SkillsTechTab() {
           <div className="w-full md:w-3/4">
             <p className="mb-4">I've come to an obvious realization: AI is the future (if not the present) of application development. An effective application developer uses an AI coding assistant constantly, and only writes code themselves to tweak, adjust, or test. I've spent the last several months learning the coding language of the future: AI prompts that deliver specific, accurate code. To this end I've used <strong>Copilot in VS Code</strong>, the <strong>Cursor IDE</strong>, and of course <strong>ChatGPT</strong>.</p>
 
-            <p className="mb-2">I've also experimented with the <strong>OpenAI API</strong> and <strong>AI image generation</strong>.</p>
+            <p className="mb-2">I've experimented with the <strong>OpenAI API</strong> (see the Role Matcher on this site) and <strong>AI image generation</strong> My recent <a href="/projects/hal9000" className="text-pink-500">HAL9000 project</a> was a deep dive into voice model training, vocoder optimization, and working with LLMs.</p>
 
             <button
               onClick={scrollToTop}
