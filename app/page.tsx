@@ -76,7 +76,7 @@ export default function HomePage() {
   };
 
   return (
-    <>
+    <main className="flex-grow flex flex-col overflow-x-hidden">
       <div className="relative w-full max-h-[calc(100vh-100px)] scale-250 md:scale-100 md:overflow-hidden">
         <div className="relative w-full aspect-[16/9] top-[72px] md:top-auto">
           <div className="absolute inset-0 z-[-10]" />
@@ -250,6 +250,6 @@ export default function HomePage() {
       </div>
 
       <RoleMatcherModal isOpen={isRoleMatcherModalOpen} setIsOpen={setIsRoleMatcherModalOpen} />
-    </>
+    </main>
   );
 }

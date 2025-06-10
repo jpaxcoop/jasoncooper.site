@@ -7,7 +7,7 @@ export default async function PagesLayout({
 }>) {
   return (
     <>
-      <main className="flex-grow max-w-full xl:max-w-7xl mx-auto p-4 md:px-8">
+      <main className="flex-grow">
         {children}
       </main>
       <Footer />

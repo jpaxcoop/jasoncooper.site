@@ -3,7 +3,7 @@ import Image from "next/image";
 
 export default function Hal9000Page() {
   return (
-    <div className="max-w-full xl:max-w-7xl mx-auto p-4 md:px-8">
+    <>
       <div className="flex flex-wrap lg:flex-nowrap gap-10 mb-8">
         <div className="w-full lg:w-2/3">
           <div className="relative rounded-lg overflow-hidden border-3 border-gray-600 bg-black">
@@ -33,7 +33,7 @@ export default function Hal9000Page() {
         </div>
       </div>
 
-       <div className="flex flex-wrap lg:flex-nowrap gap-10 mb-4">
+      <div className="flex flex-wrap lg:flex-nowrap gap-10 mb-4">
         <div className="w-full lg:w-1/3 mb-4">
           <div className="relative aspect-video rounded-lg overflow-hidden mb-4 border-3 border-gray-600">
             <Image
@@ -84,6 +84,6 @@ export default function Hal9000Page() {
           <p className="mb-4">The user interface was the relaxing part. I think of it as drawing or illustrating, one of my favorite activities. I built a website using Next.JS and Tailwind. I am proud to say that the HAL9000 "illustration" is completely Tailwind classes - no images necessary. I borrowed the code for the "transcript monitor" from the Role Matcher feature on this website. I think the result compares with its movie muse nicely.</p>
         </div>
       </div>
-    </div>
+    </>
   );
 }

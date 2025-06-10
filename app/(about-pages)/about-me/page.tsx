@@ -64,7 +64,7 @@ export default function AboutMePage() {
     }
 
     return (
-        <div className="max-w-xl mx-auto p-4 md:px-8 h-[100vw] sm:h-[600px] relative">
+        <div className="w-md md:w-xl mx-auto p-4 md:px-8 h-[100vw] sm:h-[600px] relative">
             <Image
                 src="/jason-cooper.jpg"
                 alt="Jason Cooper"
@@ -155,9 +155,9 @@ export default function AboutMePage() {
 
             {aboutBlocks.map(({ id, imgSrc, title, text }) => (
                 activeId === id && (
-                    <div key={id} className="w-[90%] md:w-2/3 p-4 md:p-8 aspect-square bg-gray-800 rounded-xl absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
+                    <div key={id} className="w-[90%] md:w-2/3 p-4 aspect-square bg-gray-800 rounded-xl absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
                         <button
-                            className="absolute top-4 right-6 text-lg hover:text-white hover:cursor-pointer"
+                            className="absolute top-1 right-3 text-lg hover:text-white hover:cursor-pointer"
                             onClick={() => setActiveId(null)}
                         >
                             ×
