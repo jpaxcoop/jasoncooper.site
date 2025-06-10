@@ -48,63 +48,65 @@ export default function SkillsTechTab() {
     }
   };
 
-  const scrollToTop = () => {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-  };
-
   return (
-    <>
+    <div id="Skills & Tech" className="pb-8 mb-4 border-b border-dashed scroll-mt-28">
       <h2 className="font-heading font-semibold text-2xl mb-4">Skills & Tech</h2>
 
-      <div className="flex flex-wrap mb-4">
-        <button
-          onClick={() => scrollToSection('application-design')}
-          className="border-gray-400 border-1 py-1 px-3 hover:text-white hover:cursor-pointer rounded-md mr-2 mb-2"
-        >
-          Application Design
-        </button>
+      <div className="flex">
+          <div className="w-full md:w-3/4">
+            <div className="flex flex-wrap mb-4">
+              <button
+                onClick={() => scrollToSection('application-design')}
+                className="border-gray-400 border-1 py-1 px-3 hover:text-white hover:cursor-pointer rounded-md mr-2 mb-2"
+              >
+                Application Design
+              </button>
 
-        <button
-          onClick={() => scrollToSection('prototyping')}
-          className="border-gray-400 border-1 py-1 px-3 hover:text-white hover:cursor-pointer rounded-md mr-2 mb-2"
-        >
-          Prototyping
-        </button>
+              <button
+                onClick={() => scrollToSection('prototyping')}
+                className="border-gray-400 border-1 py-1 px-3 hover:text-white hover:cursor-pointer rounded-md mr-2 mb-2"
+              >
+                Prototyping
+              </button>
 
-        <button
-          onClick={() => scrollToSection('ux-and-ui-design')}
-          className="border-gray-400 border-1 py-1 px-3 hover:text-white hover:cursor-pointer rounded-md mr-2 mb-2"
-        >
-          UX and UI Design
-        </button>
+              <button
+                onClick={() => scrollToSection('ux-and-ui-design')}
+                className="border-gray-400 border-1 py-1 px-3 hover:text-white hover:cursor-pointer rounded-md mr-2 mb-2"
+              >
+                UX and UI Design
+              </button>
 
-        <button
-          onClick={() => scrollToSection('application-development')}
-          className="border-gray-400 border-1 py-1 px-3 hover:text-white hover:cursor-pointer rounded-md mr-2 mb-2"
-        >
-          Application Development
-        </button>
+              <button
+                onClick={() => scrollToSection('application-development')}
+                className="border-gray-400 border-1 py-1 px-3 hover:text-white hover:cursor-pointer rounded-md mr-2 mb-2"
+              >
+                Application Development
+              </button>
 
-        <button
-          onClick={() => scrollToSection('artificial-intelligence')}
-          className="border-gray-400 border-1 py-1 px-3 hover:text-white hover:cursor-pointer rounded-md mr-2 mb-2"
-        >
-          Artificial Intelligence
-        </button>
+              <button
+                onClick={() => scrollToSection('artificial-intelligence')}
+                className="border-gray-400 border-1 py-1 px-3 hover:text-white hover:cursor-pointer rounded-md mr-2 mb-2"
+              >
+                Artificial Intelligence
+              </button>
 
-        <button
-          onClick={() => scrollToSection('languages')}
-          className="border-gray-400 border-1 py-1 px-3 hover:text-white hover:cursor-pointer rounded-md mr-2 mb-2"
-        >
-          Languages
-        </button>
+              <button
+                onClick={() => scrollToSection('languages')}
+                className="border-gray-400 border-1 py-1 px-3 hover:text-white hover:cursor-pointer rounded-md mr-2 mb-2"
+              >
+                Languages
+              </button>
 
-        <button
-          onClick={() => scrollToSection('tools')}
-          className="border-gray-400 border-1 py-1 px-3 hover:text-white hover:cursor-pointer rounded-md mr-2 mb-2"
-        >
-          Tools
-        </button>
+              <button
+                onClick={() => scrollToSection('tools')}
+                className="border-gray-400 border-1 py-1 px-3 hover:text-white hover:cursor-pointer rounded-md mr-2 mb-2"
+              >
+                Tools
+              </button>
+            </div>
+          </div>
+          <div className="hidden md:block w-1/4">
+          </div>
       </div>
 
       <div id="application-design" className="mb-6">
@@ -117,10 +119,10 @@ export default function SkillsTechTab() {
             <p className="mb-2">I often work directly with stakeholders to collect requirements and learn about the systems and processes the new application will integrate with. But it's always helpful to collaborate with a product manager, who can bring a great deal of content matter expertise.</p>
 
             <button
-              onClick={scrollToTop}
+              onClick={() => scrollToSection('Skills & Tech')}
               className="text-gray-400 hover:text-pink-600"
             >
-              Return to top
+              Return to Skills
             </button>
           </div>
 
@@ -159,10 +161,10 @@ export default function SkillsTechTab() {
             <p className="mb-2">I create prototypes to test early ideas and discover obstacles. Originally my prototypes were sketches done in <strong>Photoshop</strong>, then they graduated to <strong>HTML</strong> static files. Today, I can quickly spin up operational prototypes with a <strong>JavaScript</strong> framework and database. I've used <strong>Figma</strong> to present and share ideas, but I find it an unnecessary step when I can code something just as quickly.</p>
 
             <button
-              onClick={scrollToTop}
+              onClick={() => scrollToSection('Skills & Tech')}
               className="text-gray-400 hover:text-pink-600"
             >
-              Return to top
+              Return to Skills
             </button>
           </div>
 
@@ -204,10 +206,10 @@ export default function SkillsTechTab() {
             <p className="mb-2">With my marketing background, I have an understanding (and appreciation) for brand identity and standards. I have a lot of experience applying a brand to all sorts of assets, including applications. I'm careful to make sure the UI design represents the brand without interfering with the connection between the user and the application.</p>
 
             <button
-              onClick={scrollToTop}
+              onClick={() => scrollToSection('Skills & Tech')}
               className="text-gray-400 hover:text-pink-600"
             >
-              Return to top
+              Return to Skills
             </button>
           </div>
 
@@ -247,10 +249,10 @@ export default function SkillsTechTab() {
             <p className="mb-2">As a team leader, I'm experienced in version control and Continuous Integration/Continuous Delivery. I've worked with <strong>GitHub Actions paired with Laravel Envoyer</strong> for deployment and <strong>BitBucket with Jenkins</strong>. For JavaScript tests I've worked with <strong>Cypress and Jest</strong>. For PHP I write <strong>phpunit</strong> tests.</p>
 
             <button
-              onClick={scrollToTop}
+              onClick={() => scrollToSection('Skills & Tech')}
               className="text-gray-400 hover:text-pink-600"
             >
-              Return to top
+              Return to Skills
             </button>
           </div>
 
@@ -290,10 +292,10 @@ export default function SkillsTechTab() {
             <p className="mb-2">I've experimented with the <strong>OpenAI API</strong> (see the Role Matcher on this site) and <strong>AI image generation</strong> My recent <a href="/projects/hal9000" className="text-pink-500">HAL9000 project</a> was a deep dive into voice model training, vocoder optimization, and working with LLMs.</p>
 
             <button
-              onClick={scrollToTop}
+              onClick={() => scrollToSection('Skills & Tech')}
               className="text-gray-400 hover:text-pink-600"
             >
-              Return to top
+              Return to Skills
             </button>
           </div>
 
@@ -344,10 +346,10 @@ export default function SkillsTechTab() {
         </ul>
 
         <button
-          onClick={scrollToTop}
+          onClick={() => scrollToSection('Skills & Tech')}
           className="text-gray-400 hover:text-pink-600"
         >
-          Return to top
+          Return to Skills
         </button>
       </div>
 
@@ -366,13 +368,13 @@ export default function SkillsTechTab() {
         </ul>
 
         <button
-          onClick={scrollToTop}
+          onClick={() => scrollToSection('Skills & Tech')}
           className="text-gray-400 hover:text-pink-600"
         >
-          Return to top
+          Return to Skills
         </button>
       </div>
-    </>
+    </div>
   );
 }
   
