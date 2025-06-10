@@ -24,6 +24,8 @@ export default async function RootLayout({
         {children}
 
         <div id="portal-root" />
+
+        <div className="fixed w-full h-full z-[-100] bg-linear-to-t from-gray-950 to-gray-800" />
       </body>
     </html>
   );
