@@ -38,7 +38,7 @@ export default function ResumePage() {
                     <button
                       key={tab}
                       onClick={() => setActiveTab(tab)}
-                      className={`block py-1 font-heading font-medium text-lg text-shadow-md/50 hover:cursor-pointer ${
+                      className={`block py-1 font-heading font-medium text-lg text-shadow-lg text-shadow-gray-900/50 hover:cursor-pointer ${
                       activeTab === tab
                         ? 'text-pink-600'
                         : 'hover:text-white'
