@@ -19,7 +19,7 @@ export default function StreamlineWealthPage() {
         <div className="w-full lg:w-1/2">
           <h1 className="font-heading font-semibold text-2xl mb-4">Streamline Wealth</h1>
 
-          <p className="mb-4">I designed sales materials for a financial firm. My clean, attractive design communicated complex information clearly and made multi-page forms approachable.</p>
+          <p>I designed sales materials for a financial firm. My clean, attractive design communicated complex information clearly and made multi-page forms approachable.</p>
 
           <p>Some may look at this project and think, "oh, so it's just graphic design." But graphic design <em>is</em> UI design&mdash;if it's done correctly. Each element's position, scale (not necessarily size - its size relative to other elements), and color guide the eye across the design so that information is processed in order of the desired priority.</p>
         </div>
@@ -41,7 +41,7 @@ export default function StreamlineWealthPage() {
             </div>
 
             <div className="w-full lg:w-1/2 mb-4">
-              <p className="mb-4">Streamline's collateral included multi-page forms with dozens of questions. A clear, intuitive layout can engage the customer instead of intimidating them.</p>
+              <p>Streamline's collateral included multi-page forms with dozens of questions. A clear, intuitive layout can engage the customer instead of intimidating them.</p>
             </div>
           </div>
         </div>
@@ -60,7 +60,7 @@ export default function StreamlineWealthPage() {
             </div>
 
             <div className="w-full lg:w-1/2 mb-4">
-              <p className="mb-4">Traditionally, sales collateral is often in a portrait (vertical) layout because that is more comfortable to physically hold. I did my homework and learned that the collateral was rarely printed, and instead presented in a web conference on a desktop screen. This means a landscape (horizontal) layout would be more approriate.</p>
+              <p>Traditionally, sales collateral is often in a portrait (vertical) layout because that is more comfortable to physically hold. I did my homework and learned that the collateral was rarely printed, and instead presented in a web conference on a desktop screen. This means a landscape (horizontal) layout would be more approriate.</p>
             </div>
           </div>
         </div>

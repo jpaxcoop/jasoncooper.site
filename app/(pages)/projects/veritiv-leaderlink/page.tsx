@@ -19,7 +19,7 @@ export default function VeritivLeaderLinkPage() {
         <div className="w-full lg:w-1/2">
           <h1 className="font-heading font-semibold text-2xl mb-4">Veritiv LeaderLink</h1>
 
-          <p className="mb-4">During my tenure at Dynamic Marketing Systems (now "Truelio"), I designed several applications for Veritiv (formerly Unisource), a multi-billion-dollar paper, packaging, and facility supplies distributor..</p>
+          <p>During my tenure at Dynamic Marketing Systems (now "Truelio"), I designed several applications for Veritiv (formerly Unisource), a multi-billion-dollar paper, packaging, and facility supplies distributor..</p>
 
           <p>LeaderLink was an intranet application that provided leadership resources and news to Veritiv management. I worked with Veritiv to establish requirements and processes. Then I designed the UI and coded it, and managed a team of .NET developers to build the application.</p>
         </div>

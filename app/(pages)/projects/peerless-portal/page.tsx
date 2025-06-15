@@ -19,9 +19,9 @@ export default function PeerlessPortalPage() {
         <div className="w-full lg:w-1/3">
           <h1 className="font-heading font-semibold text-2xl mb-4">Peerless Portal</h1>
 
-          <p className="mb-4">I led the design and development of the Peerless Portal, a customer-facing order automation platform. I started with a blank canvas and had the platform deployed in production with customers in 3 months.</p>
+          <p>I led the design and development of the Peerless Portal, a customer-facing order automation platform. I started with a blank canvas and had the platform deployed in production with customers in 3 months.</p>
 
-          <p className="mb-4">Adoption increased from there. In the first year, Peerless Network required that all but the largest enterprise customers be serviced through the Peerless Portal. My team grew to 5 team members dedicated to the Portal project.</p>
+          <p>Adoption increased from there. In the first year, Peerless Network required that all but the largest enterprise customers be serviced through the Peerless Portal. My team grew to 5 team members dedicated to the Portal project.</p>
         </div>
       </div>
 
@@ -40,7 +40,7 @@ export default function PeerlessPortalPage() {
           </div>
 
           <div className="w-full md:w-1/2">
-            <p className="mb-4">I wore the hats of team lead, designer, and developer. I worked closely with the voice product team, the customer account management leadership, and technical support to design features to support business units across the company.</p>
+            <p>I wore the hats of team lead, designer, and developer. I worked closely with the voice product team, the customer account management leadership, and technical support to design features to support business units across the company.</p>
           </div>
         </div>
 
