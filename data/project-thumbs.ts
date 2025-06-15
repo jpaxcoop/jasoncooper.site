@@ -1,53 +1,76 @@
-import { ThumbCollection } from '@/types/thumb';
+import { ProjectThumbCollection } from '@/types/project-thumb';
 
-export const thumbs: ThumbCollection = {
+export const projectThumbs: ProjectThumbCollection = {
   hal9000: {
+    id: 'hal9000',
     title: 'HAL9000',
     imgSrc: '/hal9000.png',
     linkHref: '/projects/hal9000',
     description: 'My first serious foray into AI development: training an AI voice model and working with a Hugging Face LLM.',
     openInNewTab: false,
+    skills: ['prototyping', 'artificial-intelligence'],
+  },
+  jasonCooperSite: {
+    id: 'jason-cooper-site',
+    title: 'jasoncooper.site',
+    imgSrc: '/jason-cooper-site.png',
+    linkHref: '/projects/jason-cooper-site',
+    description: 'My portfolio website has been a whirlwind education and a lot of fun.',
+    openInNewTab: false,
+    skills: ['application-design', 'ux-and-ui-design', 'application-development', 'artificial-intelligence'],
   },
   peerlessPortal: {
+    id: 'peerless-portal',
     title: 'Peerless Portal',
     imgSrc: '/peerless-portal.png',
     linkHref: '/projects/peerless-portal',
     description: 'I designed and developed the Peerless Portal, an ordering automation and provisioning platform for a telecommunications company.',
     openInNewTab: false,
+    skills: ['application-design', 'prototyping', 'ux-and-ui-design', 'application-development'],
   },
   pgi: {
+    id: 'pgi-marketing',
     title: 'PGi',
     imgSrc: '/pgi-landing-page.jpg',
     linkHref: '/projects/pgi',
     description: 'I built hundreds of landing pages and emails, and orchestrated dozens of campaigns for PGi. I was so efficient that I replaced two team members, and my more effective designs increased engagement measurably.',
     openInNewTab: false,
+    skills: ['prototyping', 'ux-and-ui-design'],
   },
   hopeIndustrialSystems: {
+    id: 'hope-industrial-systems',
     title: 'Hope Industrial Systems',
     imgSrc: '/hope-industrial-shopping.png',
     linkHref: '',
     description: 'I was hired to develop some temporary shopping pages while a full-scale ecommerce site was built.',
     openInNewTab: false,
+    skills: ['ux-and-ui-design'],
   },
   streamlineWealth: {
+    id: 'streamline-wealth',
     title: 'Streamline Wealth',
     imgSrc: '/streamline-wealth.png',
     linkHref: '/projects/streamline-wealth',
     description: 'I designed sales materials for a financial firm. My clean, attractive design communicated complex information clearly and made multi-page forms approachable.',
     openInNewTab: false,
+    skills: ['ux-and-ui-design', 'application-development'],
   },
   paxton: {
+    id: 'paxton',
     title: 'paxton',
     imgSrc: '/paxton.png',
     linkHref: 'https://jasonpaxtoncooper.com/paxton',
     description: 'Paxton Cooper is my son. The hard work of getting him here fell upon my wife. I contributed by building this website to keep me organized and informed.',
     openInNewTab: true,
+    skills: ['application-design', 'ux-and-ui-design'],
   },
   veritivLeaderLink: {
+    id: 'veritiv-leaderlink',
     title: 'Veritiv LeaderLink',
     imgSrc: '/leaderlink-quick-links.jpg',
     linkHref: '/projects/veritiv-leaderlink',
     description: 'LeaderLink was one of several applications I designed for Veritiv, a multi-billion-dollar paper, packaging, and facility supplies distributor.',
     openInNewTab: false,
+    skills: ['application-design', 'ux-and-ui-design'],
   },
 };

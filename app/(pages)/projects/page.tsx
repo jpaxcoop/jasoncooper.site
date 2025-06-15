@@ -1,7 +1,7 @@
 'use client';
 
-import { thumbs } from '@/data/thumb';
-import { handleThumbClick } from '@/utlis/thumb-utils';
+import { projectThumbs } from '@/data/project-thumbs';
+import { handleClick } from '@/utlis/projectThumbUtils';
 import Image from 'next/image';
 import Link from 'next/link';
 import { useRouter } from 'next/navigation';
@@ -11,7 +11,7 @@ export default function ProjectsPage() {
 
   return (
 		<div className="grid lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 gap-10">
-			{Object.entries(thumbs).map(([key, thumb]) => {
+			{Object.entries(projectThumbs).map(([key, thumb]) => {
 				return (
 					<div key={key} className="mb-4">
 						<div className="relative aspect-square rounded-lg overflow-hidden mb-4">
@@ -21,7 +21,7 @@ export default function ProjectsPage() {
 								fill
 								className={`object-cover border-pink-500 ${thumb.linkHref ? 'hover:cursor-pointer  hover:border-2' : ''}`}
 								sizes="(max-width: 768px) 50vw, 25vw"
-								onClick={() => handleThumbClick(thumb, router)}
+								onClick={() => handleClick(thumb, router)}
 							/>
 						</div>
 

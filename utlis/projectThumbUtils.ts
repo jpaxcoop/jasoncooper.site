@@ -1,9 +1,9 @@
 'use client';
 
-import { Thumb } from '@/types/thumb';
+import { ProjectThumb } from '@/types/project-thumb';
 import { AppRouterInstance } from 'next/dist/shared/lib/app-router-context.shared-runtime';
 
-export function handleThumbClick(thumb: Thumb, router: AppRouterInstance): void {
+export function handleClick(thumb: ProjectThumb, router: AppRouterInstance): void {
   if (!thumb.linkHref) {
     return;
   }
