@@ -2,19 +2,12 @@ export const resumeContent = {
   introduction: {
     id: `introduction`,
     tab: 'Introduction',
-    title: `Hello! I'm a designer and developer looking for my next passion project.`,
-    text: `Do you have a web application that you need to constantly enhance with new features for your customers? Or maybe you have a vision where you're still working out the details? I can help in either case.
-
-I can bring a lot of value to your organization: instead of waiting on detailed instructions or exact specifications, I can accelerate the development process by helping you create the specs, or by creating a proof-of-concept until exact specs are ready.
-
-Once we're up and running, I'm an effective leader who can manage projects and guide a team efficiently. And because I'm not a specialist, I can pitch in wherever it's needed: development, design, operations, analytics, presentations.
-
-Please reach out to me and I'm happy to share my thoughts and experience, and listen to yours.`,
-    text_short: `Do you have a web application that you need to constantly enhance with new features for your customers? Or maybe you have a vision where you're still working out the details? I can help in either case.
+    title: `Hello! I'm a designer and developer looking for my next role.`,
+    text: `Does your organization have a web application that is constantly enhanced with new features for your customers? Or maybe you have a vision where you're still working out the details? In either case, I am someone you want on your team.
 
 I can bring a lot of value to your organization by accelerating the development process with my intertwined design and development workflow.
 
-I'm also an effective leader who can manage projects and guide a team efficiently. And because I'm not a specialist, I can pitch in wherever it's needed: development, design, operations, analytics, presentations.
+Once we're up and running, I'm an effective leader who can manage projects and guide a team efficiently. And I can pitch in wherever it's needed: development, design, operations, analytics, presentations.
 
 Please reach out to me and I'm happy to share my thoughts and experience, and listen to yours.`,
   },

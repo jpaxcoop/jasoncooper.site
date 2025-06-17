@@ -86,7 +86,7 @@ export default function ResumePdf() {
                 {resumeContent.introduction.title}
               </Text>
 
-              {markdownToPdfComponents(resumeContent.introduction.text_short)}
+              {markdownToPdfComponents(resumeContent.introduction.text)}
             </View>
 
             <View>
