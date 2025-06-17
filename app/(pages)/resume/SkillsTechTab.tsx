@@ -4,7 +4,7 @@ import { useRouter } from "next/navigation";
 import Image from "next/image";
 import { projectThumbs } from "@/data/project-thumbs";
 import { handleClick } from "@/utlis/projectThumbUtils";
-import { resumeContent } from "@/data/resumeContent";
+import { resumeContent } from "@/data/resume-content";
 import ReactMarkdown from 'react-markdown';
 
 export default function SkillsTechTab() {

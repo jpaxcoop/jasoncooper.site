@@ -1,4 +1,4 @@
-import { resumeContent } from '@/data/resumeContent';
+import { resumeContent } from '@/data/resume-content';
 import { NextRequest, NextResponse } from 'next/server';
 import { OpenAI } from 'openai';
 

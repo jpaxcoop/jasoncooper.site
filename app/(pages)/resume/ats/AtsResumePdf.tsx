@@ -1,5 +1,5 @@
 import { projectThumbs } from '@/data/project-thumbs';
-import { resumeContent } from '@/data/resumeContent';
+import { resumeContent } from '@/data/resume-content';
 import { markdownToPdfComponents } from '@/utlis/markdownToPDF';
 import { Document, Page, Text, View, Link } from '@react-pdf/renderer';
 import { Font } from '@react-pdf/renderer';

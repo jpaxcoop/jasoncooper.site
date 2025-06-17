@@ -9,7 +9,7 @@ import ChevronRightIcon from '@mui/icons-material/ChevronRight';
 import RoleMatcherModal from "@/components/RoleMatcherModal";
 import ResumePdf from "./ResumePdf";
 import { pdf } from "@react-pdf/renderer";
-import { resumeContent } from "@/data/resumeContent";
+import { resumeContent } from "@/data/resume-content";
 
 export default function ResumePage() {
   const tabs = Object.values(resumeContent);

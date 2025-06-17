@@ -1,6 +1,6 @@
 import Link from "next/link";
 import ChevronRightIcon from '@mui/icons-material/ChevronRight';
-import { resumeContent } from "@/data/resumeContent";
+import { resumeContent } from "@/data/resume-content";
 import ReactMarkdown from 'react-markdown';
 
 export default function RecommendationsTab() {
