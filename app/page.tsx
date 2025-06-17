@@ -112,7 +112,7 @@ export default function HomePage() {
               alt=""
               width={113}
               height={402}
-              className="absolute top-[3%] left-[31%] w-[4.25%] hover:cursor-pointer hover:drop-shadow-[0_0_0.5vw] hover:drop-shadow-pink-400"
+              className="absolute top-[3%] left-[31%] w-[4.25%] hover:cursor-pointer hover-easter-egg-shadow"
               onClick={handleLampClick}
             />
 
