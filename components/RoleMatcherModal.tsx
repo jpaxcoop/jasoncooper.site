@@ -62,31 +62,43 @@ export default function RoleMatcherModal({ isOpen, setIsOpen }: { isOpen: boolea
   return (
     <div className="fixed h-screen w-screen top-0 left-0 z-50 flex md:items-center justify-center bg-black/50 p-4">
       <div className="w-full max-w-4xl h-3/4 min-h-[400px]">
-        <div className="relative text-emerald-400 font-terminal tracking-wide bg-black shadow rounded-lg border-3 border-gray-709 h-full">
-          <div className="absolute w-full flex p-3 justify-between bg-black">
-            <div className="px-1">*** ROLE MATCHER ***</div>
-            <button className="px-1 text-right hover:text-black hover:bg-emerald-400 hover:cursor-pointer" onClick={() => setIsOpen(false)}>
-              QUIT
-            </button>
-          </div>
+        <div className="relative text-emerald-400 font-terminal tracking-wide bg-black shadow rounded-lg border-3 border-gray-709 h-full overflow-hidden">
+          <div className="h-2/3 flex flex-col">
+            <div className="flex p-3 pb-0 justify-between">
+              <div className="px-1">
+                *** ROLE MATCHER ***
+              </div>
+              <button className="px-1 text-right hover:text-black hover:bg-emerald-400 hover:cursor-pointer" onClick={() => setIsOpen(false)}>
+                QUIT
+              </button>
+            </div>
 
-          <div className="h-2/3 text-emerald-400 font-terminal tracking-wide overflow-y-auto terminal-scrollbar">
+            <div className="text-nowrap text-emerald-400 text-terminal">
+              ----------------------------------------------------------------------------------------------------------------------------
+            </div>
 
-            <div className="mt-8 p-4">
-              <TypingText fullText={`Hello. Welcome to the artificial intelligence-powered "Role Matcher." Please enter information regarding the role you are hiring for. The Role Matcher will match it to Jason's skills and experience, then prepare a summary for your review.`} speed={10} />
+            <div className="text-emerald-400 font-terminal tracking-wide overflow-y-auto terminal-scrollbar">
+              <div className="p-4 pt-0">
+                <TypingText fullText={`Hello. Welcome to the artificial intelligence-powered "Role Matcher." Please enter information regarding the role you are hiring for. The Role Matcher will match it to Jason's skills and experience, then prepare a summary for your review.`} speed={10} />
 
-              {loading && (
-                <>
-                  Loading...
-                  <div className="bg-emerald-400 aspect-square w-4 animate-blink"></div>
-                </>
-              )}
+                {loading && (
+                  <>
+                    Loading...
+                    <div className="bg-emerald-400 aspect-square w-4 animate-blink"></div>
+                  </>
+                )}
 
-              {roleMatch && <TypingText fullText={roleMatch} speed={10} />}
+                {roleMatch && (
+                  <>
+                    <div className="mb-4">Loaded!</div>
+                    <TypingText fullText={roleMatch} speed={10} />
+                  </>
+                )}
+              </div>
             </div>
           </div>
 
-          <div className="h-1/3 p-4 flex flex-col">
+          <div className="h-1/3 flex flex-col">
             <div className="overflow-hidden text-nowrap text-emerald-400 text-terminal">
               ----------------------------------------------------------------------------------------------------------------------------
             </div>
@@ -97,14 +109,14 @@ export default function RoleMatcherModal({ isOpen, setIsOpen }: { isOpen: boolea
                 setText(e.target.value);
                 setRoleDescription(e.target.value);
               }}
-              className="block w-full font-terminal text-gray-300 resize-none focus-visible:outline-0 rounded-lg flex-grow min-h-[24px] caret-gray-300 terminal-scrollbar"
+              className="px-4 block w-full font-terminal text-gray-300 resize-none focus-visible:outline-0 rounded-lg flex-grow min-h-[24px] caret-gray-300 terminal-scrollbar"
               placeholder="Enter/paste your role information here, then submit."></textarea>
 
-              <div className="flex justify-end">
-                <button className="px-1 text-emerald-400 font-terminal tracking-wide text-right hover:text-black hover:bg-emerald-400 hover:cursor-pointer" onClick={() => handleSubmitClick()}>
-                  SUBMIT
-                </button>
-              </div>
+            <div className="flex justify-end p-4 pt-1">
+              <button className="px-1 text-emerald-400 font-terminal tracking-wide text-right hover:text-black hover:bg-emerald-400 hover:cursor-pointer" onClick={() => handleSubmitClick()}>
+                SUBMIT
+              </button>
+            </div>
           </div>
         </div>
       </div>
