@@ -1,3 +1,4 @@
+import { resumeContent } from '@/data/resumeContent';
 import { NextRequest, NextResponse } from 'next/server';
 import { OpenAI } from 'openai';
 
@@ -6,12 +7,12 @@ const openai = new OpenAI({
 });
 
 export async function POST(req: NextRequest) {
-  const { roleDescription, resumeText } = await req.json();
+  const { roleDescription } = await req.json();
 
   const prompt = `
-Given the following resumé:
+Given the following resumé of Jason Cooper, a man:
 
-${resumeText}
+${JSON.stringify(resumeContent)}
 
 And the following job description:
 

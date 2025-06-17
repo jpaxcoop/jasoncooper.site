@@ -11,23 +11,6 @@ export default function RoleMatcherModal({ isOpen, setIsOpen }: { isOpen: boolea
   const [loading, setLoading] = useState<boolean>(false);
   const [roleMatch, setRoleMatch] = useState<string>('');
 
-  const resumeText = `Jason Cooper
-Designer and developer with 15 years designing applications and 10 years developing them.
-10 years of marketing and marketing technology experience
-Skilled in HTML, CSS, JavaScript, Typescript, and PHP languages.
-Experienced in React with Next.JS, Vue, Tailwind, Twitter Bootstrap, and Laravel frameworks.
-Experience with Jest, Cypress, and phpunit tests.
-Experienced with MySQL databases and familiar with PostgreSQL databases.
-Experience using and building RESTful APIs. Experience using SOAP APIs.
-Experience with AWS, including S3, RDS, and Amplify. 
-Strong graphic design, UI design, and copywriting skills.
-Experienced with wireframing and designing with Adobe Creative Suite (20 years) and with Figma.
-Experienced with and knowledgeable about developing applications with AI assistance.
-Experience managing developer teams and projects using SDLCs like Agile and tools like Jira.
-Fast learner and self-starter.
-Jason has some college education, and work experience equivalent to a bachelor's degree.
-Excellent communicator.`;
-
   useEffect(() => {
     if (isOpen) {
       setText('');
@@ -61,7 +44,7 @@ Excellent communicator.`;
     const res = await fetch('/api/ai', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ roleDescription, resumeText }),
+      body: JSON.stringify({ roleDescription }),
     });
 
     const data = await res.json();
