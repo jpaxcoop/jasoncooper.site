@@ -8,18 +8,18 @@ export default function IntroductionTab() {
     <>
       <div id={resumeContent.introduction.id} className="flex flex-wrap md:flex-nowrap gap-10 pb-8 mb-4 border-b border-dashed scroll-mt-28">
         <div className="w-full md:w-3/4">
-          <h2 className="font-heading font-semibold text-2xl mb-2">{resumeContent.introduction.title}</h2>
+          <h2 className="font-heading font-semibold text-2xl text-white mb-4 max-w-md">{resumeContent.introduction.title}</h2>
 
           <ReactMarkdown>{resumeContent.introduction.text}</ReactMarkdown>
         </div>
 
         <div className="w-full md:w-1/4">
-          <Link href="mailto:jasonpaxtoncooper@gmail.com" className="block mb-4 border border-gray-400 rounded-lg p-2 hover:text-white">
+          <Link href="mailto:jasonpaxtoncooper@gmail.com" className="block font-heading text-gray-200 whitespace-nowrap mb-4 border-2 border-gray-400 rounded-lg px-4 py-2 hover:text-white hover:border-white hover:cursor-pointer">
             Email Jason
             <ChevronRightIcon fontSize="small" />
           </Link>
 
-          <Link href="https://www.linkedin.com/in/jasonpaxtoncooper" target="_blank" className="block mb-4 border border-gray-400 rounded-lg p-2 hover:text-white">
+          <Link href="https://www.linkedin.com/in/jasonpaxtoncooper" target="_blank" className="block font-heading text-gray-200 whitespace-nowrap mb-4 border-2 border-gray-400 rounded-lg px-4 py-2 hover:text-white hover:border-white hover:cursor-pointer">
             Connect on LinkedIn
             <ChevronRightIcon fontSize="small" />
           </Link>

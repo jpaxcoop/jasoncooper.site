@@ -69,7 +69,7 @@ export default function SkillsTechTab() {
 
                 <button
                   onClick={() => scrollToSection(resumeContent.skillsAndTech.id)}
-                  className="text-gray-400 hover:text-pink-600"
+                  className="text-gray-400 hover:text-pink-500"
                 >
                   Return to Skills
                 </button>
