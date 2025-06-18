@@ -15,6 +15,8 @@ export default function RoleMatcherModal({ isOpen, setIsOpen }: { isOpen: boolea
   const [isMatching, setIsMatching] = useState<boolean>(false);
   const [roleMatch, setRoleMatch] = useState<string>('');
 
+  const [errorMessage, setErrorMessage] = useState<string>('');
+
   const [isDownloading, setIsDownloading] = useState<boolean>(false);
 
   useEffect(() => {
@@ -39,7 +41,7 @@ export default function RoleMatcherModal({ isOpen, setIsOpen }: { isOpen: boolea
 
   const handleSubmitClick = async () => {
     if (!roleDescription) {
-      setRoleMatch('Please enter a role description before submitting.');
+      setErrorMessage('Please enter a role description before submitting.');
 
       return;
     }
@@ -48,6 +50,7 @@ export default function RoleMatcherModal({ isOpen, setIsOpen }: { isOpen: boolea
       return;
     }
 
+    setErrorMessage('');
     setIsMatching(true);
     setRoleMatch('');
 
@@ -61,7 +64,7 @@ export default function RoleMatcherModal({ isOpen, setIsOpen }: { isOpen: boolea
     if (data.result) {
       setRoleMatch(data.result);
     } else {
-      setRoleMatch('Error generating AI response.');
+      setErrorMessage('Error generating AI response.');
     }
 
     setIsMatching(false);
@@ -72,6 +75,7 @@ export default function RoleMatcherModal({ isOpen, setIsOpen }: { isOpen: boolea
       return;
     }
 
+    setErrorMessage('');
     setIsDownloading(true);
 
     const res = await fetch('/api/optimize-resume', {
@@ -100,7 +104,7 @@ export default function RoleMatcherModal({ isOpen, setIsOpen }: { isOpen: boolea
       a.click();
       URL.revokeObjectURL(url);
     } else {
-      setRoleMatch('Error generating resumé PDF.');
+      setErrorMessage('Error generating resumé PDF.');
     }
 
     setIsDownloading(false);
@@ -111,6 +115,7 @@ export default function RoleMatcherModal({ isOpen, setIsOpen }: { isOpen: boolea
       return;
     }
 
+    setErrorMessage('');
     setIsDownloading(true);
 
     const res = await fetch('/api/optimize-resume', {
@@ -139,7 +144,7 @@ export default function RoleMatcherModal({ isOpen, setIsOpen }: { isOpen: boolea
       a.click();
       URL.revokeObjectURL(url);
     } else {
-      setRoleMatch('Error generating ATS resumé PDF.');
+      setErrorMessage('Error generating ATS resumé PDF.');
     }
 
     setIsDownloading(false);
@@ -199,6 +204,12 @@ export default function RoleMatcherModal({ isOpen, setIsOpen }: { isOpen: boolea
                     <TypingText fullText={roleMatch} speed={10} />
                   </>
                 )}
+
+                {
+                  errorMessage && (
+                    <TypingText fullText={errorMessage} speed={10} />
+                  )
+                }
               </div>
             </div>
           </div>
