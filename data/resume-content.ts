@@ -100,6 +100,10 @@ I've experimented with the **OpenAI API** (see the **Role Matcher**) and **AI im
           `MySQL`,
           `Git`,
           `Ubuntu`,
+          `Bash`,
+          `RESTful APIs`,
+          `SOAP APIs`,
+          `WordPress`,
         ],
       },
       {
@@ -118,6 +122,9 @@ I've experimented with the **OpenAI API** (see the **Role Matcher**) and **AI im
           `AWS`,
           `nginx`,
           `GitHub`,
+          `Salesforce`,
+          `Mailchimp`,
+          ``
         ],
       },
     ],
@@ -132,6 +139,7 @@ I've experimented with the **OpenAI API** (see the **Role Matcher**) and **AI im
         role: `Senior UI Designer / Developer`,
         org: `Peerless Network`,
         dates: `Sep 2018 - Apr 2025 · 6 yrs 8 mos`,
+        ats_dates: `09/2018 - 04/2025`,
         text: `I led the design and development of the Peerless Portal, a customer-facing order automation platform. I started with a blank canvas and had the platform deployed in production with customers in 3 months.
 
 Adoption increased from there. In the first year, Peerless Network required that all but the largest enterprise customers be serviced through the Peerless Portal. My team grew to 5 team members dedicated to the Portal project.
@@ -145,6 +153,7 @@ Over the years, the Peerless Portal drastically increased its scope - upstream w
         role: `Marketing Automation & Technology Manager`,
         org: `PGi`,
         dates: `Jan 2016 - Sep 2018 · 2 yrs 9 mos`,
+        ats_dates: `01/2016 - 09/2018`,
         text: `I was a marketeer. The swashbucklers of the marketing industry, marketeers operate on the uncharted edges of technology, embarking on campaigns long and short, bringing home ROI bounty.
 
 I managed PGi's marketing technology, including marketing automation platforms (primarily Eloqua, but also Hubspot and Marketo) and content management systems (primarily WordPress). I also extend our marketing technology capabilities through heavy JavaScript and PHP development, and leveraging APIs.
@@ -160,6 +169,7 @@ Finally, I made sure the capabilities are available to other team members by dev
         role: `Systems Designer`,
         org: `Dynamic Marketing Systems (now Truelio)`,
         dates: `May 2004 - Oct 2015 · 11 yrs 6 mos`,
+        ats_dates: `05/2004 - 10/2015`,
         text: `For more than 10 years, I worked at the B2B marketing services firm Dynamic Marketing Systems. I started as a designer and implementer of print ordering and automation systems. I grew into an automator of all kinds of marketing - from print to email nurturing to sales support.
 
 I also became a "utility player", a position I would assume throughout my career. I started managing our print ordering system, a project that required database management and HTML and CSS development. Then I managed all kinds of projects, which included helping designing business processes for our fledgling company. My day could include pitching business to clients, creative-directing a website, copy-writing and coding an HTML email, and preparing traffic reports with analysis.`,

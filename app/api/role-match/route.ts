@@ -12,7 +12,7 @@ export async function POST(req: NextRequest) {
   const prompt = `
 Given the following resumé of Jason Cooper, a man:
 
-${JSON.stringify(resumeContent)}
+${JSON.stringify(resumeContent, null, 2)}
 
 And the following job description:
 

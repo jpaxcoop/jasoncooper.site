@@ -55,7 +55,8 @@ export const pdfStyles = StyleSheet.create({
   link: { color: primaryColor },
   contactRow: {
     marginBottom: 3,
-    alignItems: 'baseline',
+    alignItems: 'center',
+    width: '100%',
   },
   skillLink: {
     borderColor: primaryColor,

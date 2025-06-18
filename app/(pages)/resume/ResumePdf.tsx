@@ -1,5 +1,5 @@
 import { projectThumbs } from '@/data/project-thumbs';
-import { resumeContent } from '@/data/resume-content';
+import { resumeContent as resumeData } from '@/data/resume-content';
 import { markdownToPdfComponents } from '@/utlis/markdownToPDF';
 import { Document, Page, Text, View, Link, Image } from '@react-pdf/renderer';
 import { Font } from '@react-pdf/renderer';
@@ -48,10 +48,15 @@ const recentProjects = [
   projectThumbs.peerlessPortal,
 ];
 
-const languagesAndFrameworks = resumeContent.skillsAndTech.skills.find(skill => skill.id === 'languages-and-frameworks');
-const tools = resumeContent.skillsAndTech.skills.find(skill => skill.id === 'tools');
+type Props = {
+  hasJobDescription?: boolean;
+  resumeContent?: typeof resumeData;
+};
 
-export default function ResumePdf() {
+export default function ResumePdf({ hasJobDescription = false, resumeContent = resumeData }: Props) {
+  const languagesAndFrameworks = resumeContent.skillsAndTech.skills.find(skill => skill.id === 'languages-and-frameworks');
+  const tools = resumeContent.skillsAndTech.skills.find(skill => skill.id === 'tools');
+
   return (
     <Document title="Jason Cooper | Resumé" author="Jason Cooper">
       <Page size="LETTER" orientation="landscape" style={pdfStyles.page}>
@@ -72,12 +77,23 @@ export default function ResumePdf() {
                 <Link src={baseUrl} style={pdfStyles.link}>{baseUrl}</Link>
               </View>
               <View style={[pdfStyles.flexRowContainer, pdfStyles.contactRow]}>
+                <Text style={[pdfStyles.label, { width: 80 }]}>LinkedIn</Text>
+                <Link src="https://www.linkedin.com/in/jasonpaxtoncooper/" style={pdfStyles.link}>https://www.linkedin.com/in/jasonpaxtoncooper/</Link>
+              </View>
+              <View style={[pdfStyles.flexRowContainer, pdfStyles.contactRow]}>
                 <Text style={[pdfStyles.label, { width: 80 }]}>Phone</Text>
                 <Text>(706) 255-2417</Text>
               </View>
               <View style={[pdfStyles.flexRowContainer, pdfStyles.contactRow]}>
                 <Text style={[pdfStyles.label, { width: 80 }]}>Email</Text>
                 <Link src="mailto:jasonpaxtoncooper@gmail.com" style={pdfStyles.link}>jasonpaxtoncooper@gmail.com</Link>
+              </View>
+              <View style={[pdfStyles.flexRowContainer, pdfStyles.contactRow]}>
+                <Text style={[pdfStyles.label, { width: 80 }]}>Address</Text>
+                <Text>
+                  1480 Uncle Ben Drive,
+                  Powder Springs, GA 30127
+                </Text>
               </View>
             </View>
 
@@ -95,8 +111,8 @@ export default function ResumePdf() {
               </Text>
 
               <Text style={[pdfStyles.paragraph, { color: primaryColor }]}>
-                This document was NOT generated using a word processor or illustration program. Instead, a Next.js web app used the react-pdf library to generate this PDF using the same content populating the web app. 
-              </Text> 
+                {`This document was NOT generated using a word processor or illustration program. Instead, a custom Next.js web app${hasJobDescription ? ' optimized the content against your job description using a GPT model, then' : ''} generated the PDF using the react-pdf library.`} 
+              </Text>
             </View>
           </View>
 

@@ -2,14 +2,20 @@
 
 import { useEffect, useRef, useState } from "react";
 import { TypingText } from "./TypingText";
+import { pdf } from "@react-pdf/renderer";
+import ResumePdf from "@/app/(pages)/resume/ResumePdf";
+import { resumeContent } from "@/data/resume-content";
+import AtsResumePdf from "@/app/(pages)/resume/ats/AtsResumePdf";
 
 export default function RoleMatcherModal({ isOpen, setIsOpen }: { isOpen: boolean, setIsOpen: (val: boolean) => void }) {
   const textareaRef = useRef<HTMLTextAreaElement>(null);
   const [text, setText] = useState<string>('');
 
   const [roleDescription, setRoleDescription] = useState<string>('');
-  const [loading, setLoading] = useState<boolean>(false);
+  const [isMatching, setIsMatching] = useState<boolean>(false);
   const [roleMatch, setRoleMatch] = useState<string>('');
+
+  const [isDownloading, setIsDownloading] = useState<boolean>(false);
 
   useEffect(() => {
     if (isOpen) {
@@ -38,10 +44,14 @@ export default function RoleMatcherModal({ isOpen, setIsOpen }: { isOpen: boolea
       return;
     }
 
-    setLoading(true);
+    if (isMatching) {
+      return;
+    }
+
+    setIsMatching(true);
     setRoleMatch('');
 
-    const res = await fetch('/api/ai', {
+    const res = await fetch('/api/role-match', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ roleDescription }),
@@ -54,7 +64,85 @@ export default function RoleMatcherModal({ isOpen, setIsOpen }: { isOpen: boolea
       setRoleMatch('Error generating AI response.');
     }
 
-    setLoading(false);
+    setIsMatching(false);
+  }
+
+  const handleDownloadResumeClick = async () => {
+    if (isDownloading) {
+      return;
+    }
+
+    setIsDownloading(true);
+
+    const res = await fetch('/api/optimize-resume', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ roleDescription }),
+    });
+
+    const data = await res.json();
+    if (data.result) {
+      const introduction = JSON.parse(data.result);
+
+      const optimizedResumeContent = resumeContent;
+
+      optimizedResumeContent.introduction.title = introduction.title;
+      optimizedResumeContent.introduction.text = introduction.text;
+
+      const blob = await pdf(
+        <ResumePdf hasJobDescription={true} resumeContent={optimizedResumeContent} />
+      ).toBlob();
+
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement('a');
+      a.href = url;
+      a.download = 'jason-cooper-resume.pdf';
+      a.click();
+      URL.revokeObjectURL(url);
+    } else {
+      setRoleMatch('Error generating resumé PDF.');
+    }
+
+    setIsDownloading(false);
+  }
+
+  const handleDownloadAtsResumeClick = async () => {
+    if (isDownloading) {
+      return;
+    }
+
+    setIsDownloading(true);
+
+    const res = await fetch('/api/optimize-resume', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ roleDescription }),
+    });
+
+    const data = await res.json();
+    if (data.result) {
+      const introduction = JSON.parse(data.result);
+
+      const optimizedResumeContent = resumeContent;
+
+      optimizedResumeContent.introduction.title = introduction.title;
+      optimizedResumeContent.introduction.text = introduction.text;
+
+      const blob = await pdf(
+        <AtsResumePdf resumeContent={optimizedResumeContent} />
+      ).toBlob();
+
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement('a');
+      a.href = url;
+      a.download = 'jason-cooper-ats-resume.pdf';
+      a.click();
+      URL.revokeObjectURL(url);
+    } else {
+      setRoleMatch('Error generating ATS resumé PDF.');
+    }
+
+    setIsDownloading(false);
   }
 
   if (!isOpen) return null;
@@ -81,16 +169,33 @@ export default function RoleMatcherModal({ isOpen, setIsOpen }: { isOpen: boolea
               <div className="p-4 pt-0">
                 <TypingText fullText={`Hello. Welcome to the artificial intelligence-powered "Role Matcher." Please enter information regarding the role you are hiring for. The Role Matcher will match it to Jason's skills and experience, then prepare a summary for your review.`} speed={10} />
 
-                {loading && (
+                {isMatching && (
                   <>
-                    Loading...
+                    Matching...
                     <div className="bg-emerald-400 aspect-square w-4 animate-blink"></div>
                   </>
                 )}
 
                 {roleMatch && (
                   <>
-                    <div className="mb-4">Loaded!</div>
+                    <div className="mb-4">Matched!</div>
+                    <div className="mb-4">
+                      <button
+                        className={`uppercase px-1 mr-2 text-right text-black bg-emerald-400 ${isDownloading ? 'hover:cursor-wait' : 'hover:cursor-pointer'}`}
+                        onClick={() => handleDownloadResumeClick()}
+                      >
+                        Download Resumé
+                      </button>
+
+                      <button
+                        className={`uppercase px-1 mr-2 text-right text-black bg-emerald-400 ${isDownloading ? 'hover:cursor-wait' : 'hover:cursor-pointer'}`}
+                        onClick={() => handleDownloadAtsResumeClick()}
+                      >
+                        Download ATS Resumé
+                      </button>
+
+                      {isDownloading ? 'Downloading...' : ''}
+                    </div>
                     <TypingText fullText={roleMatch} speed={10} />
                   </>
                 )}
