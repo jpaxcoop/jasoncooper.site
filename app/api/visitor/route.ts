@@ -3,6 +3,7 @@ import { UAParser } from 'ua-parser-js';
 
 export async function GET(req: NextRequest) {
   const WEATHER_API_KEY = process.env.NEXT_PUBLIC_OPENWEATHER_API_KEY;
+  const IPDATA_API_KEY = process.env.NEXT_PUBLIC_IPDATA_API_KEY;
 
   const ip = req.headers.get('x-forwarded-for')?.split(',')[0] ?? null;
   // const ip = '73.82.64.135';
@@ -16,12 +17,7 @@ export async function GET(req: NextRequest) {
 
   if (ip) {
     try {
-      const res = await fetch(`https://ipapi.co/${ip}/json/`, {
-        headers: {
-          'User-Agent': userAgent || 'Mozilla/5.0',
-          'Accept': 'application/json',
-        },
-      });
+      const res = await fetch(`https://api.ipdata.co/${ip}?api-key=${IPDATA_API_KEY}`);
 
       locationData = await res.json();
     } catch (error) {
@@ -47,10 +43,10 @@ export async function GET(req: NextRequest) {
     ip,
     city: locationData?.city,
     region: locationData?.region,
-    country: locationData?.country,
+    country: locationData?.country_name,
     latitude: locationData?.latitude,
     longitude: locationData?.longitude,
-    timezone: locationData?.timezone,
+    timezone: locationData?.time_zone.name,
     browser: parsedAgent?.browser.name,
     os: parsedAgent?.os.name,
     weather: weatherData ? {
