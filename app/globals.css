@@ -177,10 +177,10 @@ p a {
 }
 
 .hover-easter-egg-shadow:hover {
-    filter: drop-shadow(0 0 0 var(--tw-shadow-color))
-            drop-shadow(1px 1px 0 var(--tw-shadow-color))
-            drop-shadow(-1px 1px 0 var(--tw-shadow-color))
-            drop-shadow(-1px -1px 0 var(--tw-shadow-color))
-            drop-shadow(1px -1px 0 var(--tw-shadow-color));
-    --tw-shadow-color: theme(colors.pink.300);
-  }
+  filter: drop-shadow(0 0 0 var(--tw-shadow-color))
+          drop-shadow(1px 1px 0 var(--tw-shadow-color))
+          drop-shadow(-1px 1px 0 var(--tw-shadow-color))
+          drop-shadow(-1px -1px 0 var(--tw-shadow-color))
+          drop-shadow(1px -1px 0 var(--tw-shadow-color));
+  --tw-shadow-color: theme(colors.pink.300);
+}
