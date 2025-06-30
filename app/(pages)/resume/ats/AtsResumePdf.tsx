@@ -68,7 +68,7 @@ export default function AtsResumePdf({ resumeContent = resumeData }: Props) {
         <View style={[pdfStyles.section]}>
           <Text style={[pdfStyles.heading, { fontSize: '14px', color: 'black' }]}>Contact Information</Text>
 
-          <Text style={pdfStyles.subheading}>Website</Text>
+          <Text style={pdfStyles.subheading}>Portfolio Website</Text>
           <Text style={{ marginBottom: '12px' }}>{baseUrl}</Text>
 
           <Text style={pdfStyles.subheading}>LinkedIn</Text>

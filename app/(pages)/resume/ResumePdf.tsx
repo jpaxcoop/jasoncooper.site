@@ -73,7 +73,7 @@ export default function ResumePdf({ hasJobDescription = false, resumeContent = r
           <View style={{ width: '50%', marginRight: 60 }}>
             <View style={[pdfStyles.section]}>
               <View style={[pdfStyles.flexRowContainer, pdfStyles.contactRow]}>
-                <Text style={[pdfStyles.label, { width: 80 }]}>On the web</Text>
+                <Text style={[pdfStyles.label, { width: 80 }]}>Portfolio</Text>
                 <Link src={baseUrl} style={pdfStyles.link}>{baseUrl}</Link>
               </View>
               <View style={[pdfStyles.flexRowContainer, pdfStyles.contactRow]}>
