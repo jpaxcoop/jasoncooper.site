@@ -11,6 +11,7 @@ const screens = [
   '/desk/screen-graphic-design.png',
   '/desk/screen-jason-cooper-site.png',
   '/desk/screen-server-ops.png',
+  '/desk/screen-aws-uploading.png',
 ];
 
 export default function HomePage() {
@@ -128,6 +129,7 @@ export default function HomePage() {
           <div className="group">
             <Link href="/projects">
               <Image
+                priority={true}
                 src="/desk/screen.svg"
                 alt=""
                 width={760}
