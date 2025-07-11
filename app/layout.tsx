@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import Header from "@/components/Header";
+import { GoogleAnalytics } from '@next/third-parties/google';
 
 export const metadata: Metadata = {
   title: "Jason Cooper",
@@ -12,11 +13,10 @@ export default async function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const NEXT_PUBLIC_GOOGLE_ANALYTICS_ID = process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS_ID;
+
   return (
     <html lang="en">
-      <head>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      </head>
       <body
         className="antialiased flex min-h-screen flex-col"
       >
@@ -27,6 +27,7 @@ export default async function RootLayout({
 
         <div className="fixed w-full h-full z-[-100] bg-linear-to-t from-gray-950 to-gray-800" />
       </body>
+      {NEXT_PUBLIC_GOOGLE_ANALYTICS_ID && <GoogleAnalytics gaId={NEXT_PUBLIC_GOOGLE_ANALYTICS_ID} />}
     </html>
   );
 }
