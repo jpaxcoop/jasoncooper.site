@@ -68,7 +68,8 @@ export default function HomePage() {
   };
 
   const handleMouseClick = () => {
-    playErrorSound();
+    const randomIndex = Math.floor(Math.random() * screens.length);
+    setScreen(screens[randomIndex]);
   };
 
   const handleBookClick = () => {
