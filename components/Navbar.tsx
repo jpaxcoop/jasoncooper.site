@@ -47,9 +47,9 @@ export default function Navbar() {
         <li key="contact">
           <button
             onClick={showContactModal}
-            className="text-lg lowercase tracking-wider transition-colors hover:text-pink-500 text-shadow-lg text-shadow-gray-900/50 hover:cursor-pointer"
+            className="text-lg lowercase tracking-wider transition-colors hover:text-pink-500 text-shadow-lg text-shadow-gray-900/50 hover:cursor-pointer text-gray-300"
           >
-            contact
+            Contact
           </button>
         </li>
       </ul>

@@ -4,6 +4,7 @@ import { useEffect, useRef } from 'react';
 import { createPortal } from 'react-dom';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
+import { useContactModal } from '@/context/GlobalContext';
 
 interface NavMenuPortalProps {
   isOpen: boolean;
@@ -22,6 +23,8 @@ export default function NavMenuPortal({ isOpen, onClose }: NavMenuPortalProps) {
   const pathname = usePathname();
   const portalRoot = typeof window !== 'undefined' ? document.getElementById('portal-root') : null;
   const menuRef = useRef<HTMLUListElement | null>(null);
+  
+    const { showContactModal } = useContactModal();
 
   // Optional: close on outside click
   useEffect(() => {
@@ -64,6 +67,15 @@ export default function NavMenuPortal({ isOpen, onClose }: NavMenuPortalProps) {
           </li>
         );
       })}
+
+      <li key="contact">
+        <button
+          onClick={showContactModal}
+          className="block lowercase tracking-wider transition-colors hover:text-pink-500 text-gray-300"
+        >
+          Contact
+        </button>
+      </li>
     </ul>,
     portalRoot
   );
