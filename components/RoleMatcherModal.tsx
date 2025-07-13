@@ -155,7 +155,7 @@ export default function RoleMatcherModal({ isOpen, setIsOpen }: { isOpen: boolea
   return (
     <div className="fixed h-screen w-screen top-0 left-0 z-50 flex md:items-center justify-center bg-black/50 p-4">
       <div className="w-full max-w-4xl h-3/4 min-h-[400px]">
-        <div className="relative text-emerald-400 font-terminal tracking-wide bg-black shadow rounded-lg border-3 border-gray-709 h-full overflow-hidden">
+        <div className="relative text-emerald-400 font-terminal tracking-wide bg-black shadow rounded-lg border-3 border-emerald-500 h-full overflow-hidden">
           <div className="h-2/3 flex flex-col">
             <div className="flex p-3 pb-0 justify-between">
               <div className="px-1">
