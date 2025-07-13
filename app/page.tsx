@@ -2,6 +2,7 @@
 
 import Footer from "@/components/Footer";
 import RoleMatcherModal from "@/components/RoleMatcherModal";
+import { useContactModal } from "@/context/GlobalContext";
 import Image from "next/image"
 import Link from "next/link";
 import { useCallback, useEffect, useState } from "react";
@@ -21,6 +22,8 @@ export default function HomePage() {
   const emptyScreen = '/desk/empty-screen.png';
 
   const [screen, setScreen] = useState<string>(emptyScreen);
+
+  const { showContactModal } = useContactModal();
 
   useEffect(() => {
     const randomIndex = Math.floor(Math.random() * screens.length);
@@ -69,10 +72,6 @@ export default function HomePage() {
   };
 
   const handleBookClick = () => {
-    playErrorSound();
-  };
-
-  const handlePhoneClick = () => {
     playErrorSound();
   };
 
@@ -234,14 +233,29 @@ export default function HomePage() {
             onClick={handleBookClick}
           />
 
-          <Image
-            src="/desk/phone.svg"
-            alt=""
-            width={64}
-            height={73}
-            className="absolute top-[32%] left-[23%] w-[3%]"
-            onClick={handlePhoneClick}
-          />
+          <div className="group" onClick={showContactModal}>
+            <Image
+              src="/desk/phone.svg"
+              alt=""
+              width={64}
+              height={73}
+              className="absolute top-[32%] left-[23%] w-[3%] group-hover:cursor-pointer"
+            />
+
+            <Image
+              src="/desk/iphone-locked-screen.png"
+              alt=""
+              width={64}
+              height={73}
+              className="absolute top-[32%] left-[23%] w-[3%] group-hover:cursor-pointer"
+            />
+
+            <div className="hidden lg:block absolute top-[21.5%] left-[13%] border-pink-500/50 border-3 px-4 py-1 text-[1.25vw] rounded group-hover:bg-pink-500/50 bg-white/25 opacity-0 animate-fadeIn hover:cursor-pointer" style={{animationDelay: '1.25s'}}>
+              <div className="absolute w-[15%] h-[200%] top-1/2 left-[102%] border-pink-500/50 border-t-3 border-r-3"></div>
+              <div className="absolute h-[25%] aspect-square rounded-full top-[250%] left-[116%] transform -translate-x-1/2 -translate-y--1 bg-pink-500/50"></div>
+              Contact Jason
+            </div>
+          </div>
         </div>
       </div>
 

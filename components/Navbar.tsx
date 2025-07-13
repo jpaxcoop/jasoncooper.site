@@ -6,6 +6,7 @@ import { useState } from 'react';
 import MenuIcon from '@mui/icons-material/Menu';
 import MenuOpenIcon from '@mui/icons-material/MenuOpen';
 import NavMenuPortal from './NavMenuPortal';
+import { useContactModal } from '@/context/GlobalContext';
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState<boolean>(false);
@@ -20,6 +21,8 @@ export default function Navbar() {
     { href: '/about-me', label: 'About Me' },
     { href: '/about-you', label: 'About You' },
   ];
+
+  const { showContactModal } = useContactModal();
 
   return (
     <nav className="z-[20] opacity-0 animate-fadeIn px-4">
@@ -40,6 +43,15 @@ export default function Navbar() {
             </li>
           );
         })}
+
+        <li key="contact">
+          <button
+            onClick={showContactModal}
+            className="text-lg lowercase tracking-wider transition-colors hover:text-pink-500 text-shadow-lg text-shadow-gray-900/50 hover:cursor-pointer"
+          >
+            contact
+          </button>
+        </li>
       </ul>
 
       <div className="fixed top-4 left-4 md:hidden">

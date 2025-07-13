@@ -1,7 +1,9 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import { GlobalContextProvider } from '@/context/GlobalContext';
 import Header from "@/components/Header";
 import { GoogleAnalytics } from '@next/third-parties/google';
+import ContactModal from "@/components/ContactModal";
 
 export const metadata: Metadata = {
   title: "Jason Cooper",
@@ -20,12 +22,16 @@ export default async function RootLayout({
       <body
         className="antialiased flex min-h-screen flex-col"
       >
-        <Header />
-        {children}
+        <GlobalContextProvider>
+          <Header />
+          {children}
 
-        <div id="portal-root" />
+          <div id="portal-root" />
 
-        <div className="fixed w-full h-full z-[-100] bg-linear-to-t from-gray-950 to-gray-800" />
+          <div className="fixed w-full h-full z-[-100] bg-linear-to-t from-gray-950 to-gray-800" />
+
+          <ContactModal />
+        </GlobalContextProvider>
       </body>
       {NEXT_PUBLIC_GOOGLE_ANALYTICS_ID && <GoogleAnalytics gaId={NEXT_PUBLIC_GOOGLE_ANALYTICS_ID} />}
     </html>
