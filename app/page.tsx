@@ -13,6 +13,9 @@ const screens = [
   '/desk/screen-jason-cooper-site.png',
   '/desk/screen-server-ops.png',
   '/desk/screen-aws-uploading.png',
+  '/desk/screen-desk-illustration.png',
+  '/desk/screen-apple-i.png',
+  '/desk/screen-guess-that-sound.png',
 ];
 
 export default function HomePage() {
@@ -68,8 +71,19 @@ export default function HomePage() {
   };
 
   const handleMouseClick = () => {
-    const randomIndex = Math.floor(Math.random() * screens.length);
-    setScreen(screens[randomIndex]);
+    setScreen(prevScreen => {
+      if (screens.length < 2) return prevScreen;
+
+      // remove the current screen from the “hat”
+      const randomIndex = Math.floor(Math.random() * (screens.length - 1));
+
+      // If randomIndex lands on or after the current screen’s index,
+      // shift it by one to “skip over” the current screen.
+      const currentIndex = screens.indexOf(prevScreen);
+      const nextIndex = randomIndex >= currentIndex ? randomIndex + 1 : randomIndex;
+
+      return screens[nextIndex];
+    });
   };
 
   const handleBookClick = () => {
@@ -184,7 +198,7 @@ export default function HomePage() {
             alt=""
             width={118}
             height={87}
-            className="absolute top-[54%] left-[54%] w-[4.75%]"
+            className="absolute top-[54%] left-[54%] w-[4.75%] hover:cursor-pointer hover-easter-egg-shadow"
             onClick={handleMouseClick}
           />
 
