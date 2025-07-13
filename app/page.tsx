@@ -147,7 +147,7 @@ export default function HomePage() {
 
               <div className="hidden lg:block absolute top-[4%] left-[60%] border-pink-500/50 border-3 px-4 py-1 text-[1.25vw] rounded group-hover:bg-pink-500/50 bg-white/25 opacity-0 animate-fadeIn hover:cursor-pointer" style={{animationDelay: '1s'}}>
                 <div className="absolute w-[25%] h-[200%] top-1/2 left-[-25%] border-pink-500/50 border-t-3 border-l-3"></div>
-                <div className="absolute h-[40%] aspect-square rounded-full top-[250%] left-[-25%] transform -translate-x-1/2 -translate-y--1 bg-pink-500/50"></div>
+                <div className="absolute h-[25%] aspect-square rounded-full top-[250%] left-[-24.5%] transform -translate-x-1/2 -translate-y--1 bg-pink-500/50"></div>
                 Jason's projects
               </div>
             </Link>
@@ -165,7 +165,7 @@ export default function HomePage() {
 
             <div className="hidden lg:block absolute top-[56%] left-[22%] border-pink-500/50 border-3 px-4 py-1 text-[1.25vw] rounded bg-pink-600/80 group-hover:bg-pink-500 opacity-0 animate-fadeIn hover:cursor-pointer" style={{animationDelay: '1.75s'}} onClick={handleKeyboardClick}>
               <div className="absolute w-[15%] h-[240%] bottom-1/2 right-[-15%] border-pink-500/50 border-b-3 border-r-3"></div>
-              <div className="absolute h-[40%] aspect-square rounded-full top-[-215%] right-[-20%] transform -translate-x-1/2 -translate-y-1 bg-pink-500/50"></div>
+              <div className="absolute h-[25%] aspect-square rounded-full top-[-204.5%] right-[-18%] transform -translate-x-1/2 -translate-y-1 bg-pink-500/50"></div>
               Hiring? Try the Role Matcher
             </div>
           </div>
@@ -199,9 +199,9 @@ export default function HomePage() {
                 onClick={handleResumeMouseClick}
               />
 
-              <div className="hidden lg:block absolute top-[63%] left-[70%] border-pink-500/50 border-3 px-4 py-1 text-[1.25vw] text-pink-500 group-hover:text-white rounded group-hover:bg-pink-500/50 bg-white/45 opacity-0 animate-fadeIn hover:cursor-pointer" style={{animationDelay: '1.5s'}}>
-                <div className="absolute w-[35%] h-[100%] bottom-1/2 left-[-35%] border-pink-500/50 border-b-3 border-l-3"></div>
-                <div className="absolute h-[40%] aspect-square rounded-full top-[-75%] left-[-34%] transform -translate-x-1/2 -translate-y-1 bg-pink-500/50"></div>
+              <div className="hidden lg:block absolute top-[72%] left-[50%] border-pink-500/50 border-3 px-4 py-1 text-[1.25vw] rounded group-hover:bg-pink-500/50 bg-white/25 opacity-0 animate-fadeIn hover:cursor-pointer" style={{animationDelay: '1.5s'}}>
+                <div className="absolute w-[35%] h-[300%] bottom-1/2 right-[-37%] border-pink-500/50 border-b-3 border-r-3"></div>
+                <div className="absolute h-[25%] aspect-square rounded-full top-[-265%] left-[136.5%] transform -translate-x-1/2 -translate-y-1 bg-pink-500/50"></div>
                 Jason's resumé
               </div>
             </Link>
@@ -218,8 +218,8 @@ export default function HomePage() {
               />
 
               <div className="hidden lg:block absolute top-[34%] left-[76.5%] border-pink-500/50 border-3 px-4 py-1 text-[1.25vw] rounded group-hover:bg-pink-500/50 bg-white/25 opacity-0 animate-fadeIn hover:cursor-pointer" style={{animationDelay: '1.25s'}}>
-                <div className="absolute w-[15%] h-[180%] top-1/2 left-[-15%] border-pink-500/50 border-t-3 border-l-3"></div>
-                <div className="absolute h-[40%] aspect-square rounded-full top-[220%] left-[-15%] transform -translate-x-1/2 -translate-y--1 bg-pink-500/50"></div>
+                <div className="absolute w-[15.5%] h-[180%] top-1/2 left-[-15.5%] border-pink-500/50 border-t-3 border-l-3"></div>
+                <div className="absolute h-[25%] aspect-square rounded-full top-[228%] left-[-14.5%] transform -translate-x-1/2 -translate-y--1 bg-pink-500/50"></div>
                 About Jason
               </div>
             </Link>
