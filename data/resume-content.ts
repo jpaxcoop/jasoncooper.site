@@ -43,31 +43,29 @@ Jason would be a great asset to any engineering team and I am thankful for havin
       {
         id: `application-design`,
         title: `Application Design`,
-        text: `My journey into application design began over 15 years ago when I was hired to design a web-based print ordering application. The print side of the business did not last, but the application design did! I've designed dozens of B2B applications and websites, learning UX and UI best practices along the way.
-
-I often work directly with stakeholders to collect requirements and learn about the systems and processes the new application will integrate with. But it's always helpful to collaborate with a product manager, who can bring a great deal of content matter expertise.`,
+        text: `I often work directly with stakeholders to collect requirements and learn about the systems and processes the new application will integrate with. I express my design with screenshots, Figma presentations, HTML mockups, or JS-coded functional prototypes.`,
         list: [],
       },
       {
         id: `prototyping`,
         title: `Prototyping`,
-        text: `I create prototypes to test early ideas and discover obstacles. Originally my prototypes were sketches done in **Photoshop**, then they graduated to **HTML** static files. Today, I can quickly spin up operational prototypes with a **JavaScript** framework and database. I've used **Figma** to present and share ideas, but I find it an unnecessary step when I can code something just as quickly.`,
+        text: `I create prototypes to test early ideas and discover obstacles. I quickly spin up operational prototypes with a **JavaScript** framework and database. I've used **Figma** to present and share ideas, but I find it an unnecessary step when I can code something just as quickly.`,
         list: [],
       },
       {
         id: `ux-and-ui-design`,
         title: `UX and UI Design`,
-        text: `I collect as much information about users as I can before designing the user experience. In my experience, much of it is anecdotal and the only hard data comes from CRM platforms or legacy applications. I would enjoy the chance to conduct user research, but to this point budget and time constraints have not allowed for it.
+        text: `I collect as much information about users as I can before designing the user experience. Often the information is anecdotal and the only hard data comes from CRM platforms or legacy applications.
 
-My work in the B2B space has taught me the ideal user experience is intuitive, fast, and risk-free (meaning the user can always go back, undo, or delete). The user interface is informed by that philosophy - the process and controls should be so obvious that the need for instruction or documentation is almost redundant (but should stil be present!).
+The ideal user experience is intuitive, fast, and risk-free (meaning the user can always go back, undo, or delete). The user interface is informed by that philosophy - the process and controls should be so obvious that the need for instruction or documentation is almost redundant (but should stil be present!).
 
-With my marketing background, I have an understanding (and appreciation) for brand identity and standards. I have a lot of experience applying a brand to all sorts of assets, including applications. I'm careful to make sure the UI design represents the brand without interfering with the connection between the user and the application.`,
+With my marketing background, I understand and appreciate brand identity and standards. I have experience branding all sorts of assets, including applications. I'm careful to make sure the UI design represents the brand without interfering with the connection between the user and the application.`,
         list: [],
       },
       {
         id: `application-development`,
         title: `Application Development`,
-        text: `Today I am a **JavaScript** developer. For the last year or so, I've been focusing on **React**, especially with the **Next.js** framework. Prior to that, I worked with **Vue.js** and the **Laravel PHP** framework for several years. And prior to that, I was a big fan of the **Bootstrap** frontend framework with **jQuery**.
+        text: `Today I am a **JavaScript** developer. Recently, I've focused on **React** with the **Next.js** framework. Prior to that, I worked with **Vue.js** and the **Laravel PHP** framework for several years. And prior to that, I worked with **Bootstrap** and **jQuery**.
 
 As a team leader, I'm experienced in **version control** and **Continuous Integration/Continuous Delivery**. I've worked with **GitHub Actions paired with Laravel Envoyer** for deployment and **BitBucket with Jenkins**. For JavaScript tests I've worked with **Cypress and Jest**. For PHP I write **phpunit tests**.`,
         list: [],
@@ -75,9 +73,9 @@ As a team leader, I'm experienced in **version control** and **Continuous Integr
       {
         id: `artificial-intelligence`,
         title: `Artificial Intelligence`,
-        text: `I've come to an obvious realization: AI is the future (if not the present) of application development. An effective application developer uses an AI coding assistant constantly, and only writes code themselves to tweak, adjust, or test. I've spent the last several months learning the coding language of the future: AI prompts that deliver specific, accurate code. To this end I've used **Copilot in VS Code, the Cursor IDE, and of course ChatGPT**.
+        text: `AI is now necessary to application development. An effective developer uses an AI coding assistant constantly. I excel at providing AI prompts that deliver specific, accurate code. To this end I've used **Copilot in VS Code, the Cursor IDE, and of course ChatGPT**.
 
-I've experimented with the **OpenAI API** (see the **Role Matcher**) and **AI image generation**. My recent [HAL9000 project](http://localhost:3000/projects/hal9000) was a deep dive into **voice model training, vocoder optimization, and working with LLMs**.`,
+I've experimented with the **OpenAI API** (see the [Role Matcher](https://jasoncooper.site)) and **AI image generation**. My recent [HAL9000 project](https://jasoncooper.site/projects/hal9000) was a deep dive into **voice model training, vocoder optimization, and working with LLMs**.`,
         list: [],
       },
       {
@@ -90,20 +88,24 @@ I've experimented with the **OpenAI API** (see the **Role Matcher**) and **AI im
           `JavaScript`,
           `Typescript`,
           `PHP`,
+          `Python`,
           `Vue`,
           `React`,
           `Next.js`,
+          `Jest`,
+          `Cypress`,
           `jQuery`,
           `Tailwind`,
           `Bootstrap`,
           `Laravel`,
+          `phpunit`,
+          `WordPress`,
           `MySQL`,
           `Git`,
           `Ubuntu`,
           `Bash`,
           `RESTful APIs`,
           `SOAP APIs`,
-          `WordPress`,
         ],
       },
       {
@@ -115,15 +117,12 @@ I've experimented with the **OpenAI API** (see the **Role Matcher**) and **AI im
           `ChatGPT`,
           `TablePlus`,
           `Adobe Creative Suite`,
-          `Inkscape`,
-          `GIMP`,
-          `Audacity`,
-          `OpenShot`,
           `AWS`,
           `nginx`,
           `GitHub`,
           `Salesforce`,
           `Mailchimp`,
+          `Microsoft Office`,
           ``
         ],
       },
@@ -140,13 +139,17 @@ I've experimented with the **OpenAI API** (see the **Role Matcher**) and **AI im
         org: `Peerless Network`,
         dates: `Sep 2018 - Apr 2025 · 6 yrs 8 mos`,
         ats_dates: `09/2018 - 04/2025`,
-        text: `I led the design and development of the Peerless Portal, a customer-facing order automation platform. I started with a blank canvas and had the platform deployed in production with customers in 3 months.
+        text: `- I led the design and development of the Peerless Portal, a customer-facing order automation platform.
 
-Adoption increased from there. In the first year, Peerless Network required that all but the largest enterprise customers be serviced through the Peerless Portal. My team grew to 5 team members dedicated to the Portal project.
+- I started with a blank canvas and deployed into production with customers in 3 months.
 
-I wore the hats of team lead, designer, and developer. I worked closely with the voice product team, the customer account management leadership, and technical support to design features to support business units across the company.
+- This opened up a completely new customer market that was previously not profitable with a manually serviced approach.
 
-Over the years, the Peerless Portal drastically increased its scope - upstream with quote-building and integration with Salesforce, and downstream with product usage reporting and support ticket management. Though Peerless Network was purchased by Infobip, a much larger, international company with its own platform, the Peerless Portal remains in use today.`,
+- As we added thousands of customers, my team grew to 5 team members dedicated to the Portal project.
+
+- Millions of dollars in revenue flowed through the Portal each year, with almost no work required by the voice engineering team.
+
+- I wore the hats of team lead, designer, and developer. I worked closely with the voice product team, customer management leadership, and technical support to design features to support customers and business units across the company.`,
       },
       {
         id: `pgi`,
@@ -154,15 +157,15 @@ Over the years, the Peerless Portal drastically increased its scope - upstream w
         org: `PGi`,
         dates: `Jan 2016 - Sep 2018 · 2 yrs 9 mos`,
         ats_dates: `01/2016 - 09/2018`,
-        text: `I was a marketeer. The swashbucklers of the marketing industry, marketeers operate on the uncharted edges of technology, embarking on campaigns long and short, bringing home ROI bounty.
+        text: `- I managed PGi's marketing technology, including marketing automation platforms (primarily Eloqua, but also Hubspot and Marketo) and content management systems (primarily WordPress). I also extended our marketing capabilities through heavy JavaScript and PHP development, and leveraging APIs.
 
-I managed PGi's marketing technology, including marketing automation platforms (primarily Eloqua, but also Hubspot and Marketo) and content management systems (primarily WordPress). I also extend our marketing technology capabilities through heavy JavaScript and PHP development, and leveraging APIs.
+- This included integration between platforms (marketing automation, CRM, online chat, email, reporting, WordPress, webcasting, video), realtime asset deployment through API calls, web and email personalization, interactive web content, custom reporting dashboards, and custom partner data sharing portals with OAuth-managed access.
 
-Extended capabilities include integration between platforms (marketing automation, CRM, online chat, email, reporting, WordPress, webcasting, video), realtime asset deployment through API calls, web and email personalization, interactive web content, custom reporting dashboards, and custom partner data sharing portals with OAuth-managed access.
+- I implemented front-end frameworks to rapidly develop branded, responsive, interactive, usable, and aesthetically pleasing front ends to these capabilities. I also provided clear, illustrated, web-based documentation.
 
-I relied on front-end frameworks like Bootstrap, Foundation, and WPBakery Page Builder to rapidly develop branded, responsive, interactive, usable, and aesthetically pleasing front ends to these capabilities.
+- My work was so effective and efficient the company canceled plans to add two more technology managers to the team.
 
-Finally, I made sure the capabilities are available to other team members by developing easy-to-use interfaces and providing clear, illustrated, web-based documentation.`,
+- The result was a sales pipeline with increased leads volume and more visibility into the customer journey.`,
       },
       {
         id: `dynamic-marketing-systems`,
@@ -170,9 +173,13 @@ Finally, I made sure the capabilities are available to other team members by dev
         org: `Dynamic Marketing Systems (now Truelio)`,
         dates: `May 2004 - Oct 2015 · 11 yrs 6 mos`,
         ats_dates: `05/2004 - 10/2015`,
-        text: `For more than 10 years, I worked at the B2B marketing services firm Dynamic Marketing Systems. I started as a designer and implementer of print ordering and automation systems. I grew into an automator of all kinds of marketing - from print to email nurturing to sales support.
+        text: `- I started as a designer and implementer of print ordering and automation systems. I grew into an automator of all kinds of marketing - from print to email nurturing to sales support.
 
-I also became a "utility player", a position I would assume throughout my career. I started managing our print ordering system, a project that required database management and HTML and CSS development. Then I managed all kinds of projects, which included helping designing business processes for our fledgling company. My day could include pitching business to clients, creative-directing a website, copy-writing and coding an HTML email, and preparing traffic reports with analysis.`,
+- I started managing our print ordering system, a project that required database management and HTML and CSS development.
+
+- Then I managed all kinds of projects, which included helping designing business processes for our fledgling company.
+
+- My day could include pitching business to clients, creative-directing a website, copy-writing and coding an HTML email, and preparing traffic reports with analysis.`,
       },
     ],
   },

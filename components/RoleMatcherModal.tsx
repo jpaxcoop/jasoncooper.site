@@ -70,6 +70,23 @@ export default function RoleMatcherModal({ isOpen, setIsOpen }: { isOpen: boolea
     setIsMatching(false);
   }
 
+  const optimizeResumeContent = (result: any) => {
+    const { introduction, languagesAndFrameworks, tools } = result;
+    const optimizedResumeContent = resumeContent;
+
+    const optimizedLanguagesAndFrameworks = optimizedResumeContent.skillsAndTech.skills.find(skill => skill.id === languagesAndFrameworks.id) ?? {
+      id: languagesAndFrameworks.id, list: []};
+    const optimizedTools = optimizedResumeContent.skillsAndTech.skills.find(skill => skill.id === tools.id) ?? {
+      id: tools.id, list: []};
+
+    optimizedResumeContent.introduction.title = introduction.title;
+    optimizedResumeContent.introduction.text = introduction.text;
+    optimizedLanguagesAndFrameworks.list = languagesAndFrameworks.list;
+    optimizedTools.list = tools.list;
+
+    return optimizedResumeContent;
+  }
+
   const handleDownloadResumeClick = async () => {
     if (isDownloading) {
       return;
@@ -86,12 +103,8 @@ export default function RoleMatcherModal({ isOpen, setIsOpen }: { isOpen: boolea
 
     const data = await res.json();
     if (data.result) {
-      const introduction = JSON.parse(data.result);
-
-      const optimizedResumeContent = resumeContent;
-
-      optimizedResumeContent.introduction.title = introduction.title;
-      optimizedResumeContent.introduction.text = introduction.text;
+      const result = JSON.parse(data.result);
+      const optimizedResumeContent = optimizeResumeContent(result);
 
       const blob = await pdf(
         <ResumePdf hasJobDescription={true} resumeContent={optimizedResumeContent} />
@@ -126,12 +139,8 @@ export default function RoleMatcherModal({ isOpen, setIsOpen }: { isOpen: boolea
 
     const data = await res.json();
     if (data.result) {
-      const introduction = JSON.parse(data.result);
-
-      const optimizedResumeContent = resumeContent;
-
-      optimizedResumeContent.introduction.title = introduction.title;
-      optimizedResumeContent.introduction.text = introduction.text;
+      const result = JSON.parse(data.result);
+      const optimizedResumeContent = optimizeResumeContent(result);
 
       const blob = await pdf(
         <AtsResumePdf resumeContent={optimizedResumeContent} />

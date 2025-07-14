@@ -118,12 +118,8 @@ export default function ResumePdf({ hasJobDescription = false, resumeContent = r
 
           <View style={{ width: '50%' }}>
             <View style={[pdfStyles.section, pdfStyles.borderSection]}>
-              <Text style={pdfStyles.heading}>
-                About Jason
-              </Text>
-
-              <Text style={pdfStyles.paragraph}>
-                To learn more, click on a topic below. Or, if you have peformed the ancient art of printing, turn to the next page. 
+              <Text style={[pdfStyles.paragraph, pdfStyles.bold]}>
+                Click on a topic below. If you have performed the ancient rite of printing, turn to the next page. 
               </Text>
             </View>
 
@@ -151,7 +147,7 @@ export default function ResumePdf({ hasJobDescription = false, resumeContent = r
               {resumeContent.experience.experiences.map((experience, index) => {
                 return (
                   <View key={index} style={{ marginBottom: 8 }}>
-                    <Link src={`#${experience.id}`} style={pdfStyles.subheading}>{experience.role}</Link>
+                    <Link src={`#${experience.id}`} style={[pdfStyles.subheading, pdfStyles.link]}>{experience.role}</Link>
                     <Text style={{ fontStyle: 'italic'}}>{experience.dates}</Text>
                   </View>
                 );
@@ -250,13 +246,8 @@ export default function ResumePdf({ hasJobDescription = false, resumeContent = r
 
             <View style={[pdfStyles.section, pdfStyles.borderSection]}>
               <Text id={tools?.id}></Text>
-              <Text
-                fixed
-                style={pdfStyles.heading}
-                render={({ pageNumber }) =>
-                  pageNumber === 2 ? tools?.title : `${tools?.title} (continued)`
-                }
-              >
+              <Text style={pdfStyles.heading}>
+                {tools?.title}
               </Text>
 
               {tools?.list.map((item, index) => {
