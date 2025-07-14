@@ -81,7 +81,7 @@ export default function AtsResumePdf({ resumeContent = resumeData }: Props) {
           <Text style={{ marginBottom: '12px' }}>jasonpaxtoncooper@gmail.com</Text>
 
           <Text style={pdfStyles.subheading}>Address</Text>
-          <Text style={{ marginBottom: '12px' }}>1480 Uncle Ben Drive, Powder Springs, GA 30127</Text>
+          <Text style={{ marginBottom: '12px' }}>Metro Atlanta area, GA, United States</Text>
         </View>
 
         <View style={[pdfStyles.section]}>
@@ -110,6 +110,8 @@ export default function AtsResumePdf({ resumeContent = resumeData }: Props) {
             );
           })}
 
+          <Text style={pdfStyles.subheading}>Languages and Frameworks</Text>
+
           {languagesAndFrameworks?.list.map((item, index) => {
             return (
               <Text key={index} style={{ marginBottom: 6 }}>
@@ -117,6 +119,8 @@ export default function AtsResumePdf({ resumeContent = resumeData }: Props) {
               </Text>
             );
           })}
+
+          <Text style={[pdfStyles.subheading, { marginTop: '6px' }]}>Software and Tools</Text>
 
           {tools?.list.map((item, index) => {
             return (
@@ -134,7 +138,7 @@ export default function AtsResumePdf({ resumeContent = resumeData }: Props) {
             return (
               <View key={index}>
                 <Text id={experience.id} style={pdfStyles.subheading}>
-                  {experience.role}, {experience.org}
+                  {experience.role} at {experience.org}
                 </Text>
 
                 <Text>{experience.ats_dates}</Text>
@@ -155,7 +159,7 @@ export default function AtsResumePdf({ resumeContent = resumeData }: Props) {
                   {recommendation.text}
                 </Text>
 
-                <View style={{ marginLeft: 12 }}>
+                <View>
                   <Text style={pdfStyles.label}>
                     {recommendation.title}
                   </Text>
@@ -167,22 +171,6 @@ export default function AtsResumePdf({ resumeContent = resumeData }: Props) {
               </View>
             );
           })}
-        </View>
-
-        <View style={[pdfStyles.section]}>
-          <Text style={[pdfStyles.heading, { fontSize: '14px', color: 'black' }]}>Recent Projects</Text>
-
-          {recentProjects.map((project, index) => {
-              return (
-                <View key={index} id={project.id}>
-                  <Text style={[pdfStyles.heading, { fontSize: '14px', color: 'black' }]}>
-                    {project.title}
-                  </Text>
-
-                  {markdownToPdfComponents(project.description)}
-                </View>
-              );
-            })}
         </View>
       </Page>
     </Document>
