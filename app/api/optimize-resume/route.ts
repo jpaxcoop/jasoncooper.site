@@ -41,24 +41,37 @@ Here is Jason's resume data:
 
 ${resumeJsonString}
 
-Your task:
+Your tasks:
 
-Rewrite the resume introduction section.
-- Provide an updated "title" and "text" field for the introduction, formatted as valid JSON like this:
+- Rewrite the resume introduction section. Do not indicate experience in a role that is not present in the Experience section of the resume data.
+- Remove any languages and frameworks that are not relevant to the job description.
+- Remove any tools that are not relevant to the job description.
+- Provide the updated introduction, languages and frameworks, and tools in the following JSON format:
 
-{
-  "title": "Your new title here",
-  "text": "Your new introduction text here"
+{ 
+  "introduction": {
+    "title": "Your new title here",
+    "text": "Your new introduction text here"
+  },
+  "languagesAndFrameworks": {
+    id: "languages-and-frameworks",
+    "list": ["List of relevant languages and frameworks"]
+  },
+  "tools": {
+    id: "tools",
+    "list": ["List of relevant tools"]
+  }
 }
 
 Remember: do not invent or assume any new skills or qualifications. Use only information present in the resume data.
           `
         }
       ],
-      temperature: 0  // very important to set temperature low to reduce creativity
+      temperature: 0,
     });
 
     const aiResponse = completion.choices[0].message.content;
+
     return NextResponse.json({ result: aiResponse });
 
   } catch (error) {
