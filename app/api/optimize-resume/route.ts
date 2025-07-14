@@ -43,9 +43,10 @@ ${resumeJsonString}
 
 Your tasks:
 
-- Rewrite the resume introduction section. Do not indicate experience in a role that is not present in the Experience section of the resume data.
+- Rewrite the resume introduction section. When writing the introduction title, do not indicate experience in a role that is not present in the Experience section of the resume data.
+- Do not use the exact same wording as the job description.
 - Remove any languages and frameworks that are not relevant to the job description.
-- Remove any tools that are not relevant to the job description.
+- Remove any tools that are not relevant to the job description. However, ALWAYS include Adobe Creative Suite.
 - Provide the updated introduction, languages and frameworks, and tools in the following JSON format:
 
 { 
