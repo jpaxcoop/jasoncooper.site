@@ -39,7 +39,6 @@ function renderInlineTokens(tokens: any[], parentKey: string = ''): JSX.Element[
   });
 }
 
-// Full renderer: handles paragraphs + inline markdown
 export function markdownToPdfComponents(markdown: string): JSX.Element[] {
   const tokens = marked.lexer(markdown);
   const output: JSX.Element[] = [];
@@ -47,14 +46,28 @@ export function markdownToPdfComponents(markdown: string): JSX.Element[] {
   tokens.forEach((token, idx) => {
     if (token.type === 'paragraph') {
       output.push(
-        <Text key={idx} style={pdfStyles.paragraph}>
+        <Text key={`p-${idx}`} style={pdfStyles.paragraph}>
           {renderInlineTokens(token.tokens || [], `p-${idx}`)}
         </Text>
       );
     }
 
-    // You can add support for headings, lists, etc. here
-    // if (token.type === 'heading') { ... }
+    if (token.type === 'list' && !token.ordered) {
+      const listItems = token.items.map((item: any, itemIdx: number) => (
+        <View key={`ul-${idx}-${itemIdx}`} style={pdfStyles.listItem}>
+          <Text style={pdfStyles.bullet}>•</Text>
+          <Text style={pdfStyles.listContent}>
+            {renderInlineTokens(item.tokens || [], `ul-${idx}-${itemIdx}`)}
+          </Text>
+        </View>
+      ));
+
+      output.push(
+        <View key={`list-${idx}`} style={pdfStyles.list}>
+          {listItems}
+        </View>
+      );
+    }
   });
 
   return output;

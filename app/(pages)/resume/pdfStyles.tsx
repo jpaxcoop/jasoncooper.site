@@ -58,6 +58,23 @@ export const pdfStyles = StyleSheet.create({
     alignItems: 'center',
     width: '100%',
   },
+  list: {
+    marginBottom: 8,
+    paddingLeft: 12,
+  },
+  listItem: {
+    flexDirection: 'row',
+    marginBottom: 4,
+  },
+  bullet: {
+    width: 10,
+    fontSize: 12,
+    marginRight: 4,
+  },
+  listContent: {
+    fontSize: 12,
+    flex: 1,
+  },
   skillLink: {
     borderColor: primaryColor,
     borderStyle: 'solid',
