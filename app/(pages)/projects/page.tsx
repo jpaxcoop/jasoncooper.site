@@ -32,7 +32,7 @@ export default function ProjectsPage() {
 						{thumb.linkHref &&
 							<Link
 								href={thumb.linkHref}
-								className="border py-1 px-3 rounded-sm text-base hover:text-pink-500"
+								 className="font-heading font-medium whitespace-nowrap border-2 border-gray-500 dark:border-gray-400 rounded-lg px-4 py-2 hover:text-pink-500 hover:border-pink-500 hover:cursor-pointer bg-white/25 dark:bg-gray-800/25"
 								target={thumb.openInNewTab ? '_blank' : '_self'}
 							>
 								View Project

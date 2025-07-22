@@ -34,8 +34,8 @@ export default function Navbar() {
             <li key={href}>
               <Link
                 href={href}
-                className={`text-lg lowercase tracking-wider transition-colors hover:text-pink-500 text-shadow-lg text-shadow-gray-900/50 ${
-                  isActive ? 'text-white' : 'text-gray-300'
+                className={`text-lg lowercase tracking-wider transition-colors hover:text-pink-500 text-shadow-lg dark:text-shadow-gray-900/50 ${
+                  isActive ? 'font-bold dark:text-white' : ''
                 }`}
               >
                 {label}
@@ -47,7 +47,7 @@ export default function Navbar() {
         <li key="contact">
           <button
             onClick={showContactModal}
-            className="text-lg lowercase tracking-wider transition-colors hover:text-pink-500 text-shadow-lg text-shadow-gray-900/50 hover:cursor-pointer text-gray-300"
+            className="text-lg lowercase tracking-wider transition-colors hover:text-pink-500 dark:text-shadow-lg dark:text-shadow-gray-900/50 hover:cursor-pointer"
           >
             Contact
           </button>

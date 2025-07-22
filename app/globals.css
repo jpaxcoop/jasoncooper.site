@@ -80,6 +80,8 @@
 
 @import "tailwindcss";
 
+@custom-variant dark (&:where(.dark, .dark *));
+
 :root {
   --font-heading: 'Montserrat', sans-serif;
   --font-sans: 'Nunito', sans-serif;
@@ -87,8 +89,8 @@
 }
 
 @theme {
-  --color-background: theme('colors.gray.900');
-  --color-foreground: theme('colors.gray.300');
+  --color-foreground: theme('colors.gray.900');
+  --dark-color-foreground: theme('colors.gray.300');
   --font-sans: var(--font-sans);
   --font-heading: var(--font-heading);
   --font-terminal: var(--font-terminal);
@@ -96,12 +98,15 @@
 
 body {
   color: var(--color-foreground);
-  @apply bg-linear-to-t from-gray-950 to-gray-800;
-  @apply font-sans; /* Use Nunito for body */
+  @apply font-sans;
+}
+
+.dark body {
+  color: var(--dark-color-foreground);
 }
 
 h1, h2, h3, h4, h5, h6 {
-  @apply font-heading; /* Use Montserrat for headings */
+  @apply font-heading;
 }
 
 p {

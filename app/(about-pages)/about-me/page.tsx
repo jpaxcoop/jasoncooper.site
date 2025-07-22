@@ -155,7 +155,7 @@ export default function AboutMePage() {
 
             {aboutBlocks.map(({ id, imgSrc, title, text }) => (
                 activeId === id && (
-                    <div key={id} className="w-[90%] md:w-2/3 p-4 aspect-square bg-gray-800 rounded-xl absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
+                    <div key={id} className="w-[90%] md:w-2/3 p-4 aspect-square bg-gray-100 dark:bg-gray-800 rounded-xl absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
                         <button
                             className="absolute top-1 right-3 text-lg hover:text-white hover:cursor-pointer"
                             onClick={() => setActiveId(null)}

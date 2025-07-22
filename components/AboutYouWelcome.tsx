@@ -13,7 +13,7 @@ type Props = {
 
                 <button
                     onClick={onDismiss}
-                    className="px-4 py-2 border-2 border-white text-white rounded hover:cursor-pointer"
+                    className="font-heading font-medium whitespace-nowrap mb-4 border-2 border-pink-500 rounded-lg px-4 py-2 hover:text-white hover:bg-pink-600 hover:cursor-pointer bg-white/25 dark:bg-gray-800/25"
                 >
                     Learn About You
                 </button>

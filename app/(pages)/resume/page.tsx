@@ -44,7 +44,7 @@ export default function ResumePage() {
         <div className="w-full md:w-auto">
           <div className="sticky top-30">
             <button 
-              className="block font-heading text-gray-200 whitespace-nowrap mb-4 border-2 border-pink-500 rounded-lg px-4 py-2 hover:text-white hover:bg-pink-600 hover:cursor-pointer"
+              className="block font-heading font-medium whitespace-nowrap mb-4 border-2 border-pink-500 rounded-lg px-4 py-2 hover:text-white hover:bg-pink-600 hover:cursor-pointer bg-white/25 dark:bg-gray-800/25"
               onClick={handleDownload}
             >
               Download Resumé PDF
@@ -71,10 +71,10 @@ export default function ResumePage() {
                     <button
                       key={index}
                       onClick={() => scrollToSection(tab.id)}
-                      className={`block py-1 font-heading font-medium text-lg text-shadow-lg text-shadow-gray-900/50 hover:cursor-pointer ${
+                      className={`block py-1 font-heading font-medium text-lg dark:text-shadow-lg dark:text-shadow-gray-900/50 hover:cursor-pointer ${
                       activeTab === tab.id
                         ? 'text-pink-500'
-                        : 'hover:text-white'
+                        : 'hover:text-black hover:font-bold dark:hover:text-white'
                       }`}
                     >
                       {tab.tab}

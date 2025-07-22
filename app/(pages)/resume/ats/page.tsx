@@ -21,7 +21,7 @@ export default function ResumePage() {
   return (
     <div className="flex flex-wrap md:flex-nowrap gap-10">
       <button 
-        className="block font-heading text-gray-200 whitespace-nowrap mb-4 border-2 border-pink-500 rounded-lg px-4 py-2 hover:text-white hover:bg-pink-600 hover:cursor-pointer"
+        className="block font-heading font-medium whitespace-nowrap mb-4 border-2 border-pink-500 rounded-lg px-4 py-2 hover:text-white hover:bg-pink-600 hover:cursor-pointer bg-white/25 dark:bg-gray-800/25"
         onClick={handleDownload}
       >
         Download ATS Resumé PDF

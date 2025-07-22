@@ -36,7 +36,7 @@ export default function SkillsTechTab() {
                   <button
                     key={index}
                     onClick={() => scrollToSection(skill.id)}
-                    className="border-gray-400 border-1 py-1 px-3 hover:text-white hover:cursor-pointer rounded-md mr-2 mb-2"
+                    className="border-gray-500 dark:border-gray-400 border-1 py-1 px-3 hover:text-pink-500 hover:border-pink-500 hover:cursor-pointer rounded-md mr-2 mb-2 bg-white/25 dark:bg-gray-800/25"
                   >
                     {skill.title}
                   </button>
@@ -69,7 +69,7 @@ export default function SkillsTechTab() {
 
                 <button
                   onClick={() => scrollToSection(resumeContent.skillsAndTech.id)}
-                  className="text-gray-400 hover:text-pink-500"
+                  className="text-gray-600 dark:text-gray-400 hover:text-pink-500"
                 >
                   Return to Skills
                 </button>

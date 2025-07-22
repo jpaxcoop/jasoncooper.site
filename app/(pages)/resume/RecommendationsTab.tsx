@@ -27,7 +27,7 @@ export default function RecommendationsTab() {
           </div>
 
           <div className="w-full md:w-1/4">
-            <Link href="https://www.linkedin.com/in/jasonpaxtoncooper" target="_blank" className="block font-heading text-gray-200 whitespace-nowrap mb-4 border-2 border-gray-400 rounded-lg px-4 py-2 hover:text-white hover:border-white hover:cursor-pointer">
+            <Link href="https://www.linkedin.com/in/jasonpaxtoncooper" target="_blank" className="block font-heading font-medium whitespace-nowrap mb-4 border-2 border-gray-500 dark:border-gray-400 rounded-lg px-4 py-2 hover:text-pink-500 hover:border-pink-500 hover:cursor-pointer bg-white/25 dark:bg-gray-800/25">
               More on LinkedIn
               <ChevronRightIcon fontSize="small" />
             </Link>

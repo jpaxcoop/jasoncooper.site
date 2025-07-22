@@ -24,7 +24,7 @@ export default function NavMenuPortal({ isOpen, onClose }: NavMenuPortalProps) {
   const portalRoot = typeof window !== 'undefined' ? document.getElementById('portal-root') : null;
   const menuRef = useRef<HTMLUListElement | null>(null);
   
-    const { showContactModal } = useContactModal();
+  const { showContactModal } = useContactModal();
 
   // Optional: close on outside click
   useEffect(() => {

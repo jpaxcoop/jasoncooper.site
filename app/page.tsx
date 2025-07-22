@@ -159,9 +159,9 @@ export default function HomePage() {
                 className="absolute top-[7.375%] left-[45.1875%] w-[28.5625%] animate-[fadeIn_1s_ease-in_forwards] hover:cursor-pointer pointer-events-none"
               />
 
-              <div className="hidden lg:block absolute top-[4%] left-[60%] border-pink-500/50 border-3 px-4 py-1 text-[1.25vw] rounded group-hover:bg-pink-500/50 bg-white/25 opacity-0 animate-fadeIn hover:cursor-pointer" style={{animationDelay: '1s'}}>
-                <div className="absolute w-[25%] h-[200%] top-1/2 left-[-25%] border-pink-500/50 border-t-3 border-l-3"></div>
-                <div className="absolute h-[25%] aspect-square rounded-full top-[250%] left-[-24.5%] transform -translate-x-1/2 -translate-y--1 bg-pink-500/50"></div>
+              <div className="hidden lg:block absolute top-[4%] left-[60%] border-pink-500/80 border-3 px-4 py-1 text-[1.25vw] rounded group-hover:bg-pink-500/80 bg-gray-300 dark:bg-gray-900 dark:bg-gray-800/25 opacity-0 animate-fadeIn hover:cursor-pointer" style={{animationDelay: '1s'}}>
+                <div className="absolute w-[25%] h-[200%] top-1/2 left-[-25%] border-pink-500/80 border-t-3 border-l-3"></div>
+                <div className="absolute h-[25%] aspect-square rounded-full top-[250%] left-[-24.5%] transform -translate-x-1/2 -translate-y--1 bg-pink-500/80"></div>
                 Jason's projects
               </div>
             </Link>
@@ -177,8 +177,8 @@ export default function HomePage() {
               onClick={handleKeyboardClick}
             />
 
-            <div className="hidden lg:block absolute top-[56%] left-[22%] border-pink-500/50 border-3 px-4 py-1 text-[1.25vw] rounded bg-pink-600/80 group-hover:bg-pink-500 opacity-0 animate-fadeIn hover:cursor-pointer" style={{animationDelay: '1.75s'}} onClick={handleKeyboardClick}>
-              <div className="absolute w-[15%] h-[240%] bottom-1/2 right-[-15%] border-pink-500/50 border-b-3 border-r-3"></div>
+            <div className="hidden lg:block absolute top-[56%] left-[22%] border-pink-500/80 border-3 px-4 py-1 text-[1.25vw] rounded bg-pink-600/80 group-hover:bg-pink-500 opacity-0 animate-fadeIn hover:cursor-pointer text-white" style={{animationDelay: '1.75s'}} onClick={handleKeyboardClick}>
+              <div className="absolute w-[15%] h-[240%] bottom-1/2 right-[-15%] border-pink-500/80 border-b-3 border-r-3"></div>
               <div className="absolute h-[25%] aspect-square rounded-full top-[-204.5%] right-[-18%] transform -translate-x-1/2 -translate-y-1 bg-pink-500/50"></div>
               Hiring? Try the Role Matcher
             </div>
@@ -213,8 +213,8 @@ export default function HomePage() {
                 onClick={handleResumeMouseClick}
               />
 
-              <div className="hidden lg:block absolute top-[72%] left-[50%] border-pink-500/50 border-3 px-4 py-1 text-[1.25vw] rounded group-hover:bg-pink-500/50 bg-white/25 opacity-0 animate-fadeIn hover:cursor-pointer" style={{animationDelay: '1.5s'}}>
-                <div className="absolute w-[35%] h-[300%] bottom-1/2 right-[-37%] border-pink-500/50 border-b-3 border-r-3"></div>
+              <div className="hidden lg:block absolute top-[72%] left-[50%] border-pink-500/80 border-3 px-4 py-1 text-[1.25vw] rounded group-hover:bg-pink-500/80 bg-gray-300 dark:bg-gray-900 opacity-0 animate-fadeIn hover:cursor-pointer" style={{animationDelay: '1.5s'}}>
+                <div className="absolute w-[35%] h-[300%] bottom-1/2 right-[-37%] border-pink-500/80 border-b-3 border-r-3"></div>
                 <div className="absolute h-[25%] aspect-square rounded-full top-[-265%] left-[136.5%] transform -translate-x-1/2 -translate-y-1 bg-pink-500/50"></div>
                 Jason's resumé
               </div>
@@ -231,8 +231,8 @@ export default function HomePage() {
                 className="absolute top-[40%] left-[73.25%] w-[4.75%] group-hover:cursor-pointer"
               />
 
-              <div className="hidden lg:block absolute top-[34%] left-[76.5%] border-pink-500/50 border-3 px-4 py-1 text-[1.25vw] rounded group-hover:bg-pink-500/50 bg-white/25 opacity-0 animate-fadeIn hover:cursor-pointer" style={{animationDelay: '1.25s'}}>
-                <div className="absolute w-[15.5%] h-[180%] top-1/2 left-[-15.5%] border-pink-500/50 border-t-3 border-l-3"></div>
+              <div className="hidden lg:block absolute top-[34%] left-[76.5%] border-pink-500/80 border-3 px-4 py-1 text-[1.25vw] rounded group-hover:bg-pink-500/80 bg-gray-300 dark:bg-gray-900 opacity-0 animate-fadeIn hover:cursor-pointer" style={{animationDelay: '1.25s'}}>
+                <div className="absolute w-[15.5%] h-[180%] top-1/2 left-[-15.5%] border-pink-500/80 border-t-3 border-l-3"></div>
                 <div className="absolute h-[25%] aspect-square rounded-full top-[228%] left-[-14.5%] transform -translate-x-1/2 -translate-y--1 bg-pink-500/50"></div>
                 About Jason
               </div>
@@ -265,8 +265,8 @@ export default function HomePage() {
               className="absolute top-[32%] left-[23%] w-[3%] group-hover:cursor-pointer"
             />
 
-            <div className="hidden lg:block absolute top-[21.5%] left-[13%] border-pink-500/50 border-3 px-4 py-1 text-[1.25vw] rounded group-hover:bg-pink-500/50 bg-white/25 opacity-0 animate-fadeIn hover:cursor-pointer" style={{animationDelay: '1.25s'}}>
-              <div className="absolute w-[15%] h-[200%] top-1/2 left-[102%] border-pink-500/50 border-t-3 border-r-3"></div>
+            <div className="hidden lg:block absolute top-[21.5%] left-[13%] border-pink-500/80 border-3 px-4 py-1 text-[1.25vw] rounded group-hover:bg-pink-500/80 bg-gray-300 dark:bg-gray-900 opacity-0 animate-fadeIn hover:cursor-pointer" style={{animationDelay: '1.25s'}}>
+              <div className="absolute w-[15%] h-[200%] top-1/2 left-[102%] border-pink-500/80 border-t-3 border-r-3"></div>
               <div className="absolute h-[25%] aspect-square rounded-full top-[250%] left-[116%] transform -translate-x-1/2 -translate-y--1 bg-pink-500/50"></div>
               Contact Jason
             </div>
