@@ -1,4 +1,3 @@
-import { projectThumbs } from '@/data/project-thumbs';
 import { resumeContent as resumeData } from '@/data/resume-content';
 import { markdownToPdfComponents } from '@/utlis/markdownToPDF';
 import { Document, Page, Text, View, Link } from '@react-pdf/renderer';
@@ -41,12 +40,6 @@ Font.register({
 });
 
 const baseUrl = 'https://jasoncooper.site';
-
-const recentProjects = [
-  projectThumbs.hal9000,
-  projectThumbs.jasonCooperSite,
-  projectThumbs.peerlessPortal,
-];
 
 type Props = {
   resumeContent?: typeof resumeData;

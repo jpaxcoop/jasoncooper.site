@@ -7,6 +7,21 @@ import ResumePdf from "@/app/(pages)/resume/ResumePdf";
 import { resumeContent } from "@/data/resume-content";
 import AtsResumePdf from "@/app/(pages)/resume/ats/AtsResumePdf";
 
+interface ResumeOptimizationResult {
+  introduction: {
+    title: string;
+    text: string;
+  };
+  languagesAndFrameworks: {
+    id: string;
+    list: string[];
+  };
+  tools: {
+    id: string;
+    list: string[];
+  };
+}
+
 export default function RoleMatcherModal({ isOpen, setIsOpen }: { isOpen: boolean, setIsOpen: (val: boolean) => void }) {
   const textareaRef = useRef<HTMLTextAreaElement>(null);
   const [text, setText] = useState<string>('');
@@ -70,7 +85,7 @@ export default function RoleMatcherModal({ isOpen, setIsOpen }: { isOpen: boolea
     setIsMatching(false);
   }
 
-  const optimizeResumeContent = (result: any) => {
+  const optimizeResumeContent = (result: ResumeOptimizationResult) => {
     const { introduction, languagesAndFrameworks, tools } = result;
     const optimizedResumeContent = resumeContent;
 
