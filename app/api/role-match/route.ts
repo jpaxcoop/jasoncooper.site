@@ -22,7 +22,7 @@ Describe in a bullet point list of 120 words or less how well the resumé matche
 
   try {
     const completion = await openai.chat.completions.create({
-      model: 'gpt-4',
+      model: 'gpt-6-luna',
       messages: [{ role: 'user', content: prompt }],
     });
 
